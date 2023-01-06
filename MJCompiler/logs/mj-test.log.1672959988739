@@ -1,0 +1,190 @@
+INFO  00:05:28,952 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  00:05:28,980 - #2 program
+INFO  00:05:28,980 - #25 test301
+INFO  00:05:28,980 - #9 const
+INFO  00:05:28,981 - #25 int
+INFO  00:05:28,981 - #25 nula
+INFO  00:05:28,981 - #7 =
+INFO  00:05:28,981 - #24 0
+INFO  00:05:28,981 - #6 ;
+INFO  00:05:28,981 - #9 const
+INFO  00:05:28,981 - #25 int
+INFO  00:05:28,981 - #25 jedan
+INFO  00:05:28,981 - #7 =
+INFO  00:05:28,981 - #24 1
+INFO  00:05:28,981 - #6 ;
+INFO  00:05:28,981 - #9 const
+INFO  00:05:28,981 - #25 int
+INFO  00:05:28,981 - #25 pet
+INFO  00:05:28,981 - #7 =
+INFO  00:05:28,981 - #24 5
+INFO  00:05:28,981 - #6 ;
+INFO  00:05:28,981 - #25 int
+INFO  00:05:28,983 - #25 niz
+INFO  00:05:28,983 - #10 [
+INFO  00:05:28,983 - #11 ]
+INFO  00:05:28,983 - #8 ,
+INFO  00:05:28,983 - #25 niz2
+INFO  00:05:28,983 - #10 [
+INFO  00:05:28,983 - #11 ]
+INFO  00:05:28,983 - #8 ,
+INFO  00:05:28,983 - #25 a
+INFO  00:05:28,983 - #8 ,
+INFO  00:05:28,984 - #25 b
+INFO  00:05:28,984 - #6 ;
+INFO  00:05:28,984 - #25 char
+INFO  00:05:28,984 - #25 nizch
+INFO  00:05:28,984 - #10 [
+INFO  00:05:28,984 - #11 ]
+INFO  00:05:28,984 - #6 ;
+INFO  00:05:28,984 - #3 {
+INFO  00:05:28,985 - #5 void
+INFO  00:05:28,985 - #25 main
+INFO  00:05:28,985 - #14 (
+INFO  00:05:28,985 - #15 )
+INFO  00:05:28,985 - #25 int
+INFO  00:05:28,985 - #25 bodovi
+INFO  00:05:28,985 - #6 ;
+INFO  00:05:28,985 - #25 bool
+INFO  00:05:28,985 - #25 bt
+INFO  00:05:28,985 - #6 ;
+INFO  00:05:28,985 - #3 {
+INFO  00:05:28,986 - #17 print
+INFO  00:05:28,986 - #14 (
+INFO  00:05:28,986 - #25 nula
+INFO  00:05:28,986 - #15 )
+INFO  00:05:28,986 - #6 ;
+INFO  00:05:28,986 - #4 }
+INFO  00:05:28,986 - #4 }
+INFO  00:05:28,988 - Program(
+ test301
+  ConstList(
+    ConstList(
+      ConstList(
+        NoConstList(
+        ) [NoConstList]
+        ConstDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         nula
+          NumConst(
+           0
+          ) [NumConst]
+        ) [ConstDeclOneTime]
+      ) [ConstList]
+      ConstDeclOneTime(
+        Type(
+         int
+        ) [Type]
+       jedan
+        NumConst(
+         1
+        ) [NumConst]
+      ) [ConstDeclOneTime]
+    ) [ConstList]
+    ConstDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     pet
+      NumConst(
+       5
+      ) [NumConst]
+    ) [ConstDeclOneTime]
+  ) [ConstList]
+  VarList(
+    VarList(
+      NoVarList(
+      ) [NoVarList]
+      MoreVarDecl(
+        Type(
+         int
+        ) [Type]
+       niz
+        VarSquares(
+        ) [VarSquares]
+        MultipleVars(
+          MultipleVars(
+            OneVar(
+             niz2
+              VarSquares(
+              ) [VarSquares]
+            ) [OneVar]
+           a
+            NoSquares(
+            ) [NoSquares]
+          ) [MultipleVars]
+         b
+          NoSquares(
+          ) [NoSquares]
+        ) [MultipleVars]
+      ) [MoreVarDecl]
+    ) [VarList]
+    VarDeclOneTime(
+      Type(
+       char
+      ) [Type]
+     nizch
+      VarSquares(
+      ) [VarSquares]
+    ) [VarDeclOneTime]
+  ) [VarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        VarList(
+          NoVarList(
+          ) [NoVarList]
+          VarDeclOneTime(
+            Type(
+             int
+            ) [Type]
+           bodovi
+            NoSquares(
+            ) [NoSquares]
+          ) [VarDeclOneTime]
+        ) [VarList]
+        VarDeclOneTime(
+          Type(
+           bool
+          ) [Type]
+         bt
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        NoStmt(
+        ) [NoStmt]
+        MatchedStmt(
+          PrintCondition(
+            PositiveExpr(
+              FirstExpr(
+                TermOne(
+                  FactorDesNoAct(
+                    OneDesignatorIdent(
+                     nula
+                    ) [OneDesignatorIdent]
+                  ) [FactorDesNoAct]
+                ) [TermOne]
+              ) [FirstExpr]
+            ) [PositiveExpr]
+          ) [PrintCondition]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  00:05:28,988 - ===================================
+INFO  00:05:28,989 -  Print count calls = 1
+INFO  00:05:28,989 -  Deklarisanih promenljivih ima = 7

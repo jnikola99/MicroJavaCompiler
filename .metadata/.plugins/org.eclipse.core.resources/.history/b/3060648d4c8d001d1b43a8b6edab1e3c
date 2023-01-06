@@ -1,0 +1,12 @@
+program MJProgram
+// Pokazati i kada broj stvarnih i formalnih parametra nije isti
+{
+class Base {
+	int baseField;
+	{
+		void foo(char c, bool b, int n) {
+			
+		}
+	}
+}
+}

@@ -1,0 +1,180 @@
+INFO  03:14:48,401 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  03:14:48,430 - #2 program
+INFO  03:14:48,430 - #25 MJProgram
+INFO  03:14:48,430 - #25 int
+INFO  03:14:48,431 - #25 x
+INFO  03:14:48,431 - #6 ;
+INFO  03:14:48,432 - #25 int
+INFO  03:14:48,432 - #25 y
+INFO  03:14:48,432 - #6 ;
+INFO  03:14:48,432 - #3 {
+INFO  03:14:48,432 - #25 int
+INFO  03:14:48,433 - #25 k
+INFO  03:14:48,433 - #14 (
+INFO  03:14:48,433 - #15 )
+INFO  03:14:48,433 - #25 int
+INFO  03:14:48,433 - #25 c
+INFO  03:14:48,433 - #6 ;
+INFO  03:14:48,433 - #3 {
+INFO  03:14:48,433 - #25 c
+INFO  03:14:48,434 - #7 =
+INFO  03:14:48,434 - #24 1
+ERROR 03:14:48,434 - 
+Sintaksna greska na liniji 6
+INFO  03:14:48,434 - #6 ;
+INFO  03:14:48,434 - #21 return
+INFO  03:14:48,434 - #25 c
+INFO  03:14:48,434 - #32 +
+INFO  03:14:48,435 - #24 2
+INFO  03:14:48,435 - #6 ;
+INFO  03:14:48,435 - #4 }
+INFO  03:14:48,435 - #25 int
+INFO  03:14:48,435 - #25 main
+ERROR 03:14:48,435 - Izvrsen oporavak do ; u liniji 6
+INFO  03:14:48,436 - #14 (
+INFO  03:14:48,436 - #15 )
+INFO  03:14:48,436 - #3 {
+INFO  03:14:48,436 - #25 y
+INFO  03:14:48,436 - #7 =
+INFO  03:14:48,436 - #24 2
+ERROR 03:14:48,436 - 
+Sintaksna greska na liniji 11
+INFO  03:14:48,436 - #6 ;
+INFO  03:14:48,436 - #25 x
+INFO  03:14:48,436 - #7 =
+INFO  03:14:48,436 - #25 y
+ERROR 03:14:48,436 - Izvrsen oporavak do ; u liniji 11
+ERROR 03:14:48,436 - 
+Sintaksna greska na liniji 12
+INFO  03:14:48,436 - #32 +
+INFO  03:14:48,436 - #24 2
+INFO  03:14:48,436 - #6 ;
+INFO  03:14:48,436 - #25 y
+INFO  03:14:48,436 - #7 =
+INFO  03:14:48,436 - #25 k
+ERROR 03:14:48,436 - Izvrsen oporavak do ; u liniji 12
+ERROR 03:14:48,436 - 
+Sintaksna greska na liniji 13
+INFO  03:14:48,436 - #14 (
+INFO  03:14:48,436 - #15 )
+INFO  03:14:48,437 - #32 +
+INFO  03:14:48,437 - #24 3
+INFO  03:14:48,437 - #6 ;
+INFO  03:14:48,437 - #17 print
+INFO  03:14:48,437 - #14 (
+INFO  03:14:48,437 - #25 y
+ERROR 03:14:48,437 - Izvrsen oporavak do ; u liniji 13
+ERROR 03:14:48,437 - 
+Sintaksna greska na liniji 14
+INFO  03:14:48,437 - #15 )
+INFO  03:14:48,437 - #6 ;
+INFO  03:14:48,437 - #21 return
+INFO  03:14:48,437 - #24 0
+INFO  03:14:48,437 - #6 ;
+INFO  03:14:48,437 - #4 }
+INFO  03:14:48,437 - #4 }
+ERROR 03:14:48,437 - Izvrsen oporavak do ; u liniji 14
+INFO  03:14:48,438 - Program(
+ MJProgram
+  NoConstList(
+  ) [NoConstList]
+  VarList(
+    VarList(
+      NoVarList(
+      ) [NoVarList]
+      VarDeclOneTime(
+        Type(
+         int
+        ) [Type]
+       x
+        NoSquares(
+        ) [NoSquares]
+      ) [VarDeclOneTime]
+    ) [VarList]
+    VarDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     y
+      NoSquares(
+      ) [NoSquares]
+    ) [VarDeclOneTime]
+  ) [VarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    MethodList(
+      NoMethodDecl(
+      ) [NoMethodDecl]
+      MethodDecl(
+        MethTypeOther(
+          Type(
+           int
+          ) [Type]
+         k
+        ) [MethTypeOther]
+        NoFormParsList(
+        ) [NoFormParsList]
+        VarList(
+          NoVarList(
+          ) [NoVarList]
+          VarDeclOneTime(
+            Type(
+             int
+            ) [Type]
+           c
+            NoSquares(
+            ) [NoSquares]
+          ) [VarDeclOneTime]
+        ) [VarList]
+        Statements(
+          NoStmt(
+          ) [NoStmt]
+          MatchedStmt(
+            ErrorStmt(
+            ) [ErrorStmt]
+          ) [MatchedStmt]
+        ) [Statements]
+      ) [MethodDecl]
+    ) [MethodList]
+    MethodDecl(
+      MethTypeOther(
+        Type(
+         int
+        ) [Type]
+       main
+      ) [MethTypeOther]
+      NoFormParsList(
+      ) [NoFormParsList]
+      NoVarList(
+      ) [NoVarList]
+      Statements(
+        Statements(
+          Statements(
+            Statements(
+              NoStmt(
+              ) [NoStmt]
+              MatchedStmt(
+                ErrorStmt(
+                ) [ErrorStmt]
+              ) [MatchedStmt]
+            ) [Statements]
+            MatchedStmt(
+              ErrorStmt(
+              ) [ErrorStmt]
+            ) [MatchedStmt]
+          ) [Statements]
+          MatchedStmt(
+            ErrorStmt(
+            ) [ErrorStmt]
+          ) [MatchedStmt]
+        ) [Statements]
+        MatchedStmt(
+          ErrorStmt(
+          ) [ErrorStmt]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  03:14:48,438 - ===================================
