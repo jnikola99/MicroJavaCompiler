@@ -51,16 +51,19 @@ terminal String CHAR;
 terminal IF, ELSE, INC, DEC, PLUS, MINUS, AND, OR, GREATER, LESS, IFEQUAL, NOTEQUAL, GREATEREQUAL, LESSEQUAL, MUL, DIV, PERCENT;
 terminal THIS, ENUM, FOREACH, DO, ARROW, DOUBLEDOT;
 
-nonterminal Program, ConstDeclList, VarDeclList, ClassDeclList, MethodDeclList, Mulop, Addop, AddopTermList;
+nonterminal ConstDeclList, VarDeclList, ClassDeclList, MethodDeclList, Mulop, Addop, AddopTermList;
 nonterminal ConstType, ConstTypeList, ConstDecl, Type, VarSquares, VarDecl, VarMultiple, ClassDecl, Label;
 nonterminal MethodType, MethodDecl, FormParsList, FormParsMultiple, FormPars, StatementList, Statement, Matched, Unmatched;
 nonterminal Designator, Condition, Expr, DesignatorStatement, DesignatorStmtMore, DesignatorNot, FirstDesignatorPart;
 nonterminal Assignop, ActPars, ActParsMore, ConditionMore, CondTerm, CondFactMore, CondFact, Relop, TermList, Term, MulopFactor, Factor;
 nonterminal DesiActPars;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program;
 
 precedence left ELSE;
 
-Program ::= (Program) PROG IDENT ConstDeclList VarDeclList ClassDeclList LBRACE MethodDeclList RBRACE;
+Program ::= (Program) PROG ProgName:p ConstDeclList VarDeclList ClassDeclList LBRACE MethodDeclList RBRACE;
+
+ProgName ::= (ProgName) IDENT:progName;
 
 ConstDeclList ::= (ConstList) ConstDeclList ConstDecl
 				|

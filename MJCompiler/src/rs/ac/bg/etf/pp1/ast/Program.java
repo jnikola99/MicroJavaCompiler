@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 6/0/2023 0:11:42
+// 7/0/2023 23:31:20
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,14 +9,17 @@ public class Program implements SyntaxNode {
 
     private SyntaxNode parent;
     private int line;
-    private String I1;
+    public rs.etf.pp1.symboltable.concepts.Obj obj = null;
+
+    private ProgName ProgName;
     private ConstDeclList ConstDeclList;
     private VarDeclList VarDeclList;
     private ClassDeclList ClassDeclList;
     private MethodDeclList MethodDeclList;
 
-    public Program (String I1, ConstDeclList ConstDeclList, VarDeclList VarDeclList, ClassDeclList ClassDeclList, MethodDeclList MethodDeclList) {
-        this.I1=I1;
+    public Program (ProgName ProgName, ConstDeclList ConstDeclList, VarDeclList VarDeclList, ClassDeclList ClassDeclList, MethodDeclList MethodDeclList) {
+        this.ProgName=ProgName;
+        if(ProgName!=null) ProgName.setParent(this);
         this.ConstDeclList=ConstDeclList;
         if(ConstDeclList!=null) ConstDeclList.setParent(this);
         this.VarDeclList=VarDeclList;
@@ -27,12 +30,12 @@ public class Program implements SyntaxNode {
         if(MethodDeclList!=null) MethodDeclList.setParent(this);
     }
 
-    public String getI1() {
-        return I1;
+    public ProgName getProgName() {
+        return ProgName;
     }
 
-    public void setI1(String I1) {
-        this.I1=I1;
+    public void setProgName(ProgName ProgName) {
+        this.ProgName=ProgName;
     }
 
     public ConstDeclList getConstDeclList() {
@@ -88,6 +91,7 @@ public class Program implements SyntaxNode {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(ProgName!=null) ProgName.accept(visitor);
         if(ConstDeclList!=null) ConstDeclList.accept(visitor);
         if(VarDeclList!=null) VarDeclList.accept(visitor);
         if(ClassDeclList!=null) ClassDeclList.accept(visitor);
@@ -96,6 +100,7 @@ public class Program implements SyntaxNode {
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(ProgName!=null) ProgName.traverseTopDown(visitor);
         if(ConstDeclList!=null) ConstDeclList.traverseTopDown(visitor);
         if(VarDeclList!=null) VarDeclList.traverseTopDown(visitor);
         if(ClassDeclList!=null) ClassDeclList.traverseTopDown(visitor);
@@ -103,6 +108,7 @@ public class Program implements SyntaxNode {
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(ProgName!=null) ProgName.traverseBottomUp(visitor);
         if(ConstDeclList!=null) ConstDeclList.traverseBottomUp(visitor);
         if(VarDeclList!=null) VarDeclList.traverseBottomUp(visitor);
         if(ClassDeclList!=null) ClassDeclList.traverseBottomUp(visitor);
@@ -115,7 +121,10 @@ public class Program implements SyntaxNode {
         buffer.append(tab);
         buffer.append("Program(\n");
 
-        buffer.append(" "+tab+I1);
+        if(ProgName!=null)
+            buffer.append(ProgName.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
         buffer.append("\n");
 
         if(ConstDeclList!=null)

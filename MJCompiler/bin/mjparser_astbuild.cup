@@ -51,7 +51,6 @@ terminal String CHAR;
 terminal IF, ELSE, INC, DEC, PLUS, MINUS, AND, OR, GREATER, LESS, IFEQUAL, NOTEQUAL, GREATEREQUAL, LESSEQUAL, MUL, DIV, PERCENT;
 terminal THIS, ENUM, FOREACH, DO, ARROW, DOUBLEDOT;
 
-nonterminal Program Program;
 nonterminal ConstDeclList ConstDeclList;
 nonterminal VarDeclList VarDeclList;
 nonterminal ClassDeclList ClassDeclList;
@@ -97,10 +96,13 @@ nonterminal Term Term;
 nonterminal MulopFactor MulopFactor;
 nonterminal Factor Factor;
 nonterminal DesiActPars DesiActPars;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program;
 
 precedence left ELSE;
 
-Program ::= (Program) PROG IDENT:I1 ConstDeclList:C2 VarDeclList:V3 ClassDeclList:C4 LBRACE MethodDeclList:M5 RBRACE {: RESULT=new Program(I1, C2, V3, C4, M5); RESULT.setLine(I1left); :};
+Program ::= (Program) PROG ProgName:p ConstDeclList:C1 VarDeclList:V2 ClassDeclList:C3 LBRACE MethodDeclList:M4 RBRACE {: RESULT=new Program(p, C1, V2, C3, M4); RESULT.setLine(pleft); :};
+
+ProgName ::= (ProgName) IDENT:progName {: RESULT=new ProgName(progName); RESULT.setLine(progNameleft); :};
 
 ConstDeclList ::= (ConstList) ConstDeclList:C1 ConstDecl:C2 {: RESULT=new ConstList(C1, C2); RESULT.setLine(C1left); :}
 				|

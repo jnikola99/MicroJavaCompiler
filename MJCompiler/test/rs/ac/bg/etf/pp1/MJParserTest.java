@@ -46,9 +46,9 @@ public class MJParserTest {
 			RuleVisitor v = new RuleVisitor();
 			prog.traverseBottomUp(v); 
 	      
-			log.info(" Print count calls = " + v.printCount);
+			/*log.info(" Print count calls = " + v.printCount);
 
-			log.info(" Deklarisanih promenljivih ima = " + v.varDeclCount);
+			log.info(" Deklarisanih promenljivih ima = " + v.varDeclCount);*/
 			
 		} 
 		finally {
