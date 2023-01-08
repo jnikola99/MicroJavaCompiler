@@ -32,14 +32,37 @@ public class SemanticPass extends VisitorAdaptor {
 		log.info(msg.toString());
 	}
 	
+	public void visit(VarDeclOneTime varDeclOne) {
+		report_info("Deklarisana promenljiva "+ varDeclOne.getVarDecName(), varDeclOne);
+		Obj varNode = Tab.insert(Obj.Var, varDeclOne.getVarDecName(), varDeclOne.getType().struct);
+	}
+	
 	public void visit(ProgName progName) {
 		progName.obj = Tab.insert(Obj.Prog, progName.getProgName(), Tab.noType);
 		Tab.openScope();     	
 	}
 	
 	public void visit(Program program) {
+		nVars = Tab.currentScope().getnVars();
 		Tab.chainLocalSymbols(program.getProgName().obj);
 		Tab.closeScope();
+	}
+	
+	public void visit(Type type) {
+		Obj typeNode = Tab.find(type.getTypeName());
+		if(typeNode == Tab.noObj) {
+			report_error("Nije pronadjen tip " + type.getTypeName() + " u tabeli simbola", null);
+			type.struct = Tab.noType;
+		}
+		else {
+			if (Obj.Type == typeNode.getKind()) {
+				type.struct = typeNode.getType();
+			} 
+			else {
+				report_error("Greska: Ime " + type.getTypeName() + " ne predstavlja tip ", type);
+				type.struct = Tab.noType;
+			}
+		}
 	}
 	
 	public boolean passed() {
