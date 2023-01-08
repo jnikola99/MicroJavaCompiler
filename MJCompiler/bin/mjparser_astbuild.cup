@@ -66,8 +66,6 @@ nonterminal VarDecl VarDecl;
 nonterminal VarMultiple VarMultiple;
 nonterminal ClassDecl ClassDecl;
 nonterminal Label Label;
-nonterminal MethodType MethodType;
-nonterminal MethodDecl MethodDecl;
 nonterminal FormParsList FormParsList;
 nonterminal FormParsMultiple FormParsMultiple;
 nonterminal FormPars FormPars;
@@ -96,7 +94,7 @@ nonterminal MulopFactor MulopFactor;
 nonterminal Factor Factor;
 nonterminal DesiActPars DesiActPars;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodType;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
 
 precedence left ELSE;

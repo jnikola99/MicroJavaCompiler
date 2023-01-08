@@ -65,6 +65,34 @@ public class SemanticPass extends VisitorAdaptor {
 		}
 	}
 	
+	public void visit(MethodDecl methodDecl) {
+		if (!returnFound && currentMethod.getType() != Tab.noType) {
+			report_error("Semanticka greska na liniji " + methodDecl.getLine() + ": funkcija " + currentMethod.getName() + " nema return iskaz!", null);
+		}
+		
+		Tab.chainLocalSymbols(currentMethod);
+		Tab.closeScope();
+		
+		returnFound = false;
+		currentMethod = null;
+	}
+	
+	public void visit(MethTypeOther methodType) {
+		currentMethod = Tab.insert(Obj.Meth, methodType.getMethName(), methodType.getType().struct);
+		methodType.obj = currentMethod;
+		Tab.openScope();
+		report_info("Obradjuje se funkcija " + methodType.getMethName(), methodType);
+	}
+	
+	public void visit(MethTypeVoid methodType) {
+		currentMethod = Tab.insert(Obj.Meth, methodType.getMethName(), Tab.noType);
+		methodType.obj = currentMethod;
+		Tab.openScope();
+		report_info("Obradjuje se funkcija " + methodType.getMethName(), methodType);
+	}
+	
+	
+	
 	public boolean passed() {
 		return !errorDetected;
 	}
