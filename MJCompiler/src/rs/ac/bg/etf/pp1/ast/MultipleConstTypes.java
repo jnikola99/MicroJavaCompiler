@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 8/0/2023 2:33:1
+// 10/0/2023 0:21:0
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,13 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class MultipleConstTypes extends ConstTypeList {
 
     private ConstTypeList ConstTypeList;
-    private String constVar;
+    private String someConst;
     private ConstType ConstType;
 
-    public MultipleConstTypes (ConstTypeList ConstTypeList, String constVar, ConstType ConstType) {
+    public MultipleConstTypes (ConstTypeList ConstTypeList, String someConst, ConstType ConstType) {
         this.ConstTypeList=ConstTypeList;
         if(ConstTypeList!=null) ConstTypeList.setParent(this);
-        this.constVar=constVar;
+        this.someConst=someConst;
         this.ConstType=ConstType;
         if(ConstType!=null) ConstType.setParent(this);
     }
@@ -27,12 +27,12 @@ public class MultipleConstTypes extends ConstTypeList {
         this.ConstTypeList=ConstTypeList;
     }
 
-    public String getConstVar() {
-        return constVar;
+    public String getSomeConst() {
+        return someConst;
     }
 
-    public void setConstVar(String constVar) {
-        this.constVar=constVar;
+    public void setSomeConst(String someConst) {
+        this.someConst=someConst;
     }
 
     public ConstType getConstType() {
@@ -75,7 +75,7 @@ public class MultipleConstTypes extends ConstTypeList {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        buffer.append(" "+tab+constVar);
+        buffer.append(" "+tab+someConst);
         buffer.append("\n");
 
         if(ConstType!=null)

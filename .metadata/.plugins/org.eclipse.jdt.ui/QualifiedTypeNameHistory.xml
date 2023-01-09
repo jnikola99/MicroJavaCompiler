@@ -18,8 +18,12 @@
 <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.Assignment"/>
 <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.FuncCall"/>
 <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethodDecl"/>
-<fullyQualifiedTypeName name="rs.etf.pp1.symboltable.Tab"/>
 <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.VarDecl"/>
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.SyntaxNode"/>
+<fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethTypeOther"/>
+<fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethTypeVoid"/>
+<fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.SemanticPass"/>
+<fullyQualifiedTypeName name="rs.etf.pp1.symboltable.Tab"/>
+<fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.ReturnCondition"/>
 </qualifiedTypeNameHistroy>

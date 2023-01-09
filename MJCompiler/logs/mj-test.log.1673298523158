@@ -1,0 +1,127 @@
+INFO  22:07:20,262 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  22:07:20,325 - #2 program
+INFO  22:07:20,326 - #25 test301
+INFO  22:07:20,326 - #25 int
+INFO  22:07:20,326 - #25 x
+INFO  22:07:20,327 - #8 ,
+INFO  22:07:20,327 - #25 y
+INFO  22:07:20,327 - #8 ,
+INFO  22:07:20,327 - #25 z
+INFO  22:07:20,327 - #8 ,
+INFO  22:07:20,328 - #25 w
+INFO  22:07:20,328 - #6 ;
+INFO  22:07:20,328 - #25 int
+INFO  22:07:20,328 - #25 o
+INFO  22:07:20,328 - #6 ;
+INFO  22:07:20,328 - #3 {
+INFO  22:07:20,328 - #5 void
+INFO  22:07:20,329 - #25 main
+INFO  22:07:20,329 - #14 (
+INFO  22:07:20,329 - #15 )
+INFO  22:07:20,329 - #25 int
+INFO  22:07:20,329 - #25 nula
+INFO  22:07:20,329 - #6 ;
+INFO  22:07:20,329 - #3 {
+INFO  22:07:20,329 - #25 nula
+INFO  22:07:20,329 - #7 =
+INFO  22:07:20,329 - #24 0
+INFO  22:07:20,330 - #6 ;
+INFO  22:07:20,330 - #4 }
+INFO  22:07:20,330 - #4 }
+INFO  22:07:20,334 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoConstList(
+  ) [NoConstList]
+  VarList(
+    VarList(
+      NoVarList(
+      ) [NoVarList]
+      MoreVarDecl(
+        Type(
+         int
+        ) [Type]
+       x
+        NoSquares(
+        ) [NoSquares]
+        MultipleVars(
+          MultipleVars(
+            OneVar(
+             y
+              NoSquares(
+              ) [NoSquares]
+            ) [OneVar]
+           z
+            NoSquares(
+            ) [NoSquares]
+          ) [MultipleVars]
+         w
+          NoSquares(
+          ) [NoSquares]
+        ) [MultipleVars]
+      ) [MoreVarDecl]
+    ) [VarList]
+    VarDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     o
+      NoSquares(
+      ) [NoSquares]
+    ) [VarDeclOneTime]
+  ) [VarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        NoVarList(
+        ) [NoVarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         nula
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        NoStmt(
+        ) [NoStmt]
+        MatchedStmt(
+          DesStatement(
+            DesignatorParsStmt(
+              OneDesignatorIdent(
+               nula
+              ) [OneDesignatorIdent]
+              AssignopExpr(
+                AssignopItem(
+                ) [AssignopItem]
+                PositiveExpr(
+                  FirstExpr(
+                    TermOne(
+                      FactorNumber(
+                       0
+                      ) [FactorNumber]
+                    ) [TermOne]
+                  ) [FirstExpr]
+                ) [PositiveExpr]
+              ) [AssignopExpr]
+            ) [DesignatorParsStmt]
+          ) [DesStatement]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  22:07:20,334 - ===================================
+INFO  22:07:20,335 - Deklarisana promenljiva z na liniji 2

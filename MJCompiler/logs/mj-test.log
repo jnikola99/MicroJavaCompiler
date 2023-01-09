@@ -1,24 +1,31 @@
-INFO  02:21:14,875 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
-INFO  02:21:14,908 - #2 program
-INFO  02:21:14,908 - #25 test301
-INFO  02:21:14,908 - #9 const
-INFO  02:21:14,909 - #25 int
-INFO  02:21:14,909 - #25 nula
-INFO  02:21:14,909 - #7 =
-INFO  02:21:14,909 - #24 0
-INFO  02:21:14,909 - #6 ;
-INFO  02:21:14,910 - #3 {
-INFO  02:21:14,910 - #5 void
-INFO  02:21:14,911 - #25 main
-INFO  02:21:14,911 - #14 (
-INFO  02:21:14,911 - #15 )
-INFO  02:21:14,911 - #25 bool
-INFO  02:21:14,911 - #25 bt
-INFO  02:21:14,911 - #6 ;
-INFO  02:21:14,912 - #3 {
-INFO  02:21:14,912 - #4 }
-INFO  02:21:14,912 - #4 }
-INFO  02:21:14,913 - Program(
+INFO  00:21:36,108 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  00:21:36,138 - #2 program
+INFO  00:21:36,138 - #25 test301
+INFO  00:21:36,138 - #9 const
+INFO  00:21:36,139 - #25 int
+INFO  00:21:36,139 - #25 x
+INFO  00:21:36,139 - #7 =
+INFO  00:21:36,139 - #24 2
+INFO  00:21:36,139 - #6 ;
+INFO  00:21:36,140 - #25 int
+INFO  00:21:36,140 - #25 y
+INFO  00:21:36,140 - #6 ;
+INFO  00:21:36,141 - #3 {
+INFO  00:21:36,141 - #5 void
+INFO  00:21:36,141 - #25 main
+INFO  00:21:36,141 - #14 (
+INFO  00:21:36,141 - #15 )
+INFO  00:21:36,142 - #25 int
+INFO  00:21:36,142 - #25 nula
+INFO  00:21:36,142 - #6 ;
+INFO  00:21:36,142 - #3 {
+INFO  00:21:36,142 - #25 nula
+INFO  00:21:36,142 - #7 =
+INFO  00:21:36,143 - #24 0
+INFO  00:21:36,143 - #6 ;
+INFO  00:21:36,143 - #4 }
+INFO  00:21:36,144 - #4 }
+INFO  00:21:36,147 - Program(
   ProgName(
    test301
   ) [ProgName]
@@ -29,14 +36,24 @@ INFO  02:21:14,913 - Program(
       Type(
        int
       ) [Type]
-     nula
+     x
       NumConst(
-       0
+       2
       ) [NumConst]
     ) [ConstDeclOneTime]
   ) [ConstList]
-  NoVarList(
-  ) [NoVarList]
+  VarList(
+    NoVarList(
+    ) [NoVarList]
+    VarDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     y
+      NoSquares(
+      ) [NoSquares]
+    ) [VarDeclOneTime]
+  ) [VarList]
   NoClassList(
   ) [NoClassList]
   MethodList(
@@ -53,16 +70,46 @@ INFO  02:21:14,913 - Program(
         ) [NoVarList]
         VarDeclOneTime(
           Type(
-           bool
+           int
           ) [Type]
-         bt
+         nula
           NoSquares(
           ) [NoSquares]
         ) [VarDeclOneTime]
       ) [VarList]
-      NoStmt(
-      ) [NoStmt]
+      Statements(
+        NoStmt(
+        ) [NoStmt]
+        MatchedStmt(
+          DesStatement(
+            DesignatorParsStmt(
+              OneDesignatorIdent(
+               nula
+              ) [OneDesignatorIdent]
+              AssignopExpr(
+                AssignopItem(
+                ) [AssignopItem]
+                PositiveExpr(
+                  FirstExpr(
+                    TermOne(
+                      FactorNumber(
+                       0
+                      ) [FactorNumber]
+                    ) [TermOne]
+                  ) [FirstExpr]
+                ) [PositiveExpr]
+              ) [AssignopExpr]
+            ) [DesignatorParsStmt]
+          ) [DesStatement]
+        ) [MatchedStmt]
+      ) [Statements]
     ) [MethodDecl]
   ) [MethodList]
 ) [Program]
-INFO  02:21:14,914 - ===================================
+INFO  00:21:36,147 - ===================================
+INFO  00:21:36,149 - Deklarisana konstanta x na liniji 2
+INFO  00:21:36,149 - Deklarisana promenljiva y na liniji 3
+INFO  00:21:36,149 - Obradjuje se funkcija main na liniji 5
+INFO  00:21:36,149 - Deklarisana promenljiva nula na liniji 6
+INFO  00:21:36,149 - ===================================
+INFO  00:21:36,149 - Parsiranje uspesno zavrseno!

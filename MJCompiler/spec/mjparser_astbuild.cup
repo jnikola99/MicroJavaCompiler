@@ -8,6 +8,7 @@ import rs.ac.bg.etf.pp1.ast.*;
 
 parser code {:
 
+	boolean errorDetected = false;
 	Logger log = Logger.getLogger(getClass());
    
    
@@ -25,6 +26,7 @@ parser code {:
     }
 
     public void report_error(String message, Object info) {
+    	errorDetected = true;
     	StringBuilder msg = new StringBuilder(message); 
     	if (info instanceof Symbol)
             msg.append (" na liniji ").append(((Symbol)info).left);
@@ -34,6 +36,9 @@ parser code {:
 
 :}
 
+init with {:
+	errorDetected = false;
+:}
 
 scan with {:
 	Symbol s = this.getScanner().next_token();
@@ -57,8 +62,6 @@ nonterminal ClassDeclList ClassDeclList;
 nonterminal MethodDeclList MethodDeclList;
 nonterminal Mulop Mulop;
 nonterminal Addop Addop;
-nonterminal AddopTermList AddopTermList;
-nonterminal ConstType ConstType;
 nonterminal ConstTypeList ConstTypeList;
 nonterminal ConstDecl ConstDecl;
 nonterminal VarSquares VarSquares;
@@ -73,9 +76,7 @@ nonterminal StatementList StatementList;
 nonterminal Statement Statement;
 nonterminal Matched Matched;
 nonterminal Unmatched Unmatched;
-nonterminal Designator Designator;
 nonterminal Condition Condition;
-nonterminal Expr Expr;
 nonterminal DesignatorStatement DesignatorStatement;
 nonterminal DesignatorStmtMore DesignatorStmtMore;
 nonterminal DesignatorNot DesignatorNot;
@@ -88,14 +89,10 @@ nonterminal CondTerm CondTerm;
 nonterminal CondFactMore CondFactMore;
 nonterminal CondFact CondFact;
 nonterminal Relop Relop;
-nonterminal TermList TermList;
-nonterminal Term Term;
-nonterminal MulopFactor MulopFactor;
-nonterminal Factor Factor;
 nonterminal DesiActPars DesiActPars;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodType;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodType, Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, MulopFactor, AddopTermList, ConstType;
 
 precedence left ELSE;
 
@@ -109,14 +106,14 @@ ConstDeclList ::= (ConstList) ConstDeclList:C1 ConstDecl:C2 {: RESULT=new ConstL
 				;
 				
 				
-ConstTypeList ::= (MultipleConstTypes) ConstTypeList:C1 COMMA IDENT:constVar EQUAL ConstType:C2 {: RESULT=new MultipleConstTypes(C1, constVar, C2); RESULT.setLine(C1left); :}
+ConstTypeList ::= (MultipleConstTypes) ConstTypeList:C1 COMMA IDENT:someConst EQUAL ConstType:symConst {: RESULT=new MultipleConstTypes(C1, someConst, symConst); RESULT.setLine(C1left); :}
 				|
-				(OneConstType) COMMA IDENT:constVar EQUAL ConstType:C1 {: RESULT=new OneConstType(constVar, C1); RESULT.setLine(constVarleft); :}
+				(OneConstType) COMMA IDENT:someConst EQUAL ConstType:symConst {: RESULT=new OneConstType(someConst, symConst); RESULT.setLine(someConstleft); :}
 				;
 				
-ConstDecl ::= (MoreConstDecl) CONST Type:constType IDENT:someConst EQUAL ConstType:C1 ConstTypeList:C2 SEMI {: RESULT=new MoreConstDecl(constType, someConst, C1, C2); RESULT.setLine(constTypeleft); :}
+ConstDecl ::= (MoreConstDecl) CONST Type:constType IDENT:someConst EQUAL ConstType:symConst ConstTypeList:C1 SEMI {: RESULT=new MoreConstDecl(constType, someConst, symConst, C1); RESULT.setLine(constTypeleft); :}
 			|
-			(ConstDeclOneTime) CONST Type:constType IDENT:someConst EQUAL ConstType:C1 SEMI {: RESULT=new ConstDeclOneTime(constType, someConst, C1); RESULT.setLine(constTypeleft); :}
+			(ConstDeclOneTime) CONST Type:constType IDENT:someConst EQUAL ConstType:symConst SEMI {: RESULT=new ConstDeclOneTime(constType, someConst, symConst); RESULT.setLine(constTypeleft); :}
 			;				
 				 				
 ConstType ::= (NumConst) NUMBER:constType {: RESULT=new NumConst(constType); RESULT.setLine(constTypeleft); :}
@@ -218,7 +215,7 @@ Matched ::= (DesStatement) DesignatorStatement:D1 SEMI {: RESULT=new DesStatemen
 		   |
 		   (ReturnNothing) RETURN SEMI {: RESULT=new ReturnNothing(); :}
 		   |
-		   (ReturnCondition) RETURN Expr:E1 SEMI {: RESULT=new ReturnCondition(E1); RESULT.setLine(E1left); :}
+		   (ReturnCondition) RETURN Expr:t SEMI {: RESULT=new ReturnCondition(t); RESULT.setLine(tleft); :}
 		   |
 		   (ReadCondition) READ LPAREN Designator:D1 RPAREN SEMI {: RESULT=new ReadCondition(D1); RESULT.setLine(D1left); :}
 		   |
@@ -310,17 +307,14 @@ AddopTermList ::= (FirstExpr) Term:T1 {: RESULT=new FirstExpr(T1); RESULT.setLin
 			(NextExpr) AddopTermList:A1 Addop:A2 Term:T3 {: RESULT=new NextExpr(A1, A2, T3); RESULT.setLine(A1left); :}
 			;		
 
-			
-MulopFactor ::=(MulopFactor) Mulop:M1 Factor:F2 {: RESULT=new MulopFactor(M1, F2); RESULT.setLine(M1left); :};
-
-Term ::= (TermOne) Factor:F1 {: RESULT=new TermOne(F1); RESULT.setLine(F1left); :}
+Term ::= (TermOne) Factor:factor {: RESULT=new TermOne(factor); RESULT.setLine(factorleft); :}
 		|
-		(TermMore) Term:T1 MulopFactor:M2 {: RESULT=new TermMore(T1, M2); RESULT.setLine(T1left); :}
+		(TermMore) Term:termName Mulop:M1 Factor:factorName {: RESULT=new TermMore(termName, M1, factorName); RESULT.setLine(termNameleft); :}
 		;
 
-Factor ::= (FactorDesAct) Designator:D1 LPAREN DesiActPars:D2 RPAREN {: RESULT=new FactorDesAct(D1, D2); RESULT.setLine(D1left); :}
+Factor ::= (FactorDesAct) Designator:func LPAREN DesiActPars:D1 RPAREN {: RESULT=new FactorDesAct(func, D1); RESULT.setLine(funcleft); :}
 		|
-		(FactorDesNoAct) Designator:D1 {: RESULT=new FactorDesNoAct(D1); RESULT.setLine(D1left); :}
+		(FactorDesNoAct) Designator:d {: RESULT=new FactorDesNoAct(d); RESULT.setLine(dleft); :}
 		|
 		(FactorNumber) NUMBER:N1 {: RESULT=new FactorNumber(N1); RESULT.setLine(N1left); :}
 		|

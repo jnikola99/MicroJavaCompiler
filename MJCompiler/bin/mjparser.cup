@@ -8,6 +8,7 @@ import rs.ac.bg.etf.pp1.ast.*;
 
 parser code {:
 
+	boolean errorDetected = false;
 	Logger log = Logger.getLogger(getClass());
    
    
@@ -25,6 +26,7 @@ parser code {:
     }
 
     public void report_error(String message, Object info) {
+    	errorDetected = true;
     	StringBuilder msg = new StringBuilder(message); 
     	if (info instanceof Symbol)
             msg.append (" na liniji ").append(((Symbol)info).left);
@@ -34,6 +36,9 @@ parser code {:
 
 :}
 
+init with {:
+	errorDetected = false;
+:}
 
 scan with {:
 	Symbol s = this.getScanner().next_token();
@@ -51,15 +56,15 @@ terminal String CHAR;
 terminal IF, ELSE, INC, DEC, PLUS, MINUS, AND, OR, GREATER, LESS, IFEQUAL, NOTEQUAL, GREATEREQUAL, LESSEQUAL, MUL, DIV, PERCENT;
 terminal THIS, ENUM, FOREACH, DO, ARROW, DOUBLEDOT;
 
-nonterminal ConstDeclList, VarDeclList, ClassDeclList, MethodDeclList, Mulop, Addop, AddopTermList;
-nonterminal ConstType, ConstTypeList, ConstDecl, VarSquares, VarDecl, VarMultiple, ClassDecl, Label;
+nonterminal ConstDeclList, VarDeclList, ClassDeclList, MethodDeclList, Mulop, Addop;
+nonterminal ConstTypeList, ConstDecl, VarSquares, VarDecl, VarMultiple, ClassDecl, Label;
 nonterminal FormParsList, FormParsMultiple, FormPars, StatementList, Statement, Matched, Unmatched;
-nonterminal Designator, Condition, Expr, DesignatorStatement, DesignatorStmtMore, DesignatorNot, FirstDesignatorPart;
-nonterminal Assignop, ActPars, ActParsMore, ConditionMore, CondTerm, CondFactMore, CondFact, Relop, TermList, Term, MulopFactor, Factor;
+nonterminal Condition, DesignatorStatement, DesignatorStmtMore, DesignatorNot, FirstDesignatorPart;
+nonterminal Assignop, ActPars, ActParsMore, ConditionMore, CondTerm, CondFactMore, CondFact, Relop;
 nonterminal DesiActPars;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodType;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodType, Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, MulopFactor, AddopTermList, ConstType;
 
 precedence left ELSE;
 
@@ -73,14 +78,14 @@ ConstDeclList ::= (ConstList) ConstDeclList ConstDecl
 				;
 				
 				
-ConstTypeList ::= (MultipleConstTypes) ConstTypeList COMMA IDENT:constVar EQUAL ConstType
+ConstTypeList ::= (MultipleConstTypes) ConstTypeList COMMA IDENT:someConst EQUAL ConstType:symConst
 				|
-				(OneConstType) COMMA IDENT:constVar EQUAL ConstType
+				(OneConstType) COMMA IDENT:someConst EQUAL ConstType:symConst
 				;
 				
-ConstDecl ::= (MoreConstDecl) CONST Type:constType IDENT:someConst EQUAL ConstType ConstTypeList SEMI
+ConstDecl ::= (MoreConstDecl) CONST Type:constType IDENT:someConst EQUAL ConstType:symConst ConstTypeList SEMI
 			|
-			(ConstDeclOneTime) CONST Type:constType IDENT:someConst EQUAL ConstType SEMI
+			(ConstDeclOneTime) CONST Type:constType IDENT:someConst EQUAL ConstType:symConst SEMI
 			;				
 				 				
 ConstType ::= (NumConst) NUMBER:constType
@@ -182,7 +187,7 @@ Matched ::= (DesStatement) DesignatorStatement SEMI
 		   |
 		   (ReturnNothing) RETURN SEMI
 		   |
-		   (ReturnCondition) RETURN Expr SEMI
+		   (ReturnCondition) RETURN Expr:t SEMI
 		   |
 		   (ReadCondition) READ LPAREN Designator RPAREN SEMI
 		   |
@@ -274,17 +279,14 @@ AddopTermList ::= (FirstExpr) Term
 			(NextExpr) AddopTermList Addop Term
 			;		
 
-			
-MulopFactor ::=(MulopFactor) Mulop Factor;
-
-Term ::= (TermOne) Factor
+Term ::= (TermOne) Factor:factor
 		|
-		(TermMore) Term MulopFactor
+		(TermMore) Term:termName Mulop Factor:factorName
 		;
 
-Factor ::= (FactorDesAct) Designator LPAREN DesiActPars RPAREN
+Factor ::= (FactorDesAct) Designator:func LPAREN DesiActPars RPAREN
 		|
-		(FactorDesNoAct) Designator
+		(FactorDesNoAct) Designator:d
 		|
 		(FactorNumber) NUMBER
 		|

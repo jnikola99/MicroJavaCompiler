@@ -1,0 +1,71 @@
+INFO  01:09:04,938 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  01:09:04,970 - #2 program
+INFO  01:09:04,970 - #25 test301
+INFO  01:09:04,970 - #9 const
+INFO  01:09:04,970 - #25 int
+INFO  01:09:04,970 - #25 nula
+INFO  01:09:04,971 - #7 =
+INFO  01:09:04,971 - #24 0
+INFO  01:09:04,971 - #6 ;
+INFO  01:09:04,971 - #3 {
+INFO  01:09:04,972 - #5 void
+INFO  01:09:04,972 - #25 main
+INFO  01:09:04,972 - #14 (
+INFO  01:09:04,972 - #15 )
+INFO  01:09:04,972 - #25 int
+INFO  01:09:04,972 - #25 x
+INFO  01:09:04,972 - #6 ;
+INFO  01:09:04,973 - #3 {
+INFO  01:09:04,973 - #4 }
+INFO  01:09:04,973 - #4 }
+INFO  01:09:04,977 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstList(
+    NoConstList(
+    ) [NoConstList]
+    ConstDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     nula
+      NumConst(
+       0
+      ) [NumConst]
+    ) [ConstDeclOneTime]
+  ) [ConstList]
+  NoVarList(
+  ) [NoVarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        NoVarList(
+        ) [NoVarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         x
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      NoStmt(
+      ) [NoStmt]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  01:09:04,977 - ===================================
+INFO  01:09:04,979 - Obradjuje se funkcija main na liniji 4
+INFO  01:09:04,979 - Deklarisana promenljiva x na liniji 5
+INFO  01:09:04,979 - ===================================

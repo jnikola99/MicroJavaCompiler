@@ -1,0 +1,100 @@
+INFO  00:08:31,808 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  00:08:31,838 - #2 program
+INFO  00:08:31,838 - #25 test301
+INFO  00:08:31,838 - #9 const
+INFO  00:08:31,839 - #25 int
+INFO  00:08:31,839 - #25 x
+INFO  00:08:31,839 - #7 =
+INFO  00:08:31,839 - #24 0
+INFO  00:08:31,839 - #6 ;
+INFO  00:08:31,840 - #3 {
+INFO  00:08:31,840 - #5 void
+INFO  00:08:31,841 - #25 main
+INFO  00:08:31,841 - #14 (
+INFO  00:08:31,841 - #15 )
+INFO  00:08:31,841 - #25 int
+INFO  00:08:31,841 - #25 nula
+INFO  00:08:31,841 - #6 ;
+INFO  00:08:31,842 - #3 {
+INFO  00:08:31,842 - #25 nula
+INFO  00:08:31,842 - #7 =
+INFO  00:08:31,842 - #24 0
+INFO  00:08:31,843 - #6 ;
+INFO  00:08:31,844 - #4 }
+INFO  00:08:31,844 - #4 }
+INFO  00:08:31,848 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstList(
+    NoConstList(
+    ) [NoConstList]
+    ConstDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     x
+      NumConst(
+       0
+      ) [NumConst]
+    ) [ConstDeclOneTime]
+  ) [ConstList]
+  NoVarList(
+  ) [NoVarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        NoVarList(
+        ) [NoVarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         nula
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        NoStmt(
+        ) [NoStmt]
+        MatchedStmt(
+          DesStatement(
+            DesignatorParsStmt(
+              OneDesignatorIdent(
+               nula
+              ) [OneDesignatorIdent]
+              AssignopExpr(
+                AssignopItem(
+                ) [AssignopItem]
+                PositiveExpr(
+                  FirstExpr(
+                    TermOne(
+                      FactorNumber(
+                       0
+                      ) [FactorNumber]
+                    ) [TermOne]
+                  ) [FirstExpr]
+                ) [PositiveExpr]
+              ) [AssignopExpr]
+            ) [DesignatorParsStmt]
+          ) [DesStatement]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  00:08:31,848 - ===================================
+INFO  00:08:31,849 - Obradjuje se funkcija main na liniji 4
+INFO  00:08:31,850 - Deklarisana promenljiva nula na liniji 5
+INFO  00:08:31,850 - ===================================
+INFO  00:08:31,850 - Parsiranje uspesno zavrseno!

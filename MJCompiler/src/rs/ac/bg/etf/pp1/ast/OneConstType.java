@@ -1,27 +1,27 @@
 // generated with ast extension for cup
 // version 0.8
-// 8/0/2023 2:33:1
+// 10/0/2023 0:21:0
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class OneConstType extends ConstTypeList {
 
-    private String constVar;
+    private String someConst;
     private ConstType ConstType;
 
-    public OneConstType (String constVar, ConstType ConstType) {
-        this.constVar=constVar;
+    public OneConstType (String someConst, ConstType ConstType) {
+        this.someConst=someConst;
         this.ConstType=ConstType;
         if(ConstType!=null) ConstType.setParent(this);
     }
 
-    public String getConstVar() {
-        return constVar;
+    public String getSomeConst() {
+        return someConst;
     }
 
-    public void setConstVar(String constVar) {
-        this.constVar=constVar;
+    public void setSomeConst(String someConst) {
+        this.someConst=someConst;
     }
 
     public ConstType getConstType() {
@@ -55,7 +55,7 @@ public class OneConstType extends ConstTypeList {
         buffer.append(tab);
         buffer.append("OneConstType(\n");
 
-        buffer.append(" "+tab+constVar);
+        buffer.append(" "+tab+someConst);
         buffer.append("\n");
 
         if(ConstType!=null)

@@ -1,0 +1,68 @@
+INFO  02:21:14,875 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  02:21:14,908 - #2 program
+INFO  02:21:14,908 - #25 test301
+INFO  02:21:14,908 - #9 const
+INFO  02:21:14,909 - #25 int
+INFO  02:21:14,909 - #25 nula
+INFO  02:21:14,909 - #7 =
+INFO  02:21:14,909 - #24 0
+INFO  02:21:14,909 - #6 ;
+INFO  02:21:14,910 - #3 {
+INFO  02:21:14,910 - #5 void
+INFO  02:21:14,911 - #25 main
+INFO  02:21:14,911 - #14 (
+INFO  02:21:14,911 - #15 )
+INFO  02:21:14,911 - #25 bool
+INFO  02:21:14,911 - #25 bt
+INFO  02:21:14,911 - #6 ;
+INFO  02:21:14,912 - #3 {
+INFO  02:21:14,912 - #4 }
+INFO  02:21:14,912 - #4 }
+INFO  02:21:14,913 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstList(
+    NoConstList(
+    ) [NoConstList]
+    ConstDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     nula
+      NumConst(
+       0
+      ) [NumConst]
+    ) [ConstDeclOneTime]
+  ) [ConstList]
+  NoVarList(
+  ) [NoVarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        NoVarList(
+        ) [NoVarList]
+        VarDeclOneTime(
+          Type(
+           bool
+          ) [Type]
+         bt
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      NoStmt(
+      ) [NoStmt]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  02:21:14,914 - ===================================

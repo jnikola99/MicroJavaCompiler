@@ -1,0 +1,66 @@
+INFO  01:11:23,465 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  01:11:23,495 - #2 program
+INFO  01:11:23,495 - #25 test301
+INFO  01:11:23,495 - #25 int
+INFO  01:11:23,496 - #25 nula
+INFO  01:11:23,496 - #7 =
+ERROR 01:11:23,497 - 
+Sintaksna greska na liniji 2
+INFO  01:11:23,497 - #24 0
+INFO  01:11:23,497 - #6 ;
+INFO  01:11:23,497 - #3 {
+INFO  01:11:23,497 - #5 void
+INFO  01:11:23,497 - #25 main
+ERROR 01:11:23,497 - Izvrsen oporavak do ; u liniji 2
+INFO  01:11:23,517 - #14 (
+INFO  01:11:23,517 - #15 )
+INFO  01:11:23,517 - #25 int
+INFO  01:11:23,517 - #25 x
+INFO  01:11:23,517 - #6 ;
+INFO  01:11:23,518 - #3 {
+INFO  01:11:23,518 - #4 }
+INFO  01:11:23,518 - #4 }
+INFO  01:11:23,524 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoConstList(
+  ) [NoConstList]
+  VarList(
+    NoVarList(
+    ) [NoVarList]
+    VarError(
+    ) [VarError]
+  ) [VarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        NoVarList(
+        ) [NoVarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         x
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      NoStmt(
+      ) [NoStmt]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  01:11:23,524 - ===================================
+INFO  01:11:23,526 - Obradjuje se funkcija main na liniji 4
+INFO  01:11:23,526 - Deklarisana promenljiva x na liniji 5
+INFO  01:11:23,526 - ===================================

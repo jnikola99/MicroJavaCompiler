@@ -1,0 +1,12 @@
+program test301
+	const int x=0;
+	int y;
+{
+void main()	
+		int nula;
+		const r=2;
+	{
+		nula=0;
+	}
+	
+}

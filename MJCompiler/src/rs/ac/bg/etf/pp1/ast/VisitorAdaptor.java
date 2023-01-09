@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 8/0/2023 2:33:1
+// 10/0/2023 0:21:0
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -11,10 +11,10 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Mulop Mulop) { }
     public void visit(Matched Matched) { }
     public void visit(Relop Relop) { }
-    public void visit(TermList TermList) { }
     public void visit(Assignop Assignop) { }
     public void visit(MethodType MethodType) { }
     public void visit(StatementList StatementList) { }
+    public void visit(MulopFactor MulopFactor) { }
     public void visit(Addop Addop) { }
     public void visit(FirstDesignatorPart FirstDesignatorPart) { }
     public void visit(ConditionMore ConditionMore) { }
@@ -28,12 +28,12 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Condition Condition) { }
     public void visit(ConstDeclList ConstDeclList) { }
     public void visit(Label Label) { }
-    public void visit(DesiActPars DesiActPars) { }
     public void visit(CondFactMore CondFactMore) { }
+    public void visit(DesiActPars DesiActPars) { }
     public void visit(DesignatorNot DesignatorNot) { }
     public void visit(VarDeclList VarDeclList) { }
-    public void visit(DesignatorStmtMore DesignatorStmtMore) { }
     public void visit(Expr Expr) { }
+    public void visit(DesignatorStmtMore DesignatorStmtMore) { }
     public void visit(ActPars ActPars) { }
     public void visit(ActParsMore ActParsMore) { }
     public void visit(DesignatorStatement DesignatorStatement) { }
@@ -44,8 +44,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ConstDecl ConstDecl) { }
     public void visit(CondFact CondFact) { }
     public void visit(MethodDeclList MethodDeclList) { }
-    public void visit(FormPars FormPars) { }
     public void visit(ConstType ConstType) { }
+    public void visit(FormPars FormPars) { }
     public void visit(FormParsMultiple FormParsMultiple) { }
     public void visit(AddopTermList AddopTermList) { }
     public void visit(Modop Modop) { visit(); }
@@ -75,7 +75,6 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(FactorDesAct FactorDesAct) { visit(); }
     public void visit(TermMore TermMore) { visit(); }
     public void visit(TermOne TermOne) { visit(); }
-    public void visit(MulopFactor MulopFactor) { visit(); }
     public void visit(NextExpr NextExpr) { visit(); }
     public void visit(FirstExpr FirstExpr) { visit(); }
     public void visit(NegativeExpr NegativeExpr) { visit(); }
