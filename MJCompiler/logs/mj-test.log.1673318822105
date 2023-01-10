@@ -1,35 +1,33 @@
-INFO  03:59:50,770 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
-INFO  03:59:50,802 - #2 program
-INFO  03:59:50,802 - #25 test301
-INFO  03:59:50,802 - #25 int
-INFO  03:59:50,803 - #25 x
-INFO  03:59:50,803 - #10 [
-INFO  03:59:50,803 - #11 ]
-INFO  03:59:50,803 - #8 ,
-INFO  03:59:50,803 - #25 y
-INFO  03:59:50,804 - #8 ,
-INFO  03:59:50,804 - #25 z
-INFO  03:59:50,804 - #10 [
-INFO  03:59:50,804 - #11 ]
-INFO  03:59:50,804 - #8 ,
-INFO  03:59:50,804 - #25 w
-INFO  03:59:50,804 - #6 ;
-INFO  03:59:50,804 - #3 {
-INFO  03:59:50,805 - #5 void
-INFO  03:59:50,805 - #25 main
-INFO  03:59:50,805 - #14 (
-INFO  03:59:50,805 - #15 )
-INFO  03:59:50,805 - #25 int
-INFO  03:59:50,805 - #25 nula
-INFO  03:59:50,807 - #6 ;
-INFO  03:59:50,807 - #3 {
-INFO  03:59:50,807 - #25 nula
-INFO  03:59:50,807 - #7 =
-INFO  03:59:50,807 - #24 0
-INFO  03:59:50,808 - #6 ;
-INFO  03:59:50,808 - #4 }
-INFO  03:59:50,808 - #4 }
-INFO  03:59:50,812 - Program(
+INFO  03:46:44,917 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  03:46:44,949 - #2 program
+INFO  03:46:44,949 - #25 test301
+INFO  03:46:44,949 - #25 int
+INFO  03:46:44,950 - #25 x
+INFO  03:46:44,950 - #10 [
+INFO  03:46:44,950 - #11 ]
+INFO  03:46:44,951 - #8 ,
+INFO  03:46:44,951 - #25 y
+INFO  03:46:44,951 - #8 ,
+INFO  03:46:44,951 - #25 z
+INFO  03:46:44,951 - #8 ,
+INFO  03:46:44,951 - #25 w
+INFO  03:46:44,951 - #6 ;
+INFO  03:46:44,951 - #3 {
+INFO  03:46:44,952 - #5 void
+INFO  03:46:44,952 - #25 main
+INFO  03:46:44,952 - #14 (
+INFO  03:46:44,952 - #15 )
+INFO  03:46:44,953 - #25 int
+INFO  03:46:44,953 - #25 nula
+INFO  03:46:44,953 - #6 ;
+INFO  03:46:44,953 - #3 {
+INFO  03:46:44,954 - #25 nula
+INFO  03:46:44,954 - #7 =
+INFO  03:46:44,954 - #24 0
+INFO  03:46:44,955 - #6 ;
+INFO  03:46:44,955 - #4 }
+INFO  03:46:44,955 - #4 }
+INFO  03:46:44,959 - Program(
   ProgName(
    test301
   ) [ProgName]
@@ -53,8 +51,8 @@ INFO  03:59:50,812 - Program(
             ) [NoSquares]
           ) [OneVar]
          z
-          VarSquares(
-          ) [VarSquares]
+          NoSquares(
+          ) [NoSquares]
         ) [MultipleVars]
        w
         NoSquares(
@@ -114,12 +112,12 @@ INFO  03:59:50,812 - Program(
     ) [MethodDecl]
   ) [MethodList]
 ) [Program]
-INFO  03:59:50,812 - ===================================
-INFO  03:59:50,814 - Deklarisana promenljiva y na liniji 2
-INFO  03:59:50,814 - Deklarisan niz z na liniji 2
-INFO  03:59:50,814 - Deklarisana promenljiva w na liniji 2
-INFO  03:59:50,814 - Deklarisan niz x na liniji 2
-INFO  03:59:50,815 - Obradjuje se funkcija main na liniji 4
-INFO  03:59:50,815 - Deklarisana promenljiva nula na liniji 5
-INFO  03:59:50,815 - ===================================
-INFO  03:59:50,815 - Parsiranje uspesno zavrseno!
+INFO  03:46:44,960 - ===================================
+INFO  03:46:44,961 - Deklarisan niz y na liniji 2
+INFO  03:46:44,961 - Deklarisana promenljiva z na liniji 2
+INFO  03:46:44,961 - Deklarisana promenljiva w na liniji 2
+INFO  03:46:44,961 - Deklarisana promenljiva x na liniji 2
+INFO  03:46:44,961 - Obradjuje se funkcija main na liniji 4
+INFO  03:46:44,961 - Deklarisana promenljiva nula na liniji 5
+INFO  03:46:44,962 - ===================================
+INFO  03:46:44,962 - Parsiranje uspesno zavrseno!

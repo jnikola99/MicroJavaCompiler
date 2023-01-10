@@ -11,6 +11,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	int printCallCount = 0;
 	Obj currentMethod = null;
 	boolean returnFound = false;
+	boolean arrayFound = false;
 	int level=0;
 	int nVars;
 	Struct typevar = null;
@@ -49,9 +50,10 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			report_error("Greska, promenljiva sa imenom: "+varDeclOne.getVarDecName()+" je deklarisana vec!",varDeclOne);
 			return;
 		}
-		if(!(varDeclOne.getVarSquares() instanceof NoSquares)) {
+		if(varDeclOne.getVarSquares()!=null) {
 			report_info("Deklarisan niz "+ varDeclOne.getVarDecName(), varDeclOne);
 			Obj varNode = Tab.insert(Obj.Var,varDeclOne.getVarDecName(),new Struct(Struct.Array,varDeclOne.getType().struct));
+			arrayFound=false;
 		}
 		else {
 			report_info("Deklarisana promenljiva "+ varDeclOne.getVarDecName(), varDeclOne);
@@ -64,9 +66,10 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			report_error("Greska, promenljiva sa imenom: "+varDeclOne.getVarDecName()+" je deklarisana vec!",varDeclOne);
 			return;
 		}
-		if(!(varDeclOne.getVarSquares() instanceof NoSquares)) {
+		if(arrayFound) {
 			report_info("Deklarisan niz "+ varDeclOne.getVarDecName(), varDeclOne);
 			Obj varNode = Tab.insert(Obj.Var,varDeclOne.getVarDecName(),new Struct(Struct.Array,varDeclOne.getType().struct));
+			arrayFound=false;
 		}
 		else {
 			report_info("Deklarisana promenljiva "+ varDeclOne.getVarDecName(), varDeclOne);
@@ -79,9 +82,10 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			report_error("Greska, promenljiva sa imenom: "+varDeclOne.getVarName()+" je deklarisana vec!",varDeclOne);
 			return;
 		}
-		if(!(varDeclOne.getVarSquares() instanceof NoSquares)) {
+		if(arrayFound) {
 			report_info("Deklarisan niz "+ varDeclOne.getVarName(), varDeclOne);
 			Obj varNode = Tab.insert(Obj.Var,varDeclOne.getVarName(),new Struct(Struct.Array,typevar));
+			arrayFound=false;
 		}
 		else {
 		report_info("Deklarisana promenljiva "+ varDeclOne.getVarName(), varDeclOne);
@@ -94,9 +98,10 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			report_error("Greska, promenljiva sa imenom: "+varDeclOne.getVarName()+" je deklarisana vec!",varDeclOne);
 			return;
 		}
-		if(!(varDeclOne.getVarSquares() instanceof NoSquares)) {
+		if(arrayFound) {
 			report_info("Deklarisan niz "+ varDeclOne.getVarName(), varDeclOne);
 			Obj varNode = Tab.insert(Obj.Var,varDeclOne.getVarName(),new Struct(Struct.Array,typevar));
+			arrayFound=false;
 		}
 		else {
 		report_info("Deklarisana promenljiva "+ varDeclOne.getVarName(), varDeclOne);
@@ -132,6 +137,10 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		}
 		report_info("Deklarisana konstanta "+ constDecl.getSomeConst(), constDecl);
 		Obj constNode = Tab.insert(Obj.Con,constDecl.getSomeConst(),typevar);
+	}
+	
+	public void visit(VarSquares varSquare) {
+		arrayFound=true;
 	}
 	
 	public void visit(OneConstType constDecl) {
