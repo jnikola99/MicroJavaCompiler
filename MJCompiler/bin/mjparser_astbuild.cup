@@ -64,7 +64,6 @@ nonterminal Mulop Mulop;
 nonterminal Addop Addop;
 nonterminal ConstTypeList ConstTypeList;
 nonterminal ConstDecl ConstDecl;
-nonterminal VarSquares VarSquares;
 nonterminal VarDecl VarDecl;
 nonterminal VarMultiple VarMultiple;
 nonterminal ClassDecl ClassDecl;
@@ -92,7 +91,7 @@ nonterminal Relop Relop;
 nonterminal DesiActPars DesiActPars;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodType, Designator;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, MulopFactor, AddopTermList, ConstType;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, MulopFactor, AddopTermList, ConstType, VarSquares;
 
 precedence left ELSE;
 
@@ -128,17 +127,17 @@ VarDeclList ::= (VarList) VarDeclList:V1 VarDecl:V2 {: RESULT=new VarList(V1, V2
 			(NoVarList) {: RESULT=new NoVarList(); :} /* epsilon */
 			;
 
-VarDecl ::= (MoreVarDecl) Type:varType IDENT:varDecName VarSquares:V1 VarMultiple:V2 SEMI {: RESULT=new MoreVarDecl(varType, varDecName, V1, V2); RESULT.setLine(varTypeleft); :}
+VarDecl ::= (MoreVarDecl) Type:varType IDENT:varDecName VarSquares:varSquares VarMultiple:V1 SEMI {: RESULT=new MoreVarDecl(varType, varDecName, varSquares, V1); RESULT.setLine(varTypeleft); :}
 		|
 		(VarError) error SEMI:s
 		{: parser.report_error("Izvrsen oporavak do ; u liniji " + sleft, null);  :} {: RESULT=new VarError(); :}
 		|
-		(VarDeclOneTime) Type:varType IDENT:varDecName VarSquares:V1 SEMI {: RESULT=new VarDeclOneTime(varType, varDecName, V1); RESULT.setLine(varTypeleft); :}
+		(VarDeclOneTime) Type:varType IDENT:varDecName VarSquares:varSquares SEMI {: RESULT=new VarDeclOneTime(varType, varDecName, varSquares); RESULT.setLine(varTypeleft); :}
 		;
 
-VarMultiple ::= (MultipleVars) VarMultiple:V1 COMMA IDENT:varName VarSquares:V2 {: RESULT=new MultipleVars(V1, varName, V2); RESULT.setLine(V1left); :}
+VarMultiple ::= (MultipleVars) VarMultiple:V1 COMMA IDENT:varName VarSquares:varSquares {: RESULT=new MultipleVars(V1, varName, varSquares); RESULT.setLine(V1left); :}
 			|
-			(OneVar) COMMA IDENT:varName VarSquares:V1 {: RESULT=new OneVar(varName, V1); RESULT.setLine(varNameleft); :}
+			(OneVar) COMMA IDENT:varName VarSquares:varSquares {: RESULT=new OneVar(varName, varSquares); RESULT.setLine(varNameleft); :}
 			|
 			(CommaVarError) error COMMA:c
 			{: parser.report_error("Izvrsen oporavak do , u liniji " + cleft, null);  :} {: RESULT=new CommaVarError(); :}

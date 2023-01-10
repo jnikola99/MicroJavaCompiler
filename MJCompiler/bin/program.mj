@@ -1,6 +1,5 @@
 program test301
-	const int x=2;
-	int y;
+	int x[],y,z;
 {
 void main()	
 		int nula;

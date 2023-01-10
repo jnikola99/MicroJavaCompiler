@@ -1,0 +1,134 @@
+INFO  00:37:59,872 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  00:37:59,903 - #2 program
+INFO  00:37:59,904 - #25 test301
+INFO  00:37:59,904 - #9 const
+INFO  00:37:59,904 - #25 int
+INFO  00:37:59,904 - #25 x
+INFO  00:37:59,905 - #7 =
+INFO  00:37:59,905 - #24 2
+INFO  00:37:59,905 - #8 ,
+INFO  00:37:59,905 - #25 y
+INFO  00:37:59,905 - #7 =
+INFO  00:37:59,905 - #24 3
+INFO  00:37:59,905 - #8 ,
+INFO  00:37:59,905 - #25 z
+INFO  00:37:59,905 - #7 =
+INFO  00:37:59,905 - #24 4
+INFO  00:37:59,905 - #8 ,
+INFO  00:37:59,905 - #25 w
+INFO  00:37:59,905 - #7 =
+INFO  00:37:59,905 - #24 5
+INFO  00:37:59,905 - #6 ;
+INFO  00:37:59,905 - #3 {
+INFO  00:37:59,906 - #5 void
+INFO  00:37:59,907 - #25 main
+INFO  00:37:59,907 - #14 (
+INFO  00:37:59,907 - #15 )
+INFO  00:37:59,908 - #25 int
+INFO  00:37:59,908 - #25 nula
+INFO  00:37:59,908 - #6 ;
+INFO  00:37:59,908 - #3 {
+INFO  00:37:59,908 - #25 nula
+INFO  00:37:59,909 - #7 =
+INFO  00:37:59,909 - #24 0
+INFO  00:37:59,909 - #6 ;
+INFO  00:37:59,910 - #4 }
+INFO  00:37:59,910 - #4 }
+INFO  00:37:59,913 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstList(
+    NoConstList(
+    ) [NoConstList]
+    MoreConstDecl(
+      Type(
+       int
+      ) [Type]
+     x
+      NumConst(
+       2
+      ) [NumConst]
+      MultipleConstTypes(
+        MultipleConstTypes(
+          OneConstType(
+           y
+            NumConst(
+             3
+            ) [NumConst]
+          ) [OneConstType]
+         z
+          NumConst(
+           4
+          ) [NumConst]
+        ) [MultipleConstTypes]
+       w
+        NumConst(
+         5
+        ) [NumConst]
+      ) [MultipleConstTypes]
+    ) [MoreConstDecl]
+  ) [ConstList]
+  NoVarList(
+  ) [NoVarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        NoVarList(
+        ) [NoVarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         nula
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        NoStmt(
+        ) [NoStmt]
+        MatchedStmt(
+          DesStatement(
+            DesignatorParsStmt(
+              OneDesignatorIdent(
+               nula
+              ) [OneDesignatorIdent]
+              AssignopExpr(
+                AssignopItem(
+                ) [AssignopItem]
+                PositiveExpr(
+                  FirstExpr(
+                    TermOne(
+                      FactorNumber(
+                       0
+                      ) [FactorNumber]
+                    ) [TermOne]
+                  ) [FirstExpr]
+                ) [PositiveExpr]
+              ) [AssignopExpr]
+            ) [DesignatorParsStmt]
+          ) [DesStatement]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  00:37:59,914 - ===================================
+ERROR 00:37:59,915 - Greska, nekompatibilni tipovi kod promenljive: y na liniji 2
+ERROR 00:37:59,915 - Greska, nekompatibilni tipovi kod promenljive: z na liniji 2
+ERROR 00:37:59,915 - Greska, nekompatibilni tipovi kod promenljive: w na liniji 2
+ERROR 00:37:59,915 - Greska, nekompatibilni tipovi kod promenljive: x na liniji 2
+INFO  00:37:59,915 - Obradjuje se funkcija main na liniji 4
+INFO  00:37:59,915 - Deklarisana promenljiva nula na liniji 5
+INFO  00:37:59,916 - ===================================
+ERROR 00:37:59,916 - Parsiranje NIJE uspesno zavrseno

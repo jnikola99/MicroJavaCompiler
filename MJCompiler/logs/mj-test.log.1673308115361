@@ -1,0 +1,134 @@
+INFO  00:46:32,612 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  00:46:32,642 - #2 program
+INFO  00:46:32,642 - #25 test301
+INFO  00:46:32,642 - #9 const
+INFO  00:46:32,643 - #25 int
+INFO  00:46:32,643 - #25 x
+INFO  00:46:32,643 - #7 =
+INFO  00:46:32,643 - #24 2
+INFO  00:46:32,643 - #8 ,
+INFO  00:46:32,643 - #25 y
+INFO  00:46:32,643 - #7 =
+INFO  00:46:32,643 - #24 3
+INFO  00:46:32,643 - #8 ,
+INFO  00:46:32,643 - #25 z
+INFO  00:46:32,643 - #7 =
+INFO  00:46:32,643 - #27 'a'
+INFO  00:46:32,644 - #8 ,
+INFO  00:46:32,644 - #25 w
+INFO  00:46:32,644 - #7 =
+INFO  00:46:32,644 - #24 5
+INFO  00:46:32,644 - #6 ;
+INFO  00:46:32,644 - #3 {
+INFO  00:46:32,644 - #5 void
+INFO  00:46:32,646 - #25 main
+INFO  00:46:32,646 - #14 (
+INFO  00:46:32,646 - #15 )
+INFO  00:46:32,646 - #25 int
+INFO  00:46:32,646 - #25 nula
+INFO  00:46:32,646 - #6 ;
+INFO  00:46:32,647 - #3 {
+INFO  00:46:32,647 - #25 nula
+INFO  00:46:32,647 - #7 =
+INFO  00:46:32,647 - #24 0
+INFO  00:46:32,648 - #6 ;
+INFO  00:46:32,648 - #4 }
+INFO  00:46:32,648 - #4 }
+INFO  00:46:32,652 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstList(
+    NoConstList(
+    ) [NoConstList]
+    MoreConstDecl(
+      Type(
+       int
+      ) [Type]
+     x
+      NumConst(
+       2
+      ) [NumConst]
+      MultipleConstTypes(
+        MultipleConstTypes(
+          OneConstType(
+           y
+            NumConst(
+             3
+            ) [NumConst]
+          ) [OneConstType]
+         z
+          CharConst(
+           'a'
+          ) [CharConst]
+        ) [MultipleConstTypes]
+       w
+        NumConst(
+         5
+        ) [NumConst]
+      ) [MultipleConstTypes]
+    ) [MoreConstDecl]
+  ) [ConstList]
+  NoVarList(
+  ) [NoVarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        NoVarList(
+        ) [NoVarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         nula
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        NoStmt(
+        ) [NoStmt]
+        MatchedStmt(
+          DesStatement(
+            DesignatorParsStmt(
+              OneDesignatorIdent(
+               nula
+              ) [OneDesignatorIdent]
+              AssignopExpr(
+                AssignopItem(
+                ) [AssignopItem]
+                PositiveExpr(
+                  FirstExpr(
+                    TermOne(
+                      FactorNumber(
+                       0
+                      ) [FactorNumber]
+                    ) [TermOne]
+                  ) [FirstExpr]
+                ) [PositiveExpr]
+              ) [AssignopExpr]
+            ) [DesignatorParsStmt]
+          ) [DesStatement]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  00:46:32,652 - ===================================
+INFO  00:46:32,654 - Deklarisana konstanta y na liniji 2
+ERROR 00:46:32,654 - Greska, nekompatibilni tipovi kod promenljive: z na liniji 2
+INFO  00:46:32,654 - Deklarisana konstanta w na liniji 2
+INFO  00:46:32,654 - Deklarisana konstanta x na liniji 2
+INFO  00:46:32,654 - Obradjuje se funkcija main na liniji 4
+INFO  00:46:32,654 - Deklarisana promenljiva nula na liniji 5
+INFO  00:46:32,654 - ===================================
+ERROR 00:46:32,655 - Parsiranje NIJE uspesno zavrseno

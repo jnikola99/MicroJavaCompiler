@@ -1,0 +1,10 @@
+program test301
+	const char x='a',y='b',z='c';
+{
+void main()	
+		int nula;
+	{
+		nula=0;
+	}
+	
+}

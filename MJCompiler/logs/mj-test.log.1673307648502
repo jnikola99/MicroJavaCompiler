@@ -1,0 +1,96 @@
+INFO  00:40:11,646 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  00:40:11,688 - #2 program
+INFO  00:40:11,688 - #25 test301
+INFO  00:40:11,688 - #9 const
+INFO  00:40:11,689 - #25 int
+INFO  00:40:11,689 - #25 x
+INFO  00:40:11,689 - #7 =
+INFO  00:40:11,689 - #24 2
+INFO  00:40:11,689 - #6 ;
+INFO  00:40:11,689 - #3 {
+INFO  00:40:11,690 - #5 void
+INFO  00:40:11,691 - #25 main
+INFO  00:40:11,691 - #14 (
+INFO  00:40:11,691 - #15 )
+INFO  00:40:11,691 - #25 int
+INFO  00:40:11,691 - #25 nula
+INFO  00:40:11,691 - #6 ;
+INFO  00:40:11,692 - #3 {
+INFO  00:40:11,692 - #25 nula
+INFO  00:40:11,693 - #7 =
+INFO  00:40:11,693 - #24 0
+INFO  00:40:11,693 - #6 ;
+INFO  00:40:11,695 - #4 }
+INFO  00:40:11,695 - #4 }
+INFO  00:40:11,700 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstList(
+    NoConstList(
+    ) [NoConstList]
+    ConstDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     x
+      NumConst(
+       2
+      ) [NumConst]
+    ) [ConstDeclOneTime]
+  ) [ConstList]
+  NoVarList(
+  ) [NoVarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        NoVarList(
+        ) [NoVarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         nula
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        NoStmt(
+        ) [NoStmt]
+        MatchedStmt(
+          DesStatement(
+            DesignatorParsStmt(
+              OneDesignatorIdent(
+               nula
+              ) [OneDesignatorIdent]
+              AssignopExpr(
+                AssignopItem(
+                ) [AssignopItem]
+                PositiveExpr(
+                  FirstExpr(
+                    TermOne(
+                      FactorNumber(
+                       0
+                      ) [FactorNumber]
+                    ) [TermOne]
+                  ) [FirstExpr]
+                ) [PositiveExpr]
+              ) [AssignopExpr]
+            ) [DesignatorParsStmt]
+          ) [DesStatement]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  00:40:11,700 - ===================================

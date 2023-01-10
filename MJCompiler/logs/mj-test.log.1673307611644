@@ -1,0 +1,127 @@
+INFO  00:38:27,577 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  00:38:27,621 - #2 program
+INFO  00:38:27,621 - #25 test301
+INFO  00:38:27,621 - #9 const
+INFO  00:38:27,622 - #25 int
+INFO  00:38:27,622 - #25 x
+INFO  00:38:27,622 - #7 =
+INFO  00:38:27,622 - #24 2
+INFO  00:38:27,622 - #8 ,
+INFO  00:38:27,622 - #25 y
+INFO  00:38:27,622 - #7 =
+INFO  00:38:27,622 - #24 3
+INFO  00:38:27,623 - #8 ,
+INFO  00:38:27,623 - #25 z
+INFO  00:38:27,623 - #7 =
+INFO  00:38:27,623 - #24 4
+INFO  00:38:27,623 - #8 ,
+INFO  00:38:27,623 - #25 w
+INFO  00:38:27,623 - #7 =
+INFO  00:38:27,623 - #24 5
+INFO  00:38:27,623 - #6 ;
+INFO  00:38:27,623 - #3 {
+INFO  00:38:27,624 - #5 void
+INFO  00:38:27,625 - #25 main
+INFO  00:38:27,625 - #14 (
+INFO  00:38:27,625 - #15 )
+INFO  00:38:27,626 - #25 int
+INFO  00:38:27,626 - #25 nula
+INFO  00:38:27,626 - #6 ;
+INFO  00:38:27,626 - #3 {
+INFO  00:38:27,626 - #25 nula
+INFO  00:38:27,627 - #7 =
+INFO  00:38:27,627 - #24 0
+INFO  00:38:27,628 - #6 ;
+INFO  00:38:27,628 - #4 }
+INFO  00:38:27,628 - #4 }
+INFO  00:38:27,634 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstList(
+    NoConstList(
+    ) [NoConstList]
+    MoreConstDecl(
+      Type(
+       int
+      ) [Type]
+     x
+      NumConst(
+       2
+      ) [NumConst]
+      MultipleConstTypes(
+        MultipleConstTypes(
+          OneConstType(
+           y
+            NumConst(
+             3
+            ) [NumConst]
+          ) [OneConstType]
+         z
+          NumConst(
+           4
+          ) [NumConst]
+        ) [MultipleConstTypes]
+       w
+        NumConst(
+         5
+        ) [NumConst]
+      ) [MultipleConstTypes]
+    ) [MoreConstDecl]
+  ) [ConstList]
+  NoVarList(
+  ) [NoVarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        NoVarList(
+        ) [NoVarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         nula
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        NoStmt(
+        ) [NoStmt]
+        MatchedStmt(
+          DesStatement(
+            DesignatorParsStmt(
+              OneDesignatorIdent(
+               nula
+              ) [OneDesignatorIdent]
+              AssignopExpr(
+                AssignopItem(
+                ) [AssignopItem]
+                PositiveExpr(
+                  FirstExpr(
+                    TermOne(
+                      FactorNumber(
+                       0
+                      ) [FactorNumber]
+                    ) [TermOne]
+                  ) [FirstExpr]
+                ) [PositiveExpr]
+              ) [AssignopExpr]
+            ) [DesignatorParsStmt]
+          ) [DesStatement]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  00:38:27,634 - ===================================
+ERROR 00:38:27,640 - Greska, nekompatibilni tipovi kod promenljive: y na liniji 2

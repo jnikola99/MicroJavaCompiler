@@ -1,0 +1,134 @@
+INFO  00:44:40,998 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  00:44:41,030 - #2 program
+INFO  00:44:41,030 - #25 test301
+INFO  00:44:41,030 - #9 const
+INFO  00:44:41,031 - #25 int
+INFO  00:44:41,031 - #25 x
+INFO  00:44:41,031 - #7 =
+INFO  00:44:41,031 - #24 2
+INFO  00:44:41,031 - #8 ,
+INFO  00:44:41,031 - #25 y
+INFO  00:44:41,031 - #7 =
+INFO  00:44:41,031 - #24 3
+INFO  00:44:41,031 - #8 ,
+INFO  00:44:41,032 - #25 z
+INFO  00:44:41,032 - #7 =
+INFO  00:44:41,032 - #24 4
+INFO  00:44:41,032 - #8 ,
+INFO  00:44:41,032 - #25 w
+INFO  00:44:41,032 - #7 =
+INFO  00:44:41,032 - #24 5
+INFO  00:44:41,032 - #6 ;
+INFO  00:44:41,032 - #3 {
+INFO  00:44:41,033 - #5 void
+INFO  00:44:41,034 - #25 main
+INFO  00:44:41,034 - #14 (
+INFO  00:44:41,034 - #15 )
+INFO  00:44:41,034 - #25 int
+INFO  00:44:41,034 - #25 nula
+INFO  00:44:41,034 - #6 ;
+INFO  00:44:41,035 - #3 {
+INFO  00:44:41,035 - #25 nula
+INFO  00:44:41,035 - #7 =
+INFO  00:44:41,035 - #24 0
+INFO  00:44:41,036 - #6 ;
+INFO  00:44:41,036 - #4 }
+INFO  00:44:41,037 - #4 }
+INFO  00:44:41,040 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstList(
+    NoConstList(
+    ) [NoConstList]
+    MoreConstDecl(
+      Type(
+       int
+      ) [Type]
+     x
+      NumConst(
+       2
+      ) [NumConst]
+      MultipleConstTypes(
+        MultipleConstTypes(
+          OneConstType(
+           y
+            NumConst(
+             3
+            ) [NumConst]
+          ) [OneConstType]
+         z
+          NumConst(
+           4
+          ) [NumConst]
+        ) [MultipleConstTypes]
+       w
+        NumConst(
+         5
+        ) [NumConst]
+      ) [MultipleConstTypes]
+    ) [MoreConstDecl]
+  ) [ConstList]
+  NoVarList(
+  ) [NoVarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        NoVarList(
+        ) [NoVarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         nula
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        NoStmt(
+        ) [NoStmt]
+        MatchedStmt(
+          DesStatement(
+            DesignatorParsStmt(
+              OneDesignatorIdent(
+               nula
+              ) [OneDesignatorIdent]
+              AssignopExpr(
+                AssignopItem(
+                ) [AssignopItem]
+                PositiveExpr(
+                  FirstExpr(
+                    TermOne(
+                      FactorNumber(
+                       0
+                      ) [FactorNumber]
+                    ) [TermOne]
+                  ) [FirstExpr]
+                ) [PositiveExpr]
+              ) [AssignopExpr]
+            ) [DesignatorParsStmt]
+          ) [DesStatement]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  00:44:41,040 - ===================================
+INFO  00:44:41,042 - Deklarisana konstanta y na liniji 2
+INFO  00:44:41,042 - Deklarisana konstanta z na liniji 2
+INFO  00:44:41,042 - Deklarisana konstanta w na liniji 2
+INFO  00:44:41,042 - Deklarisana konstanta x na liniji 2
+INFO  00:44:41,042 - Obradjuje se funkcija main na liniji 4
+INFO  00:44:41,042 - Deklarisana promenljiva nula na liniji 5
+INFO  00:44:41,043 - ===================================
+INFO  00:44:41,043 - Parsiranje uspesno zavrseno!

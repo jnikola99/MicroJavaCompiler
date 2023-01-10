@@ -57,14 +57,14 @@ terminal IF, ELSE, INC, DEC, PLUS, MINUS, AND, OR, GREATER, LESS, IFEQUAL, NOTEQ
 terminal THIS, ENUM, FOREACH, DO, ARROW, DOUBLEDOT;
 
 nonterminal ConstDeclList, VarDeclList, ClassDeclList, MethodDeclList, Mulop, Addop;
-nonterminal ConstTypeList, ConstDecl, VarSquares, VarDecl, VarMultiple, ClassDecl, Label;
+nonterminal ConstTypeList, ConstDecl, VarDecl, VarMultiple, ClassDecl, Label;
 nonterminal FormParsList, FormParsMultiple, FormPars, StatementList, Statement, Matched, Unmatched;
 nonterminal Condition, DesignatorStatement, DesignatorStmtMore, DesignatorNot, FirstDesignatorPart;
 nonterminal Assignop, ActPars, ActParsMore, ConditionMore, CondTerm, CondFactMore, CondFact, Relop;
 nonterminal DesiActPars;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodType, Designator;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, MulopFactor, AddopTermList, ConstType;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, MulopFactor, AddopTermList, ConstType, VarSquares;
 
 precedence left ELSE;
 
@@ -100,17 +100,17 @@ VarDeclList ::= (VarList) VarDeclList VarDecl
 			(NoVarList) /* epsilon */
 			;
 
-VarDecl ::= (MoreVarDecl) Type:varType IDENT:varDecName VarSquares VarMultiple SEMI
+VarDecl ::= (MoreVarDecl) Type:varType IDENT:varDecName VarSquares:varSquares VarMultiple SEMI
 		|
 		(VarError) error SEMI:s
 		{: parser.report_error("Izvrsen oporavak do ; u liniji " + sleft, null);  :}
 		|
-		(VarDeclOneTime) Type:varType IDENT:varDecName VarSquares SEMI
+		(VarDeclOneTime) Type:varType IDENT:varDecName VarSquares:varSquares SEMI
 		;
 
-VarMultiple ::= (MultipleVars) VarMultiple COMMA IDENT:varName VarSquares
+VarMultiple ::= (MultipleVars) VarMultiple COMMA IDENT:varName VarSquares:varSquares
 			|
-			(OneVar) COMMA IDENT:varName VarSquares
+			(OneVar) COMMA IDENT:varName VarSquares:varSquares
 			|
 			(CommaVarError) error COMMA:c
 			{: parser.report_error("Izvrsen oporavak do , u liniji " + cleft, null);  :}
