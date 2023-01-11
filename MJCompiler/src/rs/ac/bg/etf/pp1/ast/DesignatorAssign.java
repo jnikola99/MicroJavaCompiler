@@ -1,20 +1,31 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2023 4:28:10
+// 11/0/2023 5:45:28
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class AssignopExpr extends FirstDesignatorPart {
+public class DesignatorAssign extends DesignatorStatement {
 
+    private Designator Designator;
     private Assignop Assignop;
     private Expr Expr;
 
-    public AssignopExpr (Assignop Assignop, Expr Expr) {
+    public DesignatorAssign (Designator Designator, Assignop Assignop, Expr Expr) {
+        this.Designator=Designator;
+        if(Designator!=null) Designator.setParent(this);
         this.Assignop=Assignop;
         if(Assignop!=null) Assignop.setParent(this);
         this.Expr=Expr;
         if(Expr!=null) Expr.setParent(this);
+    }
+
+    public Designator getDesignator() {
+        return Designator;
+    }
+
+    public void setDesignator(Designator Designator) {
+        this.Designator=Designator;
     }
 
     public Assignop getAssignop() {
@@ -38,17 +49,20 @@ public class AssignopExpr extends FirstDesignatorPart {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(Designator!=null) Designator.accept(visitor);
         if(Assignop!=null) Assignop.accept(visitor);
         if(Expr!=null) Expr.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(Designator!=null) Designator.traverseTopDown(visitor);
         if(Assignop!=null) Assignop.traverseTopDown(visitor);
         if(Expr!=null) Expr.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(Designator!=null) Designator.traverseBottomUp(visitor);
         if(Assignop!=null) Assignop.traverseBottomUp(visitor);
         if(Expr!=null) Expr.traverseBottomUp(visitor);
         accept(visitor);
@@ -57,7 +71,13 @@ public class AssignopExpr extends FirstDesignatorPart {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("AssignopExpr(\n");
+        buffer.append("DesignatorAssign(\n");
+
+        if(Designator!=null)
+            buffer.append(Designator.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
 
         if(Assignop!=null)
             buffer.append(Assignop.toString("  "+tab));
@@ -72,7 +92,7 @@ public class AssignopExpr extends FirstDesignatorPart {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [AssignopExpr]");
+        buffer.append(") [DesignatorAssign]");
         return buffer.toString();
     }
 }

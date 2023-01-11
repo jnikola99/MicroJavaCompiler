@@ -1,0 +1,153 @@
+INFO  05:39:18,127 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  05:39:18,159 - #2 program
+INFO  05:39:18,159 - #25 test301
+INFO  05:39:18,159 - #25 int
+INFO  05:39:18,160 - #25 x
+INFO  05:39:18,160 - #10 [
+INFO  05:39:18,160 - #11 ]
+INFO  05:39:18,160 - #6 ;
+INFO  05:39:18,161 - #25 int
+INFO  05:39:18,161 - #25 y
+INFO  05:39:18,161 - #6 ;
+INFO  05:39:18,161 - #3 {
+INFO  05:39:18,161 - #5 void
+INFO  05:39:18,162 - #25 main
+INFO  05:39:18,162 - #14 (
+INFO  05:39:18,162 - #15 )
+INFO  05:39:18,162 - #25 int
+INFO  05:39:18,162 - #25 nula
+INFO  05:39:18,162 - #6 ;
+INFO  05:39:18,162 - #3 {
+INFO  05:39:18,162 - #25 nula
+INFO  05:39:18,163 - #7 =
+INFO  05:39:18,164 - #33 -
+INFO  05:39:18,164 - #24 2
+INFO  05:39:18,164 - #6 ;
+INFO  05:39:18,165 - #25 y
+INFO  05:39:18,165 - #7 =
+INFO  05:39:18,165 - #25 x
+INFO  05:39:18,165 - #10 [
+INFO  05:39:18,165 - #24 2
+INFO  05:39:18,165 - #11 ]
+INFO  05:39:18,165 - #6 ;
+INFO  05:39:18,165 - #4 }
+INFO  05:39:18,165 - #4 }
+INFO  05:39:18,169 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoConstList(
+  ) [NoConstList]
+  VarList(
+    VarList(
+      NoVarList(
+      ) [NoVarList]
+      VarDeclOneTime(
+        Type(
+         int
+        ) [Type]
+       x
+        VarSquares(
+        ) [VarSquares]
+      ) [VarDeclOneTime]
+    ) [VarList]
+    VarDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     y
+      NoSquares(
+      ) [NoSquares]
+    ) [VarDeclOneTime]
+  ) [VarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        NoVarList(
+        ) [NoVarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         nula
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        Statements(
+          NoStmt(
+          ) [NoStmt]
+          MatchedStmt(
+            DesStatement(
+              DesignatorAssign(
+                OneDesignatorIdent(
+                 nula
+                ) [OneDesignatorIdent]
+                AssignopItem(
+                ) [AssignopItem]
+                NegativeExpr(
+                  FirstExpr(
+                    TermOne(
+                      FactorNumber(
+                       2
+                      ) [FactorNumber]
+                    ) [TermOne]
+                  ) [FirstExpr]
+                ) [NegativeExpr]
+              ) [DesignatorAssign]
+            ) [DesStatement]
+          ) [MatchedStmt]
+        ) [Statements]
+        MatchedStmt(
+          DesStatement(
+            DesignatorAssign(
+              OneDesignatorIdent(
+               y
+              ) [OneDesignatorIdent]
+              AssignopItem(
+              ) [AssignopItem]
+              PositiveExpr(
+                FirstExpr(
+                  TermOne(
+                    FactorDesNoAct(
+                      DesignatorWithExpr(
+                        OneDesignatorIdent(
+                         x
+                        ) [OneDesignatorIdent]
+                        PositiveExpr(
+                          FirstExpr(
+                            TermOne(
+                              FactorNumber(
+                               2
+                              ) [FactorNumber]
+                            ) [TermOne]
+                          ) [FirstExpr]
+                        ) [PositiveExpr]
+                      ) [DesignatorWithExpr]
+                    ) [FactorDesNoAct]
+                  ) [TermOne]
+                ) [FirstExpr]
+              ) [PositiveExpr]
+            ) [DesignatorAssign]
+          ) [DesStatement]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  05:39:18,170 - ===================================
+INFO  05:39:18,171 - Deklarisan niz x na liniji 2
+INFO  05:39:18,171 - Deklarisana promenljiva y na liniji 3
+INFO  05:39:18,171 - Obradjuje se funkcija main na liniji 5
+INFO  05:39:18,172 - Deklarisana promenljiva nula na liniji 6
+ERROR 05:39:18,172 - Greska na liniji 9 : promenljiva nije niz ili indikator nije broj

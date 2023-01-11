@@ -1,10 +1,12 @@
 program test301
-	int x;
+	int x[];
+	int y;
 {
 void main()	
 		int nula;
 	{
-		nula=2+x;
+		nula=-2;
+		y=x[2];
 	}
 	
 }

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2023 4:28:10
+// 11/0/2023 5:45:28
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,13 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class DesignatorParsStmt extends DesignatorStatement {
 
     private Designator Designator;
-    private FirstDesignatorPart FirstDesignatorPart;
+    private DesiActPars DesiActPars;
 
-    public DesignatorParsStmt (Designator Designator, FirstDesignatorPart FirstDesignatorPart) {
+    public DesignatorParsStmt (Designator Designator, DesiActPars DesiActPars) {
         this.Designator=Designator;
         if(Designator!=null) Designator.setParent(this);
-        this.FirstDesignatorPart=FirstDesignatorPart;
-        if(FirstDesignatorPart!=null) FirstDesignatorPart.setParent(this);
+        this.DesiActPars=DesiActPars;
+        if(DesiActPars!=null) DesiActPars.setParent(this);
     }
 
     public Designator getDesignator() {
@@ -25,12 +25,12 @@ public class DesignatorParsStmt extends DesignatorStatement {
         this.Designator=Designator;
     }
 
-    public FirstDesignatorPart getFirstDesignatorPart() {
-        return FirstDesignatorPart;
+    public DesiActPars getDesiActPars() {
+        return DesiActPars;
     }
 
-    public void setFirstDesignatorPart(FirstDesignatorPart FirstDesignatorPart) {
-        this.FirstDesignatorPart=FirstDesignatorPart;
+    public void setDesiActPars(DesiActPars DesiActPars) {
+        this.DesiActPars=DesiActPars;
     }
 
     public void accept(Visitor visitor) {
@@ -39,18 +39,18 @@ public class DesignatorParsStmt extends DesignatorStatement {
 
     public void childrenAccept(Visitor visitor) {
         if(Designator!=null) Designator.accept(visitor);
-        if(FirstDesignatorPart!=null) FirstDesignatorPart.accept(visitor);
+        if(DesiActPars!=null) DesiActPars.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Designator!=null) Designator.traverseTopDown(visitor);
-        if(FirstDesignatorPart!=null) FirstDesignatorPart.traverseTopDown(visitor);
+        if(DesiActPars!=null) DesiActPars.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Designator!=null) Designator.traverseBottomUp(visitor);
-        if(FirstDesignatorPart!=null) FirstDesignatorPart.traverseBottomUp(visitor);
+        if(DesiActPars!=null) DesiActPars.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -65,8 +65,8 @@ public class DesignatorParsStmt extends DesignatorStatement {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(FirstDesignatorPart!=null)
-            buffer.append(FirstDesignatorPart.toString("  "+tab));
+        if(DesiActPars!=null)
+            buffer.append(DesiActPars.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

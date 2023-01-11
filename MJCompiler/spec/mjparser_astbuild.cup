@@ -79,7 +79,6 @@ nonterminal Condition Condition;
 nonterminal DesignatorStatement DesignatorStatement;
 nonterminal DesignatorStmtMore DesignatorStmtMore;
 nonterminal DesignatorNot DesignatorNot;
-nonterminal FirstDesignatorPart FirstDesignatorPart;
 nonterminal Assignop Assignop;
 nonterminal ActPars ActPars;
 nonterminal ActParsMore ActParsMore;
@@ -227,7 +226,13 @@ Matched ::= (DesStatement) DesignatorStatement:D1 SEMI {: RESULT=new DesStatemen
 		   (MatchedStatement) IF LPAREN Condition:C1 RPAREN Matched:M2 ELSE Matched:M3 {: RESULT=new MatchedStatement(C1, M2, M3); RESULT.setLine(C1left); :} 
 		   ;
 
-DesignatorStatement ::= (DesignatorParsStmt) Designator:D1 FirstDesignatorPart:F2 {: RESULT=new DesignatorParsStmt(D1, F2); RESULT.setLine(D1left); :}
+DesignatorStatement ::= (DesignatorParsStmt) Designator:D1 LPAREN DesiActPars:D2 RPAREN {: RESULT=new DesignatorParsStmt(D1, D2); RESULT.setLine(D1left); :}
+					|
+					(DesignatorAssign) Designator:D1 Assignop:A2 Expr:E3 {: RESULT=new DesignatorAssign(D1, A2, E3); RESULT.setLine(D1left); :}
+					|
+					(DesignatorInc) Designator:D1 INC {: RESULT=new DesignatorInc(D1); RESULT.setLine(D1left); :}
+					|
+					(DesignatorDec) Designator:D1 DEC {: RESULT=new DesignatorDec(D1); RESULT.setLine(D1left); :}
 					|
 					(DesignatorSquareStmt) LSQUARES DesignatorNot:D1 RSQUARES EQUAL Designator:D2 {: RESULT=new DesignatorSquareStmt(D1, D2); RESULT.setLine(D1left); :}
 					|
@@ -244,16 +249,6 @@ DesignatorNot ::= (DesignatorYes) Designator:D1 {: RESULT=new DesignatorYes(D1);
 				(DesignatorNo) {: RESULT=new DesignatorNo(); :} /* epsilon */
 				;
 
-
-FirstDesignatorPart ::= (AssignopExpr) Assignop:A1 Expr:E2 {: RESULT=new AssignopExpr(A1, E2); RESULT.setLine(A1left); :}
-					|
-					(ActParsDes) LPAREN DesiActPars:D1 RPAREN {: RESULT=new ActParsDes(D1); RESULT.setLine(D1left); :}
-					|
-					(Increment) INC {: RESULT=new Increment(); :}
-					|
-					(Decrement) DEC {: RESULT=new Decrement(); :}
-					;
-					
 DesiActPars ::= (DesiActPar) ActPars:A1 {: RESULT=new DesiActPar(A1); RESULT.setLine(A1left); :}
 			|
 			(NoDesiAct) {: RESULT=new NoDesiAct(); :} /* epsilon */
@@ -296,7 +291,7 @@ CondFact ::= (CondFactExpr) Expr:E1 {: RESULT=new CondFactExpr(E1); RESULT.setLi
 		(CondFactRelop) Expr:E1 Relop:R2 Expr:E3 {: RESULT=new CondFactRelop(E1, R2, E3); RESULT.setLine(E1left); :}
 		;
 		
-Expr ::= (PositiveExpr) AddopTermList:A1 {: RESULT=new PositiveExpr(A1); RESULT.setLine(A1left); :}
+Expr ::= (PositiveExpr) AddopTermList:exprName {: RESULT=new PositiveExpr(exprName); RESULT.setLine(exprNameleft); :}
 		|
 		(NegativeExpr) MINUS AddopTermList:exprName {: RESULT=new NegativeExpr(exprName); RESULT.setLine(exprNameleft); :}
 		;		
@@ -333,7 +328,7 @@ Factor ::= (FactorDesAct) Designator:func LPAREN DesiActPars:D1 RPAREN {: RESULT
 		
 Designator ::= (OneDesignatorIdent) IDENT:designatorName {: RESULT=new OneDesignatorIdent(designatorName); RESULT.setLine(designatorNameleft); :}
 			|
-			(DesignatorWithExpr) Designator:D1 LSQUARES Expr:E2 RSQUARES {: RESULT=new DesignatorWithExpr(D1, E2); RESULT.setLine(D1left); :}
+			(DesignatorWithExpr) Designator:d LSQUARES Expr:e RSQUARES {: RESULT=new DesignatorWithExpr(d, e); RESULT.setLine(dleft); :}
 			|
 			(DesignatorWithIdent) Designator:D1 DOT IDENT:designatorName {: RESULT=new DesignatorWithIdent(D1, designatorName); RESULT.setLine(D1left); :}
 			;

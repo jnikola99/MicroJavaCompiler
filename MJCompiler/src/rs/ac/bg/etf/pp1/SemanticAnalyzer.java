@@ -300,6 +300,31 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		factor.struct = Tab.charType;
 	}
 	
+	public void visit(NegativeExpr ne) {
+		Struct s = ne.getAddopTermList().struct;
+		if(s!=Tab.intType) {
+			report_error("Greska na liniji "+ ne.getLine()+" : izraz mora biti tipa int.", null);
+			ne.struct = Tab.noType;
+		}
+		else {
+			ne.struct=s;
+		}
+	}
+	
+	public void visit(PositiveExpr expr) {
+		expr.struct = expr.getAddopTermList().struct;
+	}
+	
+	public void visit(DesignatorWithExpr des) {
+		Struct e = des.getExpr().struct;
+		Struct s = des.getDesignator().obj.getType();
+		des.obj = des.getDesignator().obj;
+		if(e!=Tab.intType || s.getKind()!=Struct.Array) {
+			report_error("Greska na liniji "+ des.getLine()+" : promenljiva nije niz ili indikator nije broj", null);
+		}
+		
+	}
+	
 	
 	public boolean passed() {
 		return !errorDetected;

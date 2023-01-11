@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2023 4:28:10
+// 11/0/2023 5:45:28
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -16,7 +16,6 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(StatementList StatementList) { }
     public void visit(MulopFactor MulopFactor) { }
     public void visit(Addop Addop) { }
-    public void visit(FirstDesignatorPart FirstDesignatorPart) { }
     public void visit(ConditionMore ConditionMore) { }
     public void visit(Factor Factor) { }
     public void visit(CondTerm CondTerm) { }
@@ -96,16 +95,15 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(OneExprActPars OneExprActPars) { visit(); }
     public void visit(NoDesiAct NoDesiAct) { visit(); }
     public void visit(DesiActPar DesiActPar) { visit(); }
-    public void visit(Decrement Decrement) { visit(); }
-    public void visit(Increment Increment) { visit(); }
-    public void visit(ActParsDes ActParsDes) { visit(); }
-    public void visit(AssignopExpr AssignopExpr) { visit(); }
     public void visit(DesignatorNo DesignatorNo) { visit(); }
     public void visit(DesignatorYes DesignatorYes) { visit(); }
     public void visit(MoreDesStmt MoreDesStmt) { visit(); }
     public void visit(OneDesStmt OneDesStmt) { visit(); }
     public void visit(MoreDesignatorSquare MoreDesignatorSquare) { visit(); }
     public void visit(DesignatorSquareStmt DesignatorSquareStmt) { visit(); }
+    public void visit(DesignatorDec DesignatorDec) { visit(); }
+    public void visit(DesignatorInc DesignatorInc) { visit(); }
+    public void visit(DesignatorAssign DesignatorAssign) { visit(); }
     public void visit(DesignatorParsStmt DesignatorParsStmt) { visit(); }
     public void visit(MatchedStatement MatchedStatement) { visit(); }
     public void visit(StatementCondition StatementCondition) { visit(); }

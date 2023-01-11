@@ -59,7 +59,7 @@ terminal THIS, ENUM, FOREACH, DO, ARROW, DOUBLEDOT;
 nonterminal ConstDeclList, VarDeclList, ClassDeclList, MethodDeclList, Mulop, Addop;
 nonterminal ConstTypeList, ConstDecl, VarDecl, VarMultiple, ClassDecl, Label;
 nonterminal FormParsList, FormParsMultiple, FormPars, StatementList, Statement, Matched, Unmatched;
-nonterminal Condition, DesignatorStatement, DesignatorStmtMore, DesignatorNot, FirstDesignatorPart;
+nonterminal Condition, DesignatorStatement, DesignatorStmtMore, DesignatorNot;
 nonterminal Assignop, ActPars, ActParsMore, ConditionMore, CondTerm, CondFactMore, CondFact, Relop;
 nonterminal DesiActPars;
 
@@ -200,7 +200,13 @@ Matched ::= (DesStatement) DesignatorStatement SEMI
 		   (MatchedStatement) IF LPAREN Condition RPAREN Matched ELSE Matched 
 		   ;
 
-DesignatorStatement ::= (DesignatorParsStmt) Designator FirstDesignatorPart
+DesignatorStatement ::= (DesignatorParsStmt) Designator LPAREN DesiActPars RPAREN
+					|
+					(DesignatorAssign) Designator Assignop Expr
+					|
+					(DesignatorInc) Designator INC
+					|
+					(DesignatorDec) Designator DEC
 					|
 					(DesignatorSquareStmt) LSQUARES DesignatorNot RSQUARES EQUAL Designator
 					|
@@ -217,16 +223,6 @@ DesignatorNot ::= (DesignatorYes) Designator
 				(DesignatorNo) /* epsilon */
 				;
 
-
-FirstDesignatorPart ::= (AssignopExpr) Assignop Expr
-					|
-					(ActParsDes) LPAREN DesiActPars RPAREN
-					|
-					(Increment) INC
-					|
-					(Decrement) DEC
-					;
-					
 DesiActPars ::= (DesiActPar) ActPars
 			|
 			(NoDesiAct) /* epsilon */
@@ -269,7 +265,7 @@ CondFact ::= (CondFactExpr) Expr
 		(CondFactRelop) Expr Relop Expr
 		;
 		
-Expr ::= (PositiveExpr) AddopTermList
+Expr ::= (PositiveExpr) AddopTermList:exprName
 		|
 		(NegativeExpr) MINUS AddopTermList:exprName
 		;		
@@ -306,7 +302,7 @@ Factor ::= (FactorDesAct) Designator:func LPAREN DesiActPars RPAREN
 		
 Designator ::= (OneDesignatorIdent) IDENT:designatorName
 			|
-			(DesignatorWithExpr) Designator LSQUARES Expr RSQUARES
+			(DesignatorWithExpr) Designator:d LSQUARES Expr:e RSQUARES
 			|
 			(DesignatorWithIdent) Designator DOT IDENT:designatorName
 			;
