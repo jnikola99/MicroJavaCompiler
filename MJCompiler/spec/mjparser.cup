@@ -271,12 +271,12 @@ CondFact ::= (CondFactExpr) Expr
 		
 Expr ::= (PositiveExpr) AddopTermList
 		|
-		(NegativeExpr) MINUS AddopTermList
+		(NegativeExpr) MINUS AddopTermList:exprName
 		;		
 		
-AddopTermList ::= (FirstExpr) Term
+AddopTermList ::= (FirstExpr) Term:termName
 			|
-			(NextExpr) AddopTermList Addop Term
+			(NextExpr) AddopTermList:exprName Addop Term:termName
 			;		
 
 Term ::= (TermOne) Factor:factor

@@ -26,4 +26,5 @@
 <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.SemanticPass"/>
 <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.Tab"/>
 <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.ReturnCondition"/>
+<fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.NoSquares"/>
 </qualifiedTypeNameHistroy>

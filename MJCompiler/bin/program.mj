@@ -1,10 +1,10 @@
 program test301
-	int x[],y,z[],w;
+	int x;
 {
 void main()	
 		int nula;
 	{
-		nula=0;
+		nula=2+x;
 	}
 	
 }

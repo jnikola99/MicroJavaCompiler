@@ -1,0 +1,10 @@
+program test301
+	int x[],y,z[],w;
+{
+void r()	
+		int nula;
+	{
+		nula=0;
+	}
+	
+}

@@ -183,8 +183,20 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			term.struct=e;
 		}
 		else {
-			report_error("Greska na liniji "+ term.getLine()+" : nekompatibilni tipovi u izrazu za sabiranje.", null);
+			report_error("Greska na liniji "+ term.getLine()+" : nekompatibilni tipovi u izrazu za mnozenje.", null);
 			term.struct = Tab.noType;
+		}
+	}
+	
+	public void visit(NextExpr expr) {
+		Struct t = expr.getAddopTermList().struct;
+		Struct e = expr.getTerm().struct;
+		if(t.equals(e) && e==Tab.intType) {
+			expr.struct=e;
+		}
+		else {
+			report_error("Greska na liniji "+ expr.getLine()+" : nekompatibilni tipovi u izrazu za sabiranje.", null);
+			expr.struct = Tab.noType;
 		}
 	}
 	
@@ -194,6 +206,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	}
 	
 	public void visit(Program program) {
+		mainExist();
 		nVars = Tab.currentScope().getnVars();
 		Tab.chainLocalSymbols(program.getProgName().obj);
 		Tab.closeScope();
@@ -274,6 +287,19 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	public void visit(FactorDesNoAct factor) {
 		factor.struct = factor.getDesignator().obj.getType();
 	}
+	
+	public void visit(FirstExpr expr) {
+		expr.struct = expr.getTerm().struct;
+	}
+	
+	public void visit(FactorNumber factor) {
+		factor.struct=Tab.intType;
+	}
+	
+	public void visit(FactorChar factor) {
+		factor.struct = Tab.charType;
+	}
+	
 	
 	public boolean passed() {
 		return !errorDetected;

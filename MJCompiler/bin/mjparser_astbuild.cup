@@ -298,12 +298,12 @@ CondFact ::= (CondFactExpr) Expr:E1 {: RESULT=new CondFactExpr(E1); RESULT.setLi
 		
 Expr ::= (PositiveExpr) AddopTermList:A1 {: RESULT=new PositiveExpr(A1); RESULT.setLine(A1left); :}
 		|
-		(NegativeExpr) MINUS AddopTermList:A1 {: RESULT=new NegativeExpr(A1); RESULT.setLine(A1left); :}
+		(NegativeExpr) MINUS AddopTermList:exprName {: RESULT=new NegativeExpr(exprName); RESULT.setLine(exprNameleft); :}
 		;		
 		
-AddopTermList ::= (FirstExpr) Term:T1 {: RESULT=new FirstExpr(T1); RESULT.setLine(T1left); :}
+AddopTermList ::= (FirstExpr) Term:termName {: RESULT=new FirstExpr(termName); RESULT.setLine(termNameleft); :}
 			|
-			(NextExpr) AddopTermList:A1 Addop:A2 Term:T3 {: RESULT=new NextExpr(A1, A2, T3); RESULT.setLine(A1left); :}
+			(NextExpr) AddopTermList:exprName Addop:A1 Term:termName {: RESULT=new NextExpr(exprName, A1, termName); RESULT.setLine(exprNameleft); :}
 			;		
 
 Term ::= (TermOne) Factor:factor {: RESULT=new TermOne(factor); RESULT.setLine(factorleft); :}
