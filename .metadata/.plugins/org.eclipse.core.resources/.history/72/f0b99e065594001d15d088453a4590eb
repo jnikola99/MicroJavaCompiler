@@ -1,0 +1,11 @@
+program test301
+	const bool z=2;
+	int x;
+{
+void main()	
+		int nula;
+	{
+		nula=-2;
+	}
+	
+}

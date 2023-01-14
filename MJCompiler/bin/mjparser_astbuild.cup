@@ -215,11 +215,11 @@ Matched ::= (DesStatement) DesignatorStatement:D1 SEMI {: RESULT=new DesStatemen
 		   |
 		   (ReturnCondition) RETURN Expr:t SEMI {: RESULT=new ReturnCondition(t); RESULT.setLine(tleft); :}
 		   |
-		   (ReadCondition) READ LPAREN Designator:D1 RPAREN SEMI {: RESULT=new ReadCondition(D1); RESULT.setLine(D1left); :}
+		   (ReadCondition) READ LPAREN Designator:d RPAREN SEMI {: RESULT=new ReadCondition(d); RESULT.setLine(dleft); :}
 		   |
-		   (PrintCondition) PRINT LPAREN Expr:E1 RPAREN SEMI {: RESULT=new PrintCondition(E1); RESULT.setLine(E1left); :}
+		   (PrintCondition) PRINT LPAREN Expr:e RPAREN SEMI {: RESULT=new PrintCondition(e); RESULT.setLine(eleft); :}
 		   |
-		   (MorePrintCondition) PRINT LPAREN Expr:E1 COMMA NUMBER:N2 RPAREN SEMI {: RESULT=new MorePrintCondition(E1, N2); RESULT.setLine(E1left); :}
+		   (MorePrintCondition) PRINT LPAREN Expr:e COMMA NUMBER:N1 RPAREN SEMI {: RESULT=new MorePrintCondition(e, N1); RESULT.setLine(eleft); :}
 		   |
 		   (StatementCondition) LBRACE StatementList:S1 RBRACE {: RESULT=new StatementCondition(S1); RESULT.setLine(S1left); :}
 		   |
@@ -228,23 +228,23 @@ Matched ::= (DesStatement) DesignatorStatement:D1 SEMI {: RESULT=new DesStatemen
 
 DesignatorStatement ::= (DesignatorParsStmt) Designator:D1 LPAREN DesiActPars:D2 RPAREN {: RESULT=new DesignatorParsStmt(D1, D2); RESULT.setLine(D1left); :}
 					|
-					(DesignatorAssign) Designator:D1 Assignop:A2 Expr:E3 {: RESULT=new DesignatorAssign(D1, A2, E3); RESULT.setLine(D1left); :}
+					(DesignatorAssign) Designator:d Assignop:A1 Expr:e {: RESULT=new DesignatorAssign(d, A1, e); RESULT.setLine(dleft); :}
 					|
-					(DesignatorInc) Designator:D1 INC {: RESULT=new DesignatorInc(D1); RESULT.setLine(D1left); :}
+					(DesignatorInc) Designator:d INC {: RESULT=new DesignatorInc(d); RESULT.setLine(dleft); :}
 					|
-					(DesignatorDec) Designator:D1 DEC {: RESULT=new DesignatorDec(D1); RESULT.setLine(D1left); :}
+					(DesignatorDec) Designator:d DEC {: RESULT=new DesignatorDec(d); RESULT.setLine(dleft); :}
 					|
-					(DesignatorSquareStmt) LSQUARES DesignatorNot:D1 RSQUARES EQUAL Designator:D2 {: RESULT=new DesignatorSquareStmt(D1, D2); RESULT.setLine(D1left); :}
+					(DesignatorSquareStmt) LSQUARES DesignatorNot:desiFirst RSQUARES EQUAL Designator:desiSecond {: RESULT=new DesignatorSquareStmt(desiFirst, desiSecond); RESULT.setLine(desiFirstleft); :}
 					|
-					(MoreDesignatorSquare) LSQUARES DesignatorNot:D1 DesignatorStmtMore:D2 RSQUARES EQUAL Designator:D3 {: RESULT=new MoreDesignatorSquare(D1, D2, D3); RESULT.setLine(D1left); :}
+					(MoreDesignatorSquare) LSQUARES DesignatorNot:desiFirst DesignatorStmtMore:D1 RSQUARES EQUAL Designator:desiSecond {: RESULT=new MoreDesignatorSquare(desiFirst, D1, desiSecond); RESULT.setLine(desiFirstleft); :}
 					;
 					
-DesignatorStmtMore ::= (OneDesStmt) COMMA DesignatorNot:D1 {: RESULT=new OneDesStmt(D1); RESULT.setLine(D1left); :}
+DesignatorStmtMore ::= (OneDesStmt) COMMA DesignatorNot:d {: RESULT=new OneDesStmt(d); RESULT.setLine(dleft); :}
 					|
-					(MoreDesStmt) DesignatorStmtMore:D1 COMMA DesignatorNot:D2 {: RESULT=new MoreDesStmt(D1, D2); RESULT.setLine(D1left); :}
+					(MoreDesStmt) DesignatorStmtMore:desiFirst COMMA DesignatorNot:desiSecond {: RESULT=new MoreDesStmt(desiFirst, desiSecond); RESULT.setLine(desiFirstleft); :}
 					; 					
 					
-DesignatorNot ::= (DesignatorYes) Designator:D1 {: RESULT=new DesignatorYes(D1); RESULT.setLine(D1left); :}
+DesignatorNot ::= (DesignatorYes) Designator:d {: RESULT=new DesignatorYes(d); RESULT.setLine(dleft); :}
 				|
 				(DesignatorNo) {: RESULT=new DesignatorNo(); :} /* epsilon */
 				;
@@ -318,7 +318,7 @@ Factor ::= (FactorDesAct) Designator:func LPAREN DesiActPars:D1 RPAREN {: RESULT
 		|
 		(FactorExpr) LPAREN Expr:E1 RPAREN {: RESULT=new FactorExpr(E1); RESULT.setLine(E1left); :}
 		|
-		(FactorNewTypeExpr) NEW Type:T1 LSQUARES Expr:E2 RSQUARES {: RESULT=new FactorNewTypeExpr(T1, E2); RESULT.setLine(T1left); :}
+		(FactorNewTypeExpr) NEW Type:arrType LSQUARES Expr:e RSQUARES {: RESULT=new FactorNewTypeExpr(arrType, e); RESULT.setLine(arrTypeleft); :}
 		|
 		(FactorNewTypeActPars) NEW Type:T1 LPAREN ActPars:A2 RPAREN {: RESULT=new FactorNewTypeActPars(T1, A2); RESULT.setLine(T1left); :}
 		|

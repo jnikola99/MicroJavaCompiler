@@ -1,0 +1,42 @@
+INFO  21:57:12,286 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  21:57:12,319 - #2 program
+INFO  21:57:12,319 - #25 test301
+INFO  21:57:12,319 - #25 int
+INFO  21:57:12,320 - #25 x
+INFO  21:57:12,320 - #10 [
+INFO  21:57:12,320 - #11 ]
+INFO  21:57:12,321 - #6 ;
+INFO  21:57:12,321 - #25 int
+INFO  21:57:12,321 - #25 y
+INFO  21:57:12,321 - #6 ;
+INFO  21:57:12,322 - #9 const
+ERROR 21:57:12,322 - 
+Sintaksna greska na liniji 4
+INFO  21:57:12,322 - #25 bool
+INFO  21:57:12,322 - #7 =
+INFO  21:57:12,322 - #26 true
+INFO  21:57:12,322 - #6 ;
+INFO  21:57:12,322 - #3 {
+INFO  21:57:12,322 - #5 void
+INFO  21:57:12,322 - #25 main
+INFO  21:57:12,322 - #14 (
+INFO  21:57:12,323 - #15 )
+INFO  21:57:12,323 - #25 int
+INFO  21:57:12,323 - #25 nula
+INFO  21:57:12,324 - #6 ;
+INFO  21:57:12,324 - #3 {
+INFO  21:57:12,324 - #25 nula
+INFO  21:57:12,324 - #7 =
+INFO  21:57:12,324 - #33 -
+INFO  21:57:12,324 - #24 2
+INFO  21:57:12,324 - #6 ;
+INFO  21:57:12,324 - #25 y
+INFO  21:57:12,324 - #7 =
+INFO  21:57:12,324 - #25 x
+INFO  21:57:12,324 - #10 [
+INFO  21:57:12,324 - #24 2
+INFO  21:57:12,324 - #11 ]
+INFO  21:57:12,324 - #6 ;
+INFO  21:57:12,324 - #4 }
+INFO  21:57:12,324 - #4 }
+ERROR 21:57:12,324 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 13

@@ -1,0 +1,117 @@
+INFO  00:08:29,881 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  00:08:29,911 - #2 program
+INFO  00:08:29,911 - #25 test301
+INFO  00:08:29,911 - #9 const
+INFO  00:08:29,911 - #25 bool
+INFO  00:08:29,912 - #25 z
+INFO  00:08:29,912 - #7 =
+INFO  00:08:29,912 - #26 true
+INFO  00:08:29,912 - #6 ;
+INFO  00:08:29,912 - #25 int
+INFO  00:08:29,912 - #25 x
+INFO  00:08:29,912 - #10 [
+INFO  00:08:29,913 - #11 ]
+INFO  00:08:29,913 - #6 ;
+INFO  00:08:29,913 - #3 {
+INFO  00:08:29,913 - #5 void
+INFO  00:08:29,915 - #25 main
+INFO  00:08:29,915 - #14 (
+INFO  00:08:29,915 - #15 )
+INFO  00:08:29,915 - #25 int
+INFO  00:08:29,915 - #25 nula
+INFO  00:08:29,915 - #6 ;
+INFO  00:08:29,916 - #3 {
+INFO  00:08:29,916 - #16 read
+INFO  00:08:29,916 - #14 (
+INFO  00:08:29,916 - #25 x
+INFO  00:08:29,916 - #10 [
+INFO  00:08:29,916 - #24 1
+INFO  00:08:29,917 - #11 ]
+INFO  00:08:29,917 - #15 )
+INFO  00:08:29,917 - #6 ;
+INFO  00:08:29,917 - #4 }
+INFO  00:08:29,917 - #4 }
+INFO  00:08:29,921 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstList(
+    NoConstList(
+    ) [NoConstList]
+    ConstDeclOneTime(
+      Type(
+       bool
+      ) [Type]
+     z
+      BoolConst(
+       true
+      ) [BoolConst]
+    ) [ConstDeclOneTime]
+  ) [ConstList]
+  VarList(
+    NoVarList(
+    ) [NoVarList]
+    VarDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     x
+      VarSquares(
+      ) [VarSquares]
+    ) [VarDeclOneTime]
+  ) [VarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        NoVarList(
+        ) [NoVarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         nula
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        NoStmt(
+        ) [NoStmt]
+        MatchedStmt(
+          ReadCondition(
+            DesignatorWithExpr(
+              OneDesignatorIdent(
+               x
+              ) [OneDesignatorIdent]
+              PositiveExpr(
+                FirstExpr(
+                  TermOne(
+                    FactorNumber(
+                     1
+                    ) [FactorNumber]
+                  ) [TermOne]
+                ) [FirstExpr]
+              ) [PositiveExpr]
+            ) [DesignatorWithExpr]
+          ) [ReadCondition]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  00:08:29,921 - ===================================
+INFO  00:08:29,923 - Deklarisana konstanta z na liniji 2
+INFO  00:08:29,923 - Deklarisan niz x na liniji 3
+INFO  00:08:29,923 - Obradjuje se funkcija main na liniji 5
+INFO  00:08:29,923 - Deklarisana promenljiva nula na liniji 6
+INFO  00:08:29,923 - ===================================
+INFO  00:08:29,924 - Parsiranje uspesno zavrseno!

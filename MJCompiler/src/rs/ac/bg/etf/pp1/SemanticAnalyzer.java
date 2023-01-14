@@ -1,5 +1,6 @@
 package rs.ac.bg.etf.pp1;
 import org.apache.log4j.Logger;
+
 import rs.ac.bg.etf.pp1.ast.*;
 import rs.etf.pp1.symboltable.Tab;
 import rs.etf.pp1.symboltable.concepts.Obj;
@@ -15,8 +16,13 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	int nVars;
 	Struct typevar = null;
 	Struct constTypevar = null;
+	Struct boolType = new Struct(Struct.Bool);
 
 	Logger log = Logger.getLogger(getClass());
+	
+	public SemanticAnalyzer() {
+		Tab.currentScope.addToLocals(new Obj(Obj.Type, "bool", boolType));
+	}
 	
 
 	public void report_error(String message, SyntaxNode info) {
@@ -111,7 +117,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			return;
 		}
 		String typeName=constDecl.getType().getTypeName();
-		if(!((typeName.equals("int") && (constDecl.getConstType().struct==Tab.intType))||(typeName.equals("char") && (constDecl.getConstType().struct==Tab.charType)))) {
+		if(!((typeName.equals("int") && (constDecl.getConstType().struct==Tab.intType))||(typeName.equals("char") && (constDecl.getConstType().struct==Tab.charType))||(typeName.equals("bool") && (constDecl.getConstType().struct==boolType)))) {
 			report_error("Greska, nekompatibilni tipovi kod promenljive: "+constDecl.getSomeConst(),constDecl);
 			return;
 		}
@@ -126,7 +132,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			return;
 		}
 		String typeName=constDecl.getType().getTypeName();
-		if(!((typeName.equals("int") && (constDecl.getConstType().struct==Tab.intType))||(typeName.equals("char") && (constDecl.getConstType().struct==Tab.charType)))) {
+		if(!((typeName.equals("int") && (constDecl.getConstType().struct==Tab.intType))||(typeName.equals("char") && (constDecl.getConstType().struct==Tab.charType))||(typeName.equals("bool") && (constDecl.getConstType().struct==boolType)))) {
 			report_error("Greska, nekompatibilni tipovi kod promenljive: "+constDecl.getSomeConst(),constDecl);
 			return;
 		}
@@ -139,7 +145,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			report_error("Greska, promenljiva sa imenom: "+constDecl.getSomeConst()+" je deklarisana vec!",constDecl);
 			return;
 		}
-		if(!(((constTypevar==Tab.intType)&&(typevar==Tab.intType))||((constTypevar==Tab.charType)&&(typevar==Tab.charType)))) {
+		if(!(((constTypevar==Tab.intType)&&(typevar==Tab.intType))||((constTypevar==Tab.charType)&&(typevar==Tab.charType))||((constTypevar==boolType)&&(typevar==boolType)))) {
 			report_error("Greska, nekompatibilni tipovi kod promenljive: "+constDecl.getSomeConst(),constDecl);
 			return;
 		}
@@ -152,7 +158,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			report_error("Greska, promenljiva sa imenom: "+constDecl.getSomeConst()+" je deklarisana vec!",constDecl);
 			return;
 		}
-		if(!(((constTypevar==Tab.intType)&&(typevar==Tab.intType))||((constTypevar==Tab.charType)&&(typevar==Tab.charType)))) {
+		if(!(((constTypevar==Tab.intType)&&(typevar==Tab.intType))||((constTypevar==Tab.charType)&&(typevar==Tab.charType))||((constTypevar==boolType)&&(typevar==boolType)))) {
 			report_error("Greska, nekompatibilni tipovi kod promenljive: "+constDecl.getSomeConst(),constDecl);
 			return;
 		}
@@ -170,6 +176,11 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	public void visit(CharConst cnst) {
 		cnst.struct = Tab.charType;
 		constTypevar = Tab.charType;
+	}
+	
+	public void visit(BoolConst cnst) {
+		cnst.struct = boolType;
+		constTypevar = boolType;
 	}
 	
 	public void visit(TermOne term) {
@@ -300,6 +311,19 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		factor.struct = Tab.charType;
 	}
 	
+	public void visit(FactorBool factor) {
+		factor.struct = boolType;
+	}
+	
+	public void visit(FactorNewTypeExpr factor) {
+		Struct s = factor.getExpr().struct;
+		if(s!=Tab.intType) {
+			report_error("Greska na liniji: " + factor.getLine() + ", index nije tipa int",null);
+			s=Tab.noType;
+		}
+		factor.struct=factor.getType().struct;
+	}
+	
 	public void visit(NegativeExpr ne) {
 		Struct s = ne.getAddopTermList().struct;
 		if(s!=Tab.intType) {
@@ -322,7 +346,32 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		if(e!=Tab.intType || s.getKind()!=Struct.Array) {
 			report_error("Greska na liniji "+ des.getLine()+" : promenljiva nije niz ili indikator nije broj", null);
 		}
-		
+	}
+	
+	public void visit(DesignatorInc cond) {
+		int desKind=cond.getDesignator().obj.getKind();
+		if(cond.getDesignator().obj.getType()!=Tab.intType &&  desKind!=Obj.Var && desKind!=Obj.Elem) {
+			report_error("Greska na liniji "+ cond.getLine()+" : designator uz ++ mora biti promenljiva ili element niza tipa int", null);
+		}
+	}
+	
+	public void visit(ReadCondition cond) {
+		int desKind=cond.getDesignator().obj.getKind();
+		if(cond.getDesignator().obj.getType()!=Tab.intType && cond.getDesignator().obj.getType()!=Tab.charType && cond.getDesignator().obj.getType()!=boolType && desKind!=Obj.Var && desKind!=Obj.Elem) {
+			report_error("Greska na liniji "+ cond.getLine()+" : promenljiva u read iskazu nije tipa int, char ili bool", null);
+		}
+	}
+	
+	public void visit(PrintCondition cond) {
+		if(cond.getExpr().struct!=Tab.intType && cond.getExpr().struct!=Tab.charType && cond.getExpr().struct!=boolType) {
+			report_error("Greska na liniji "+ cond.getLine()+" : promenljiva u print iskazu nije tipa int, char ili bool", null);
+		}
+	}
+	
+	public void visit(MorePrintCondition cond) {
+		if(cond.getExpr().struct!=Tab.intType && cond.getExpr().struct!=Tab.charType && cond.getExpr().struct!=boolType) {
+			report_error("Greska na liniji "+ cond.getLine()+" : promenljiva u print iskazu nije tipa int, char ili bool", null);
+		}
 	}
 	
 	

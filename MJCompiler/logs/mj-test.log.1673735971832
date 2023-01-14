@@ -1,0 +1,109 @@
+INFO  22:58:54,459 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  22:58:54,488 - #2 program
+INFO  22:58:54,488 - #25 test301
+INFO  22:58:54,488 - #9 const
+INFO  22:58:54,489 - #25 bool
+INFO  22:58:54,489 - #25 z
+INFO  22:58:54,489 - #7 =
+INFO  22:58:54,489 - #26 true
+INFO  22:58:54,489 - #6 ;
+INFO  22:58:54,489 - #25 int
+INFO  22:58:54,490 - #25 x
+INFO  22:58:54,490 - #6 ;
+INFO  22:58:54,490 - #3 {
+INFO  22:58:54,491 - #5 void
+INFO  22:58:54,491 - #25 main
+INFO  22:58:54,491 - #14 (
+INFO  22:58:54,491 - #15 )
+INFO  22:58:54,491 - #25 int
+INFO  22:58:54,492 - #25 nula
+INFO  22:58:54,492 - #6 ;
+INFO  22:58:54,492 - #3 {
+INFO  22:58:54,492 - #17 print
+INFO  22:58:54,492 - #14 (
+INFO  22:58:54,492 - #25 nula
+INFO  22:58:54,492 - #15 )
+INFO  22:58:54,493 - #6 ;
+INFO  22:58:54,493 - #4 }
+INFO  22:58:54,493 - #4 }
+INFO  22:58:54,498 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstList(
+    NoConstList(
+    ) [NoConstList]
+    ConstDeclOneTime(
+      Type(
+       bool
+      ) [Type]
+     z
+      BoolConst(
+       true
+      ) [BoolConst]
+    ) [ConstDeclOneTime]
+  ) [ConstList]
+  VarList(
+    NoVarList(
+    ) [NoVarList]
+    VarDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     x
+      NoSquares(
+      ) [NoSquares]
+    ) [VarDeclOneTime]
+  ) [VarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        NoVarList(
+        ) [NoVarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         nula
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        NoStmt(
+        ) [NoStmt]
+        MatchedStmt(
+          PrintCondition(
+            PositiveExpr(
+              FirstExpr(
+                TermOne(
+                  FactorDesNoAct(
+                    OneDesignatorIdent(
+                     nula
+                    ) [OneDesignatorIdent]
+                  ) [FactorDesNoAct]
+                ) [TermOne]
+              ) [FirstExpr]
+            ) [PositiveExpr]
+          ) [PrintCondition]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  22:58:54,498 - ===================================
+INFO  22:58:54,500 - Deklarisana konstanta z na liniji 2
+INFO  22:58:54,500 - Deklarisana promenljiva x na liniji 3
+INFO  22:58:54,500 - Obradjuje se funkcija main na liniji 5
+INFO  22:58:54,500 - Deklarisana promenljiva nula na liniji 6
+INFO  22:58:54,500 - ===================================
+INFO  22:58:54,501 - Parsiranje uspesno zavrseno!

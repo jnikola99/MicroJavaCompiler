@@ -189,11 +189,11 @@ Matched ::= (DesStatement) DesignatorStatement SEMI
 		   |
 		   (ReturnCondition) RETURN Expr:t SEMI
 		   |
-		   (ReadCondition) READ LPAREN Designator RPAREN SEMI
+		   (ReadCondition) READ LPAREN Designator:d RPAREN SEMI
 		   |
-		   (PrintCondition) PRINT LPAREN Expr RPAREN SEMI
+		   (PrintCondition) PRINT LPAREN Expr:e RPAREN SEMI
 		   |
-		   (MorePrintCondition) PRINT LPAREN Expr COMMA NUMBER RPAREN SEMI
+		   (MorePrintCondition) PRINT LPAREN Expr:e COMMA NUMBER RPAREN SEMI
 		   |
 		   (StatementCondition) LBRACE StatementList RBRACE
 		   |
@@ -202,23 +202,23 @@ Matched ::= (DesStatement) DesignatorStatement SEMI
 
 DesignatorStatement ::= (DesignatorParsStmt) Designator LPAREN DesiActPars RPAREN
 					|
-					(DesignatorAssign) Designator Assignop Expr
+					(DesignatorAssign) Designator:d Assignop Expr:e
 					|
-					(DesignatorInc) Designator INC
+					(DesignatorInc) Designator:d INC
 					|
-					(DesignatorDec) Designator DEC
+					(DesignatorDec) Designator:d DEC
 					|
-					(DesignatorSquareStmt) LSQUARES DesignatorNot RSQUARES EQUAL Designator
+					(DesignatorSquareStmt) LSQUARES DesignatorNot:desiFirst RSQUARES EQUAL Designator:desiSecond
 					|
-					(MoreDesignatorSquare) LSQUARES DesignatorNot DesignatorStmtMore RSQUARES EQUAL Designator
+					(MoreDesignatorSquare) LSQUARES DesignatorNot:desiFirst DesignatorStmtMore RSQUARES EQUAL Designator:desiSecond
 					;
 					
-DesignatorStmtMore ::= (OneDesStmt) COMMA DesignatorNot
+DesignatorStmtMore ::= (OneDesStmt) COMMA DesignatorNot:d
 					|
-					(MoreDesStmt) DesignatorStmtMore COMMA DesignatorNot
+					(MoreDesStmt) DesignatorStmtMore:desiFirst COMMA DesignatorNot:desiSecond
 					; 					
 					
-DesignatorNot ::= (DesignatorYes) Designator
+DesignatorNot ::= (DesignatorYes) Designator:d
 				|
 				(DesignatorNo) /* epsilon */
 				;
@@ -292,7 +292,7 @@ Factor ::= (FactorDesAct) Designator:func LPAREN DesiActPars RPAREN
 		|
 		(FactorExpr) LPAREN Expr RPAREN
 		|
-		(FactorNewTypeExpr) NEW Type LSQUARES Expr RSQUARES
+		(FactorNewTypeExpr) NEW Type:arrType LSQUARES Expr:e RSQUARES
 		|
 		(FactorNewTypeActPars) NEW Type LPAREN ActPars RPAREN
 		|

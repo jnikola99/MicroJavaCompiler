@@ -49,7 +49,8 @@ public class MJParserTest {
 			prog.traverseBottomUp(v); 
 			log.info("===================================");
 			
-			Tab.dump();
+			//Tab.dump();
+			TabExtended.tsdump();
 			
 			if(!p.errorDetected && v.passed()) {
 				log.info("Parsiranje uspesno zavrseno!");
