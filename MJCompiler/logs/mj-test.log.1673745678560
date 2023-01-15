@@ -1,0 +1,145 @@
+INFO  02:19:26,243 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  02:19:26,273 - #2 program
+INFO  02:19:26,274 - #25 test301
+INFO  02:19:26,274 - #9 const
+INFO  02:19:26,274 - #25 bool
+INFO  02:19:26,274 - #25 z
+INFO  02:19:26,274 - #7 =
+INFO  02:19:26,275 - #26 true
+INFO  02:19:26,275 - #6 ;
+INFO  02:19:26,275 - #25 int
+INFO  02:19:26,275 - #25 y
+INFO  02:19:26,275 - #6 ;
+INFO  02:19:26,276 - #25 int
+INFO  02:19:26,276 - #25 x
+INFO  02:19:26,276 - #10 [
+INFO  02:19:26,276 - #11 ]
+INFO  02:19:26,276 - #6 ;
+INFO  02:19:26,276 - #3 {
+INFO  02:19:26,276 - #5 void
+INFO  02:19:26,277 - #25 main
+INFO  02:19:26,277 - #14 (
+INFO  02:19:26,277 - #15 )
+INFO  02:19:26,278 - #25 int
+INFO  02:19:26,278 - #25 nula
+INFO  02:19:26,278 - #6 ;
+INFO  02:19:26,278 - #3 {
+INFO  02:19:26,278 - #25 x
+INFO  02:19:26,278 - #7 =
+INFO  02:19:26,278 - #22 new
+INFO  02:19:26,279 - #25 int
+INFO  02:19:26,279 - #10 [
+INFO  02:19:26,279 - #24 2
+INFO  02:19:26,279 - #11 ]
+INFO  02:19:26,279 - #6 ;
+INFO  02:19:26,279 - #4 }
+INFO  02:19:26,280 - #4 }
+INFO  02:19:26,283 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstList(
+    NoConstList(
+    ) [NoConstList]
+    ConstDeclOneTime(
+      Type(
+       bool
+      ) [Type]
+     z
+      BoolConst(
+       true
+      ) [BoolConst]
+    ) [ConstDeclOneTime]
+  ) [ConstList]
+  VarList(
+    VarList(
+      NoVarList(
+      ) [NoVarList]
+      VarDeclOneTime(
+        Type(
+         int
+        ) [Type]
+       y
+        NoSquares(
+        ) [NoSquares]
+      ) [VarDeclOneTime]
+    ) [VarList]
+    VarDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     x
+      VarSquares(
+      ) [VarSquares]
+    ) [VarDeclOneTime]
+  ) [VarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        NoVarList(
+        ) [NoVarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         nula
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        NoStmt(
+        ) [NoStmt]
+        MatchedStmt(
+          DesStatement(
+            DesignatorAssign(
+              OneDesignatorIdent(
+               x
+              ) [OneDesignatorIdent]
+              AssignopItem(
+              ) [AssignopItem]
+              PositiveExpr(
+                FirstExpr(
+                  TermOne(
+                    FactorNewTypeExpr(
+                      Type(
+                       int
+                      ) [Type]
+                      PositiveExpr(
+                        FirstExpr(
+                          TermOne(
+                            FactorNumber(
+                             2
+                            ) [FactorNumber]
+                          ) [TermOne]
+                        ) [FirstExpr]
+                      ) [PositiveExpr]
+                    ) [FactorNewTypeExpr]
+                  ) [TermOne]
+                ) [FirstExpr]
+              ) [PositiveExpr]
+            ) [DesignatorAssign]
+          ) [DesStatement]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  02:19:26,284 - ===================================
+INFO  02:19:26,286 - Deklarisana konstanta z na liniji 2
+INFO  02:19:26,286 - Deklarisana promenljiva y na liniji 3
+INFO  02:19:26,286 - Deklarisan niz x na liniji 4
+INFO  02:19:26,286 - Obradjuje se funkcija main na liniji 6
+INFO  02:19:26,286 - Deklarisana promenljiva nula na liniji 7
+ERROR 02:19:26,286 - Greska na liniji 9 : nisu kompatibilni tipovi
+INFO  02:19:26,286 - ===================================
+ERROR 02:19:26,287 - Parsiranje NIJE uspesno zavrseno

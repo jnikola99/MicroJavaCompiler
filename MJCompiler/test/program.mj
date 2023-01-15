@@ -1,12 +1,12 @@
 program test301
 	const bool z=true;
-	int y;
+	int y[];
 	int x[];
 {
 void main()	
 		int nula;
 	{
-		z++;
+		y = new int[3];
 	}
 	
 }

@@ -59,11 +59,11 @@ terminal THIS, ENUM, FOREACH, DO, ARROW, DOUBLEDOT;
 nonterminal ConstDeclList, VarDeclList, ClassDeclList, MethodDeclList, Mulop, Addop;
 nonterminal ConstTypeList, ConstDecl, VarDecl, VarMultiple, ClassDecl, Label;
 nonterminal FormParsList, FormParsMultiple, FormPars, StatementList, Statement, Matched, Unmatched;
-nonterminal Condition, DesignatorStatement, DesignatorStmtMore, DesignatorNot;
+nonterminal Condition;
 nonterminal Assignop, ActPars, ActParsMore, ConditionMore, CondTerm, CondFactMore, CondFact, Relop;
 nonterminal DesiActPars;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodType, Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodType, Designator, DesignatorStatement, DesignatorStmtMore, DesignatorNot;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, MulopFactor, AddopTermList, ConstType, VarSquares;
 
 precedence left ELSE;

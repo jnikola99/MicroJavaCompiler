@@ -1,0 +1,12 @@
+program test301
+	const bool z=true;
+	int y;
+	int x[];
+{
+void main()	
+		int nula;
+	{
+		nula = new int[3];
+	}
+	
+}

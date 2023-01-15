@@ -76,9 +76,6 @@ nonterminal Statement Statement;
 nonterminal Matched Matched;
 nonterminal Unmatched Unmatched;
 nonterminal Condition Condition;
-nonterminal DesignatorStatement DesignatorStatement;
-nonterminal DesignatorStmtMore DesignatorStmtMore;
-nonterminal DesignatorNot DesignatorNot;
 nonterminal Assignop Assignop;
 nonterminal ActPars ActPars;
 nonterminal ActParsMore ActParsMore;
@@ -89,7 +86,7 @@ nonterminal CondFact CondFact;
 nonterminal Relop Relop;
 nonterminal DesiActPars DesiActPars;
 
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodType, Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ProgName, Program, MethodDecl, MethodType, Designator, DesignatorStatement, DesignatorStmtMore, DesignatorNot;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, MulopFactor, AddopTermList, ConstType, VarSquares;
 
 precedence left ELSE;

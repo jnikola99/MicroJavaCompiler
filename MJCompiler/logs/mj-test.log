@@ -1,35 +1,50 @@
-INFO  00:36:21,878 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
-INFO  00:36:21,908 - #2 program
-INFO  00:36:21,908 - #25 test301
-INFO  00:36:21,908 - #9 const
-INFO  00:36:21,909 - #25 bool
-INFO  00:36:21,909 - #25 z
-INFO  00:36:21,909 - #7 =
-INFO  00:36:21,909 - #26 true
-INFO  00:36:21,909 - #6 ;
-INFO  00:36:21,910 - #25 int
-INFO  00:36:21,910 - #25 y
-INFO  00:36:21,910 - #6 ;
-INFO  00:36:21,910 - #25 int
-INFO  00:36:21,910 - #25 x
-INFO  00:36:21,910 - #10 [
-INFO  00:36:21,910 - #11 ]
-INFO  00:36:21,910 - #6 ;
-INFO  00:36:21,910 - #3 {
-INFO  00:36:21,911 - #5 void
-INFO  00:36:21,911 - #25 main
-INFO  00:36:21,911 - #14 (
-INFO  00:36:21,912 - #15 )
-INFO  00:36:21,913 - #25 int
-INFO  00:36:21,913 - #25 nula
-INFO  00:36:21,913 - #6 ;
-INFO  00:36:21,913 - #3 {
-INFO  00:36:21,913 - #25 z
-INFO  00:36:21,913 - #30 ++
-INFO  00:36:21,913 - #6 ;
-INFO  00:36:21,913 - #4 }
-INFO  00:36:21,914 - #4 }
-INFO  00:36:21,918 - Program(
+INFO  02:35:39,655 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  02:35:39,685 - #2 program
+INFO  02:35:39,685 - #25 test301
+INFO  02:35:39,685 - #9 const
+INFO  02:35:39,686 - #25 bool
+INFO  02:35:39,686 - #25 z
+INFO  02:35:39,686 - #7 =
+INFO  02:35:39,686 - #26 true
+INFO  02:35:39,686 - #6 ;
+INFO  02:35:39,686 - #25 int
+INFO  02:35:39,687 - #25 y
+INFO  02:35:39,687 - #10 [
+INFO  02:35:39,687 - #11 ]
+INFO  02:35:39,687 - #6 ;
+INFO  02:35:39,687 - #25 int
+INFO  02:35:39,687 - #25 x
+INFO  02:35:39,687 - #10 [
+INFO  02:35:39,687 - #11 ]
+INFO  02:35:39,687 - #6 ;
+INFO  02:35:39,687 - #3 {
+INFO  02:35:39,688 - #5 void
+INFO  02:35:39,688 - #25 main
+INFO  02:35:39,689 - #14 (
+INFO  02:35:39,689 - #15 )
+INFO  02:35:39,689 - #25 int
+INFO  02:35:39,689 - #25 nula
+INFO  02:35:39,689 - #6 ;
+INFO  02:35:39,690 - #3 {
+INFO  02:35:39,690 - #25 y
+INFO  02:35:39,690 - #7 =
+INFO  02:35:39,690 - #22 new
+INFO  02:35:39,691 - #25 int
+INFO  02:35:39,691 - #10 [
+INFO  02:35:39,691 - #24 3
+INFO  02:35:39,691 - #11 ]
+INFO  02:35:39,691 - #6 ;
+INFO  02:35:39,691 - #25 x
+INFO  02:35:39,691 - #7 =
+INFO  02:35:39,692 - #22 new
+INFO  02:35:39,692 - #25 char
+INFO  02:35:39,692 - #10 [
+INFO  02:35:39,692 - #24 2
+INFO  02:35:39,692 - #11 ]
+INFO  02:35:39,692 - #6 ;
+INFO  02:35:39,692 - #4 }
+INFO  02:35:39,692 - #4 }
+INFO  02:35:39,696 - Program(
   ProgName(
    test301
   ) [ProgName]
@@ -55,8 +70,8 @@ INFO  00:36:21,918 - Program(
          int
         ) [Type]
        y
-        NoSquares(
-        ) [NoSquares]
+        VarSquares(
+        ) [VarSquares]
       ) [VarDeclOneTime]
     ) [VarList]
     VarDeclOneTime(
@@ -92,27 +107,82 @@ INFO  00:36:21,918 - Program(
         ) [VarDeclOneTime]
       ) [VarList]
       Statements(
-        NoStmt(
-        ) [NoStmt]
+        Statements(
+          NoStmt(
+          ) [NoStmt]
+          MatchedStmt(
+            DesStatement(
+              DesignatorAssign(
+                OneDesignatorIdent(
+                 y
+                ) [OneDesignatorIdent]
+                AssignopItem(
+                ) [AssignopItem]
+                PositiveExpr(
+                  FirstExpr(
+                    TermOne(
+                      FactorNewTypeExpr(
+                        Type(
+                         int
+                        ) [Type]
+                        PositiveExpr(
+                          FirstExpr(
+                            TermOne(
+                              FactorNumber(
+                               3
+                              ) [FactorNumber]
+                            ) [TermOne]
+                          ) [FirstExpr]
+                        ) [PositiveExpr]
+                      ) [FactorNewTypeExpr]
+                    ) [TermOne]
+                  ) [FirstExpr]
+                ) [PositiveExpr]
+              ) [DesignatorAssign]
+            ) [DesStatement]
+          ) [MatchedStmt]
+        ) [Statements]
         MatchedStmt(
           DesStatement(
-            DesignatorInc(
+            DesignatorAssign(
               OneDesignatorIdent(
-               z
+               x
               ) [OneDesignatorIdent]
-            ) [DesignatorInc]
+              AssignopItem(
+              ) [AssignopItem]
+              PositiveExpr(
+                FirstExpr(
+                  TermOne(
+                    FactorNewTypeExpr(
+                      Type(
+                       char
+                      ) [Type]
+                      PositiveExpr(
+                        FirstExpr(
+                          TermOne(
+                            FactorNumber(
+                             2
+                            ) [FactorNumber]
+                          ) [TermOne]
+                        ) [FirstExpr]
+                      ) [PositiveExpr]
+                    ) [FactorNewTypeExpr]
+                  ) [TermOne]
+                ) [FirstExpr]
+              ) [PositiveExpr]
+            ) [DesignatorAssign]
           ) [DesStatement]
         ) [MatchedStmt]
       ) [Statements]
     ) [MethodDecl]
   ) [MethodList]
 ) [Program]
-INFO  00:36:21,918 - ===================================
-INFO  00:36:21,920 - Deklarisana konstanta z na liniji 2
-INFO  00:36:21,920 - Deklarisana promenljiva y na liniji 3
-INFO  00:36:21,920 - Deklarisan niz x na liniji 4
-INFO  00:36:21,920 - Obradjuje se funkcija main na liniji 6
-INFO  00:36:21,920 - Deklarisana promenljiva nula na liniji 7
-ERROR 00:36:21,920 - Greska na liniji 9 : designator uz ++ mora biti promenljiva ili element niza tipa int
-INFO  00:36:21,921 - ===================================
-ERROR 00:36:21,921 - Parsiranje NIJE uspesno zavrseno
+INFO  02:35:39,696 - ===================================
+INFO  02:35:39,698 - Deklarisana konstanta z na liniji 2
+INFO  02:35:39,698 - Deklarisan niz y na liniji 3
+INFO  02:35:39,698 - Deklarisan niz x na liniji 4
+INFO  02:35:39,699 - Obradjuje se funkcija main na liniji 6
+INFO  02:35:39,699 - Deklarisana promenljiva nula na liniji 7
+ERROR 02:35:39,699 - Greska na liniji 10 : nisu kompatibilni tipovi
+INFO  02:35:39,699 - ===================================
+ERROR 02:35:39,700 - Parsiranje NIJE uspesno zavrseno
