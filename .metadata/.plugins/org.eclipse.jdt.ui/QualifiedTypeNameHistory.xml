@@ -24,7 +24,13 @@
 <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethTypeOther"/>
 <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.MethTypeVoid"/>
 <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.SemanticPass"/>
-<fullyQualifiedTypeName name="rs.etf.pp1.symboltable.Tab"/>
 <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.ReturnCondition"/>
 <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.NoSquares"/>
+<fullyQualifiedTypeName name="rs.etf.pp1.symboltable.Tab"/>
+<fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.SymbolTableDumpHelp"/>
+<fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.TabExtended"/>
+<fullyQualifiedTypeName name="rs.etf.pp1.symboltable.visitors.DumpSymbolTableVisitor"/>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,169 @@
+INFO  03:32:40,736 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  03:32:40,767 - #2 program
+INFO  03:32:40,767 - #25 test301
+INFO  03:32:40,767 - #9 const
+INFO  03:32:40,767 - #25 bool
+INFO  03:32:40,767 - #25 z
+INFO  03:32:40,768 - #7 =
+INFO  03:32:40,768 - #26 true
+INFO  03:32:40,768 - #6 ;
+INFO  03:32:40,768 - #25 int
+INFO  03:32:40,769 - #25 y
+INFO  03:32:40,769 - #10 [
+INFO  03:32:40,769 - #11 ]
+INFO  03:32:40,769 - #6 ;
+INFO  03:32:40,769 - #25 int
+INFO  03:32:40,769 - #25 x
+INFO  03:32:40,769 - #10 [
+INFO  03:32:40,769 - #11 ]
+INFO  03:32:40,769 - #6 ;
+INFO  03:32:40,769 - #3 {
+INFO  03:32:40,770 - #5 void
+INFO  03:32:40,770 - #25 main
+INFO  03:32:40,771 - #14 (
+INFO  03:32:40,771 - #15 )
+INFO  03:32:40,771 - #25 int
+INFO  03:32:40,771 - #25 nula
+INFO  03:32:40,771 - #6 ;
+INFO  03:32:40,772 - #3 {
+INFO  03:32:40,772 - #25 y
+INFO  03:32:40,772 - #7 =
+INFO  03:32:40,772 - #22 new
+INFO  03:32:40,773 - #25 int
+INFO  03:32:40,773 - #10 [
+INFO  03:32:40,773 - #24 3
+INFO  03:32:40,773 - #11 ]
+INFO  03:32:40,773 - #6 ;
+INFO  03:32:40,773 - #10 [
+INFO  03:32:40,773 - #25 nula
+INFO  03:32:40,774 - #11 ]
+INFO  03:32:40,774 - #7 =
+INFO  03:32:40,774 - #25 y
+INFO  03:32:40,774 - #6 ;
+INFO  03:32:40,774 - #4 }
+INFO  03:32:40,774 - #4 }
+INFO  03:32:40,778 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstList(
+    NoConstList(
+    ) [NoConstList]
+    ConstDeclOneTime(
+      Type(
+       bool
+      ) [Type]
+     z
+      BoolConst(
+       true
+      ) [BoolConst]
+    ) [ConstDeclOneTime]
+  ) [ConstList]
+  VarList(
+    VarList(
+      NoVarList(
+      ) [NoVarList]
+      VarDeclOneTime(
+        Type(
+         int
+        ) [Type]
+       y
+        VarSquares(
+        ) [VarSquares]
+      ) [VarDeclOneTime]
+    ) [VarList]
+    VarDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     x
+      VarSquares(
+      ) [VarSquares]
+    ) [VarDeclOneTime]
+  ) [VarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        NoVarList(
+        ) [NoVarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         nula
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        Statements(
+          NoStmt(
+          ) [NoStmt]
+          MatchedStmt(
+            DesStatement(
+              DesignatorAssign(
+                OneDesignatorIdent(
+                 y
+                ) [OneDesignatorIdent]
+                AssignopItem(
+                ) [AssignopItem]
+                PositiveExpr(
+                  FirstExpr(
+                    TermOne(
+                      FactorNewTypeExpr(
+                        Type(
+                         int
+                        ) [Type]
+                        PositiveExpr(
+                          FirstExpr(
+                            TermOne(
+                              FactorNumber(
+                               3
+                              ) [FactorNumber]
+                            ) [TermOne]
+                          ) [FirstExpr]
+                        ) [PositiveExpr]
+                      ) [FactorNewTypeExpr]
+                    ) [TermOne]
+                  ) [FirstExpr]
+                ) [PositiveExpr]
+              ) [DesignatorAssign]
+            ) [DesStatement]
+          ) [MatchedStmt]
+        ) [Statements]
+        MatchedStmt(
+          DesStatement(
+            DesignatorSquareStmt(
+              DesignatorYes(
+                OneDesignatorIdent(
+                 nula
+                ) [OneDesignatorIdent]
+              ) [DesignatorYes]
+              OneDesignatorIdent(
+               y
+              ) [OneDesignatorIdent]
+            ) [DesignatorSquareStmt]
+          ) [DesStatement]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  03:32:40,778 - ===================================
+INFO  03:32:40,780 - Deklarisana konstanta z na liniji 2
+INFO  03:32:40,780 - Deklarisan niz y na liniji 3
+INFO  03:32:40,780 - Deklarisan niz x na liniji 4
+INFO  03:32:40,780 - Obradjuje se funkcija main na liniji 6
+INFO  03:32:40,780 - Deklarisana promenljiva nula na liniji 7
+ERROR 03:32:40,781 - Greska na liniji 10 : nekompatibilna dodela nizu
+INFO  03:32:40,781 - ===================================
+ERROR 03:32:40,782 - Parsiranje NIJE uspesno zavrseno

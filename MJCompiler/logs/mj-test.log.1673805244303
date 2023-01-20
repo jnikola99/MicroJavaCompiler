@@ -1,0 +1,161 @@
+INFO  18:52:26,865 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  18:52:26,896 - #2 program
+INFO  18:52:26,896 - #25 test301
+INFO  18:52:26,896 - #9 const
+INFO  18:52:26,897 - #25 bool
+INFO  18:52:26,897 - #25 z
+INFO  18:52:26,897 - #7 =
+INFO  18:52:26,897 - #26 true
+INFO  18:52:26,897 - #6 ;
+INFO  18:52:26,897 - #9 const
+INFO  18:52:26,897 - #25 int
+INFO  18:52:26,897 - #25 xyz
+INFO  18:52:26,897 - #7 =
+INFO  18:52:26,898 - #24 1
+INFO  18:52:26,898 - #6 ;
+INFO  18:52:26,898 - #25 int
+INFO  18:52:26,898 - #25 y
+INFO  18:52:26,898 - #10 [
+INFO  18:52:26,898 - #11 ]
+INFO  18:52:26,898 - #6 ;
+INFO  18:52:26,898 - #25 int
+INFO  18:52:26,899 - #25 x
+INFO  18:52:26,900 - #10 [
+INFO  18:52:26,900 - #11 ]
+INFO  18:52:26,900 - #6 ;
+INFO  18:52:26,900 - #3 {
+INFO  18:52:26,900 - #5 void
+INFO  18:52:26,900 - #25 main
+INFO  18:52:26,900 - #14 (
+INFO  18:52:26,900 - #15 )
+INFO  18:52:26,901 - #25 int
+INFO  18:52:26,901 - #25 nula
+INFO  18:52:26,901 - #8 ,
+INFO  18:52:26,901 - #25 dva
+INFO  18:52:26,901 - #8 ,
+INFO  18:52:26,901 - #25 tri
+INFO  18:52:26,901 - #8 ,
+INFO  18:52:26,901 - #25 jedan
+INFO  18:52:26,901 - #6 ;
+INFO  18:52:26,901 - #3 {
+INFO  18:52:26,902 - #16 read
+INFO  18:52:26,902 - #14 (
+INFO  18:52:26,902 - #25 xyz
+INFO  18:52:26,902 - #15 )
+INFO  18:52:26,902 - #6 ;
+INFO  18:52:26,902 - #4 }
+INFO  18:52:26,902 - #4 }
+INFO  18:52:26,907 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstList(
+    ConstList(
+      NoConstList(
+      ) [NoConstList]
+      ConstDeclOneTime(
+        Type(
+         bool
+        ) [Type]
+       z
+        BoolConst(
+         true
+        ) [BoolConst]
+      ) [ConstDeclOneTime]
+    ) [ConstList]
+    ConstDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     xyz
+      NumConst(
+       1
+      ) [NumConst]
+    ) [ConstDeclOneTime]
+  ) [ConstList]
+  VarList(
+    VarList(
+      NoVarList(
+      ) [NoVarList]
+      VarDeclOneTime(
+        Type(
+         int
+        ) [Type]
+       y
+        VarSquares(
+        ) [VarSquares]
+      ) [VarDeclOneTime]
+    ) [VarList]
+    VarDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     x
+      VarSquares(
+      ) [VarSquares]
+    ) [VarDeclOneTime]
+  ) [VarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        NoVarList(
+        ) [NoVarList]
+        MoreVarDecl(
+          Type(
+           int
+          ) [Type]
+         nula
+          NoSquares(
+          ) [NoSquares]
+          MultipleVars(
+            MultipleVars(
+              OneVar(
+               dva
+                NoSquares(
+                ) [NoSquares]
+              ) [OneVar]
+             tri
+              NoSquares(
+              ) [NoSquares]
+            ) [MultipleVars]
+           jedan
+            NoSquares(
+            ) [NoSquares]
+          ) [MultipleVars]
+        ) [MoreVarDecl]
+      ) [VarList]
+      Statements(
+        NoStmt(
+        ) [NoStmt]
+        MatchedStmt(
+          ReadCondition(
+            OneDesignatorIdent(
+             xyz
+            ) [OneDesignatorIdent]
+          ) [ReadCondition]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  18:52:26,907 - ===================================
+INFO  18:52:26,909 - Deklarisana konstanta z na liniji 2
+INFO  18:52:26,909 - Deklarisana konstanta xyz na liniji 3
+INFO  18:52:26,909 - Deklarisan niz y na liniji 4
+INFO  18:52:26,909 - Deklarisan niz x na liniji 5
+INFO  18:52:26,909 - Obradjuje se funkcija main na liniji 7
+INFO  18:52:26,909 - Deklarisana promenljiva dva na liniji 8
+INFO  18:52:26,909 - Deklarisana promenljiva tri na liniji 8
+INFO  18:52:26,909 - Deklarisana promenljiva jedan na liniji 8
+INFO  18:52:26,909 - Deklarisana promenljiva nula na liniji 8
+INFO  18:52:26,909 - ===================================
+INFO  18:52:26,910 - Parsiranje uspesno zavrseno!

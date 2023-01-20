@@ -290,7 +290,7 @@ Factor ::= (FactorDesAct) Designator:func LPAREN DesiActPars RPAREN
 		|
 		(FactorBool) BOOL
 		|
-		(FactorExpr) LPAREN Expr RPAREN
+		(FactorExpr) LPAREN Expr:e RPAREN
 		|
 		(FactorNewTypeExpr) NEW Type:arrType LSQUARES Expr:e RSQUARES
 		|

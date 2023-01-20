@@ -23,6 +23,10 @@ public class MJParserTest {
 		Log4JUtils.instance().prepareLogFile(Logger.getRootLogger());
 	}
 	
+	public static void tsdump() {
+		TabExtended.tsdump();
+	}
+	
 	public static void main(String[] args) throws Exception {
 		
 		Logger log = Logger.getLogger(MJParserTest.class);
@@ -50,7 +54,7 @@ public class MJParserTest {
 			log.info("===================================");
 			
 			//Tab.dump();
-			TabExtended.tsdump();
+			tsdump();
 			
 			if(!p.errorDetected && v.passed()) {
 				log.info("Parsiranje uspesno zavrseno!");
