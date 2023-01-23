@@ -1,0 +1,91 @@
+INFO  02:11:14,931 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  02:11:14,964 - #2 program
+INFO  02:11:14,964 - #25 test301
+INFO  02:11:14,964 - #3 {
+INFO  02:11:14,965 - #5 void
+INFO  02:11:14,966 - #25 main
+INFO  02:11:14,966 - #14 (
+INFO  02:11:14,966 - #15 )
+INFO  02:11:14,966 - #25 int
+INFO  02:11:14,966 - #25 bodovi
+INFO  02:11:14,967 - #6 ;
+INFO  02:11:14,967 - #25 bool
+INFO  02:11:14,967 - #25 bt
+INFO  02:11:14,967 - #6 ;
+INFO  02:11:14,968 - #3 {
+INFO  02:11:14,968 - #17 print
+INFO  02:11:14,968 - #14 (
+INFO  02:11:14,968 - #25 bodovi
+INFO  02:11:14,968 - #15 )
+INFO  02:11:14,968 - #6 ;
+INFO  02:11:14,968 - #4 }
+INFO  02:11:14,969 - #4 }
+INFO  02:11:14,974 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoConstList(
+  ) [NoConstList]
+  NoVarList(
+  ) [NoVarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        VarList(
+          NoVarList(
+          ) [NoVarList]
+          VarDeclOneTime(
+            Type(
+             int
+            ) [Type]
+           bodovi
+            NoSquares(
+            ) [NoSquares]
+          ) [VarDeclOneTime]
+        ) [VarList]
+        VarDeclOneTime(
+          Type(
+           bool
+          ) [Type]
+         bt
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        NoStmt(
+        ) [NoStmt]
+        MatchedStmt(
+          PrintCondition(
+            PositiveExpr(
+              FirstExpr(
+                TermOne(
+                  FactorDesNoAct(
+                    OneDesignatorIdent(
+                     bodovi
+                    ) [OneDesignatorIdent]
+                  ) [FactorDesNoAct]
+                ) [TermOne]
+              ) [FirstExpr]
+            ) [PositiveExpr]
+          ) [PrintCondition]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  02:11:14,974 - ===================================
+INFO  02:11:14,976 - Obradjuje se funkcija main na liniji 5
+INFO  02:11:14,976 - Deklarisana promenljiva bodovi na liniji 6
+INFO  02:11:14,976 - Deklarisana promenljiva bt na liniji 7
+INFO  02:11:14,977 - ===================================
+INFO  02:11:14,981 - Parsiranje uspesno zavrseno!

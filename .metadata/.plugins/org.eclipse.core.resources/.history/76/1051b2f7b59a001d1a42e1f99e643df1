@@ -1,0 +1,17 @@
+package rs.ac.bg.etf.pp1;
+import rs.etf.pp1.mj.runtime.Code;
+import rs.ac.bg.etf.pp1.ast.VisitorAdaptor;
+import rs.ac.bg.etf.pp1.ast.*;
+import rs.etf.pp1.symboltable.Tab;
+import rs.etf.pp1.symboltable.concepts.Obj;
+import rs.etf.pp1.symboltable.concepts.Struct;
+
+public class CodeGenerator extends VisitorAdaptor{
+	private int mainPc;
+	
+	public int getMainPc(){
+		return mainPc;
+	}
+	
+	
+}

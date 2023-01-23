@@ -2,12 +2,16 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="mnozenje"/>
+		<item key="selection" value="Print"/>
 		<item key="casesensitive" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="wrap" value="true"/>
 		<item key="wholeword" value="false"/>
 		<list key="findhistory">
+			<item value="print"/>
+			<item value="factorexpr"/>
+			<item value="onedes"/>
+			<item value="nisu kom"/>
 			<item value="mnozenje"/>
 			<item value="designatorwith"/>
 			<item value="nisu kompat"/>
@@ -19,10 +23,6 @@
 			<item value="nisu kompatibilni"/>
 			<item value="nisu kompatinilni"/>
 			<item value="onedesig"/>
-			<item value="assignop"/>
-			<item value="addopitem"/>
-			<item value="varsquares"/>
-			<item value="mulopfactor"/>
 		</list>
 		<list key="replacehistory">
 		</list>

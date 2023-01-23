@@ -1,0 +1,145 @@
+INFO  02:10:41,771 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  02:10:41,802 - #2 program
+INFO  02:10:41,802 - #25 test301
+INFO  02:10:41,802 - #9 const
+INFO  02:10:41,802 - #25 int
+INFO  02:10:41,802 - #25 nula
+INFO  02:10:41,803 - #7 =
+INFO  02:10:41,803 - #24 0
+INFO  02:10:41,803 - #6 ;
+INFO  02:10:41,803 - #9 const
+INFO  02:10:41,803 - #25 int
+INFO  02:10:41,803 - #25 jedan
+INFO  02:10:41,803 - #7 =
+INFO  02:10:41,803 - #24 1
+INFO  02:10:41,803 - #6 ;
+INFO  02:10:41,803 - #9 const
+INFO  02:10:41,803 - #25 int
+INFO  02:10:41,804 - #25 pet
+INFO  02:10:41,804 - #7 =
+INFO  02:10:41,804 - #24 5
+INFO  02:10:41,804 - #6 ;
+INFO  02:10:41,804 - #3 {
+INFO  02:10:41,804 - #5 void
+INFO  02:10:41,805 - #25 main
+INFO  02:10:41,805 - #14 (
+INFO  02:10:41,805 - #15 )
+INFO  02:10:41,805 - #25 int
+INFO  02:10:41,805 - #25 bodovi
+INFO  02:10:41,805 - #6 ;
+INFO  02:10:41,805 - #25 bool
+INFO  02:10:41,806 - #25 bt
+INFO  02:10:41,806 - #6 ;
+INFO  02:10:41,806 - #3 {
+INFO  02:10:41,806 - #17 print
+INFO  02:10:41,806 - #14 (
+INFO  02:10:41,806 - #25 bodovi
+INFO  02:10:41,806 - #15 )
+INFO  02:10:41,806 - #6 ;
+INFO  02:10:41,806 - #4 }
+INFO  02:10:41,807 - #4 }
+INFO  02:10:41,811 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstList(
+    ConstList(
+      ConstList(
+        NoConstList(
+        ) [NoConstList]
+        ConstDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         nula
+          NumConst(
+           0
+          ) [NumConst]
+        ) [ConstDeclOneTime]
+      ) [ConstList]
+      ConstDeclOneTime(
+        Type(
+         int
+        ) [Type]
+       jedan
+        NumConst(
+         1
+        ) [NumConst]
+      ) [ConstDeclOneTime]
+    ) [ConstList]
+    ConstDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     pet
+      NumConst(
+       5
+      ) [NumConst]
+    ) [ConstDeclOneTime]
+  ) [ConstList]
+  NoVarList(
+  ) [NoVarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        VarList(
+          NoVarList(
+          ) [NoVarList]
+          VarDeclOneTime(
+            Type(
+             int
+            ) [Type]
+           bodovi
+            NoSquares(
+            ) [NoSquares]
+          ) [VarDeclOneTime]
+        ) [VarList]
+        VarDeclOneTime(
+          Type(
+           bool
+          ) [Type]
+         bt
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        NoStmt(
+        ) [NoStmt]
+        MatchedStmt(
+          PrintCondition(
+            PositiveExpr(
+              FirstExpr(
+                TermOne(
+                  FactorDesNoAct(
+                    OneDesignatorIdent(
+                     bodovi
+                    ) [OneDesignatorIdent]
+                  ) [FactorDesNoAct]
+                ) [TermOne]
+              ) [FirstExpr]
+            ) [PositiveExpr]
+          ) [PrintCondition]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  02:10:41,811 - ===================================
+INFO  02:10:41,813 - Deklarisana konstanta nula na liniji 5
+INFO  02:10:41,814 - Deklarisana konstanta jedan na liniji 6
+INFO  02:10:41,814 - Deklarisana konstanta pet na liniji 7
+INFO  02:10:41,814 - Obradjuje se funkcija main na liniji 11
+INFO  02:10:41,814 - Deklarisana promenljiva bodovi na liniji 12
+INFO  02:10:41,814 - Deklarisana promenljiva bt na liniji 13
+INFO  02:10:41,814 - ===================================
+INFO  02:10:41,818 - Parsiranje uspesno zavrseno!

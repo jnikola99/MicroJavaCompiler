@@ -17,6 +17,8 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	boolean returnFound = false;
 	boolean newArray = false;
 	String currentDesignatorName = null;
+	int adr=0;
+	char adrch=0;
 	int currentNumber = 0;
 	int level=0;
 	int nVars;
@@ -133,6 +135,16 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		report_info("Deklarisana konstanta "+ constDecl.getSomeConst(), constDecl);
 		Obj constNode = Tab.insert(Obj.Con,constDecl.getSomeConst(),typevar);
 		
+		if(constDecl.getConstType().struct==Tab.intType) {
+			constNode.setAdr(adr);
+		}
+		else if(constDecl.getConstType().struct==Tab.charType) {
+			constNode.setAdr(adrch);
+		}
+		else {
+			constNode.setAdr(adr);
+		}
+		constNode.setLevel(level);
 	}
 	
 	public void visit(MoreConstDecl constDecl) {
@@ -180,16 +192,24 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	public void visit(NumConst cnst) {
 		cnst.struct = Tab.intType;
 		constTypevar = Tab.intType;
+		adr = cnst.getConstType();
 	}
 	
 	public void visit(CharConst cnst) {
 		cnst.struct = Tab.charType;
 		constTypevar = Tab.charType;
+		adrch = cnst.getConstType().charAt(0);
 	}
 	
 	public void visit(BoolConst cnst) {
 		cnst.struct = boolType;
 		constTypevar = boolType;
+		if(cnst.getConstType().equals("true")) {
+			adr = 1;
+		}
+		else {
+			adr = 0;
+		}
 	}
 	
 	public void visit(TermOne term) {
