@@ -1,0 +1,149 @@
+INFO  00:44:17,622 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  00:44:17,653 - #2 program
+INFO  00:44:17,653 - #25 test301
+INFO  00:44:17,653 - #9 const
+INFO  00:44:17,654 - #25 int
+INFO  00:44:17,654 - #25 jedan
+INFO  00:44:17,654 - #7 =
+INFO  00:44:17,654 - #24 1
+INFO  00:44:17,654 - #6 ;
+INFO  00:44:17,654 - #3 {
+INFO  00:44:17,655 - #5 void
+INFO  00:44:17,655 - #25 main
+INFO  00:44:17,655 - #14 (
+INFO  00:44:17,655 - #15 )
+INFO  00:44:17,656 - #25 int
+INFO  00:44:17,656 - #25 bodovi
+INFO  00:44:17,656 - #6 ;
+INFO  00:44:17,656 - #25 bool
+INFO  00:44:17,657 - #25 bt
+INFO  00:44:17,657 - #6 ;
+INFO  00:44:17,657 - #3 {
+INFO  00:44:17,657 - #25 bodovi
+INFO  00:44:17,657 - #7 =
+INFO  00:44:17,657 - #24 2
+INFO  00:44:17,658 - #6 ;
+INFO  00:44:17,658 - #25 bodovi
+INFO  00:44:17,658 - #30 ++
+INFO  00:44:17,658 - #6 ;
+INFO  00:44:17,659 - #17 print
+INFO  00:44:17,659 - #14 (
+INFO  00:44:17,659 - #25 bodovi
+INFO  00:44:17,659 - #15 )
+INFO  00:44:17,659 - #6 ;
+INFO  00:44:17,659 - #4 }
+INFO  00:44:17,659 - #4 }
+INFO  00:44:17,663 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstList(
+    NoConstList(
+    ) [NoConstList]
+    ConstDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     jedan
+      NumConst(
+       1
+      ) [NumConst]
+    ) [ConstDeclOneTime]
+  ) [ConstList]
+  NoVarList(
+  ) [NoVarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        VarList(
+          NoVarList(
+          ) [NoVarList]
+          VarDeclOneTime(
+            Type(
+             int
+            ) [Type]
+           bodovi
+            NoSquares(
+            ) [NoSquares]
+          ) [VarDeclOneTime]
+        ) [VarList]
+        VarDeclOneTime(
+          Type(
+           bool
+          ) [Type]
+         bt
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        Statements(
+          Statements(
+            NoStmt(
+            ) [NoStmt]
+            MatchedStmt(
+              DesStatement(
+                DesignatorAssign(
+                  OneDesignatorIdent(
+                   bodovi
+                  ) [OneDesignatorIdent]
+                  AssignopItem(
+                  ) [AssignopItem]
+                  PositiveExpr(
+                    FirstExpr(
+                      TermOne(
+                        FactorNumber(
+                         2
+                        ) [FactorNumber]
+                      ) [TermOne]
+                    ) [FirstExpr]
+                  ) [PositiveExpr]
+                ) [DesignatorAssign]
+              ) [DesStatement]
+            ) [MatchedStmt]
+          ) [Statements]
+          MatchedStmt(
+            DesStatement(
+              DesignatorInc(
+                OneDesignatorIdent(
+                 bodovi
+                ) [OneDesignatorIdent]
+              ) [DesignatorInc]
+            ) [DesStatement]
+          ) [MatchedStmt]
+        ) [Statements]
+        MatchedStmt(
+          PrintCondition(
+            PositiveExpr(
+              FirstExpr(
+                TermOne(
+                  FactorDesNoAct(
+                    OneDesignatorIdent(
+                     bodovi
+                    ) [OneDesignatorIdent]
+                  ) [FactorDesNoAct]
+                ) [TermOne]
+              ) [FirstExpr]
+            ) [PositiveExpr]
+          ) [PrintCondition]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  00:44:17,663 - ===================================
+INFO  00:44:17,666 - Deklarisana konstanta jedan na liniji 4
+INFO  00:44:17,666 - Obradjuje se funkcija main na liniji 6
+INFO  00:44:17,666 - Deklarisana promenljiva bodovi na liniji 7
+INFO  00:44:17,666 - Deklarisana promenljiva bt na liniji 8
+INFO  00:44:17,666 - ===================================
+INFO  00:44:17,670 - Parsiranje uspesno zavrseno!

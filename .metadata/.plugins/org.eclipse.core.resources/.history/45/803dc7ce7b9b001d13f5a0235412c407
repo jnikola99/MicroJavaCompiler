@@ -1,0 +1,13 @@
+// Test301
+
+program test301
+	const int jedan = 1;
+{
+	void main()	
+		int bodovi;
+		bool bt;
+	{
+		bodovi=jedan;
+		print(bodovi);
+	}
+}	

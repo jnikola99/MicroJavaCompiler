@@ -29,10 +29,11 @@
 <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.TabExtended"/>
 <fullyQualifiedTypeName name="rs.etf.pp1.symboltable.visitors.DumpSymbolTableVisitor"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.ast.VisitorAdaptor"/>
 <fullyQualifiedTypeName name="rs.etf.pp1.mj.runtime.Code"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
 <fullyQualifiedTypeName name="rs.ac.bg.etf.pp1.CounterVisitor.VarCounter"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

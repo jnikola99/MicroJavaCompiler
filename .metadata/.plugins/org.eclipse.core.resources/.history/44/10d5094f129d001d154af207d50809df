@@ -1,0 +1,16 @@
+// Test301
+
+program test301
+	const int pet=5;
+	const int jedan=1;
+	int b,a[];
+{
+	void main()	
+		int bodovi;
+		int x;
+	{
+		a=new int[2];
+		//a[0]=1;
+		//print(a[0]);
+	}
+}	

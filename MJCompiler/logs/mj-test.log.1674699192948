@@ -1,0 +1,245 @@
+INFO  03:12:51,086 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  03:12:51,117 - #2 program
+INFO  03:12:51,117 - #25 test301
+INFO  03:12:51,117 - #9 const
+INFO  03:12:51,117 - #25 int
+INFO  03:12:51,117 - #25 nula
+INFO  03:12:51,118 - #7 =
+INFO  03:12:51,118 - #24 0
+INFO  03:12:51,118 - #6 ;
+INFO  03:12:51,118 - #9 const
+INFO  03:12:51,118 - #25 int
+INFO  03:12:51,118 - #25 jedan
+INFO  03:12:51,118 - #7 =
+INFO  03:12:51,118 - #24 1
+INFO  03:12:51,118 - #6 ;
+INFO  03:12:51,118 - #9 const
+INFO  03:12:51,118 - #25 int
+INFO  03:12:51,118 - #25 pet
+INFO  03:12:51,118 - #7 =
+INFO  03:12:51,118 - #24 5
+INFO  03:12:51,118 - #6 ;
+INFO  03:12:51,119 - #25 int
+INFO  03:12:51,120 - #25 niz
+INFO  03:12:51,120 - #10 [
+INFO  03:12:51,120 - #11 ]
+INFO  03:12:51,120 - #8 ,
+INFO  03:12:51,120 - #25 niz2
+INFO  03:12:51,120 - #10 [
+INFO  03:12:51,120 - #11 ]
+INFO  03:12:51,120 - #8 ,
+INFO  03:12:51,121 - #25 a
+INFO  03:12:51,121 - #8 ,
+INFO  03:12:51,121 - #25 b
+INFO  03:12:51,121 - #6 ;
+INFO  03:12:51,121 - #25 char
+INFO  03:12:51,121 - #25 nizch
+INFO  03:12:51,121 - #10 [
+INFO  03:12:51,121 - #11 ]
+INFO  03:12:51,121 - #6 ;
+INFO  03:12:51,122 - #3 {
+INFO  03:12:51,122 - #5 void
+INFO  03:12:51,122 - #25 main
+INFO  03:12:51,122 - #14 (
+INFO  03:12:51,122 - #15 )
+INFO  03:12:51,123 - #25 int
+INFO  03:12:51,123 - #25 bodovi
+INFO  03:12:51,123 - #6 ;
+INFO  03:12:51,123 - #25 bool
+INFO  03:12:51,123 - #25 bt
+INFO  03:12:51,123 - #6 ;
+INFO  03:12:51,123 - #3 {
+INFO  03:12:51,123 - #25 niz
+INFO  03:12:51,123 - #7 =
+INFO  03:12:51,123 - #22 new
+INFO  03:12:51,124 - #25 int
+INFO  03:12:51,124 - #10 [
+INFO  03:12:51,124 - #24 5
+INFO  03:12:51,124 - #11 ]
+INFO  03:12:51,124 - #6 ;
+INFO  03:12:51,125 - #10 [
+INFO  03:12:51,125 - #25 a
+INFO  03:12:51,125 - #8 ,
+INFO  03:12:51,125 - #25 b
+INFO  03:12:51,125 - #8 ,
+INFO  03:12:51,125 - #8 ,
+INFO  03:12:51,125 - #25 c
+INFO  03:12:51,125 - #11 ]
+INFO  03:12:51,125 - #7 =
+INFO  03:12:51,125 - #17 print
+ERROR 03:12:51,126 - 
+Sintaksna greska na liniji 17
+INFO  03:12:51,126 - #14 (
+INFO  03:12:51,126 - #24 2
+INFO  03:12:51,126 - #15 )
+INFO  03:12:51,127 - #6 ;
+INFO  03:12:51,127 - #4 }
+INFO  03:12:51,127 - #4 }
+ERROR 03:12:51,127 - Izvrsen oporavak do ; u liniji 16
+INFO  03:12:51,133 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstList(
+    ConstList(
+      ConstList(
+        NoConstList(
+        ) [NoConstList]
+        ConstDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         nula
+          NumConst(
+           0
+          ) [NumConst]
+        ) [ConstDeclOneTime]
+      ) [ConstList]
+      ConstDeclOneTime(
+        Type(
+         int
+        ) [Type]
+       jedan
+        NumConst(
+         1
+        ) [NumConst]
+      ) [ConstDeclOneTime]
+    ) [ConstList]
+    ConstDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     pet
+      NumConst(
+       5
+      ) [NumConst]
+    ) [ConstDeclOneTime]
+  ) [ConstList]
+  VarList(
+    VarList(
+      NoVarList(
+      ) [NoVarList]
+      MoreVarDecl(
+        Type(
+         int
+        ) [Type]
+       niz
+        VarSquares(
+        ) [VarSquares]
+        MultipleVars(
+          MultipleVars(
+            OneVar(
+             niz2
+              VarSquares(
+              ) [VarSquares]
+            ) [OneVar]
+           a
+            NoSquares(
+            ) [NoSquares]
+          ) [MultipleVars]
+         b
+          NoSquares(
+          ) [NoSquares]
+        ) [MultipleVars]
+      ) [MoreVarDecl]
+    ) [VarList]
+    VarDeclOneTime(
+      Type(
+       char
+      ) [Type]
+     nizch
+      VarSquares(
+      ) [VarSquares]
+    ) [VarDeclOneTime]
+  ) [VarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        VarList(
+          NoVarList(
+          ) [NoVarList]
+          VarDeclOneTime(
+            Type(
+             int
+            ) [Type]
+           bodovi
+            NoSquares(
+            ) [NoSquares]
+          ) [VarDeclOneTime]
+        ) [VarList]
+        VarDeclOneTime(
+          Type(
+           bool
+          ) [Type]
+         bt
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        Statements(
+          NoStmt(
+          ) [NoStmt]
+          MatchedStmt(
+            DesStatement(
+              DesignatorAssign(
+                OneDesignatorIdent(
+                 niz
+                ) [OneDesignatorIdent]
+                AssignopItem(
+                ) [AssignopItem]
+                PositiveExpr(
+                  FirstExpr(
+                    TermOne(
+                      FactorNewTypeExpr(
+                        Type(
+                         int
+                        ) [Type]
+                        PositiveExpr(
+                          FirstExpr(
+                            TermOne(
+                              FactorNumber(
+                               5
+                              ) [FactorNumber]
+                            ) [TermOne]
+                          ) [FirstExpr]
+                        ) [PositiveExpr]
+                      ) [FactorNewTypeExpr]
+                    ) [TermOne]
+                  ) [FirstExpr]
+                ) [PositiveExpr]
+              ) [DesignatorAssign]
+            ) [DesStatement]
+          ) [MatchedStmt]
+        ) [Statements]
+        MatchedStmt(
+          ErrorStmt(
+          ) [ErrorStmt]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  03:12:51,133 - ===================================
+INFO  03:12:51,135 - Deklarisana konstanta nula na liniji 4
+INFO  03:12:51,135 - Deklarisana konstanta jedan na liniji 5
+INFO  03:12:51,135 - Deklarisana konstanta pet na liniji 6
+INFO  03:12:51,135 - Deklarisan niz niz2 na liniji 8
+INFO  03:12:51,135 - Deklarisana promenljiva a na liniji 8
+INFO  03:12:51,135 - Deklarisana promenljiva b na liniji 8
+INFO  03:12:51,135 - Deklarisan niz niz na liniji 8
+INFO  03:12:51,135 - Deklarisan niz nizch na liniji 9
+INFO  03:12:51,135 - Obradjuje se funkcija main na liniji 11
+INFO  03:12:51,135 - Deklarisana promenljiva bodovi na liniji 12
+INFO  03:12:51,135 - Deklarisana promenljiva bt na liniji 13
+INFO  03:12:51,135 - ===================================
+ERROR 03:12:51,136 - Parsiranje NIJE uspesno zavrseno

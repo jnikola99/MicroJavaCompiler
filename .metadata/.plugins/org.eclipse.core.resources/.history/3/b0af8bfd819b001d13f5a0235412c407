@@ -1,0 +1,14 @@
+// Test301
+
+program test301
+	int a[];
+{
+	void main()	
+		int bodovi;
+		int x;
+	{
+		a = new int[2];
+		read(x);
+		print(x);
+	}
+}	

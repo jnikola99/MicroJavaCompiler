@@ -1,0 +1,173 @@
+INFO  01:21:38,168 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  01:21:38,199 - #2 program
+INFO  01:21:38,199 - #25 test301
+INFO  01:21:38,199 - #25 int
+INFO  01:21:38,200 - #25 a
+INFO  01:21:38,200 - #10 [
+INFO  01:21:38,200 - #11 ]
+INFO  01:21:38,200 - #6 ;
+INFO  01:21:38,201 - #3 {
+INFO  01:21:38,201 - #5 void
+INFO  01:21:38,201 - #25 main
+INFO  01:21:38,201 - #14 (
+INFO  01:21:38,201 - #15 )
+INFO  01:21:38,202 - #25 int
+INFO  01:21:38,202 - #25 bodovi
+INFO  01:21:38,202 - #6 ;
+INFO  01:21:38,202 - #25 int
+INFO  01:21:38,202 - #25 x
+INFO  01:21:38,202 - #6 ;
+INFO  01:21:38,202 - #3 {
+INFO  01:21:38,202 - #25 x
+INFO  01:21:38,203 - #7 =
+INFO  01:21:38,204 - #24 3
+INFO  01:21:38,204 - #44 %
+INFO  01:21:38,204 - #24 2
+INFO  01:21:38,230 - #32 +
+INFO  01:21:38,230 - #24 3
+INFO  01:21:38,230 - #42 *
+INFO  01:21:38,230 - #24 2
+INFO  01:21:38,231 - #33 -
+INFO  01:21:38,231 - #24 3
+INFO  01:21:38,231 - #6 ;
+INFO  01:21:38,231 - #17 print
+INFO  01:21:38,232 - #14 (
+INFO  01:21:38,232 - #25 x
+INFO  01:21:38,232 - #15 )
+INFO  01:21:38,232 - #6 ;
+INFO  01:21:38,232 - #4 }
+INFO  01:21:38,232 - #4 }
+INFO  01:21:38,236 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoConstList(
+  ) [NoConstList]
+  VarList(
+    NoVarList(
+    ) [NoVarList]
+    VarDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     a
+      VarSquares(
+      ) [VarSquares]
+    ) [VarDeclOneTime]
+  ) [VarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        VarList(
+          NoVarList(
+          ) [NoVarList]
+          VarDeclOneTime(
+            Type(
+             int
+            ) [Type]
+           bodovi
+            NoSquares(
+            ) [NoSquares]
+          ) [VarDeclOneTime]
+        ) [VarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         x
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        Statements(
+          NoStmt(
+          ) [NoStmt]
+          MatchedStmt(
+            DesStatement(
+              DesignatorAssign(
+                OneDesignatorIdent(
+                 x
+                ) [OneDesignatorIdent]
+                AssignopItem(
+                ) [AssignopItem]
+                PositiveExpr(
+                  NextExpr(
+                    NextExpr(
+                      FirstExpr(
+                        TermMore(
+                          TermOne(
+                            FactorNumber(
+                             3
+                            ) [FactorNumber]
+                          ) [TermOne]
+                          Modop(
+                          ) [Modop]
+                          FactorNumber(
+                           2
+                          ) [FactorNumber]
+                        ) [TermMore]
+                      ) [FirstExpr]
+                      AddopItem(
+                      ) [AddopItem]
+                      TermMore(
+                        TermOne(
+                          FactorNumber(
+                           3
+                          ) [FactorNumber]
+                        ) [TermOne]
+                        MulopItem(
+                        ) [MulopItem]
+                        FactorNumber(
+                         2
+                        ) [FactorNumber]
+                      ) [TermMore]
+                    ) [NextExpr]
+                    Subop(
+                    ) [Subop]
+                    TermOne(
+                      FactorNumber(
+                       3
+                      ) [FactorNumber]
+                    ) [TermOne]
+                  ) [NextExpr]
+                ) [PositiveExpr]
+              ) [DesignatorAssign]
+            ) [DesStatement]
+          ) [MatchedStmt]
+        ) [Statements]
+        MatchedStmt(
+          PrintCondition(
+            PositiveExpr(
+              FirstExpr(
+                TermOne(
+                  FactorDesNoAct(
+                    OneDesignatorIdent(
+                     x
+                    ) [OneDesignatorIdent]
+                  ) [FactorDesNoAct]
+                ) [TermOne]
+              ) [FirstExpr]
+            ) [PositiveExpr]
+          ) [PrintCondition]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  01:21:38,236 - ===================================
+INFO  01:21:38,238 - Deklarisan niz a na liniji 4
+INFO  01:21:38,239 - Obradjuje se funkcija main na liniji 6
+INFO  01:21:38,239 - Deklarisana promenljiva bodovi na liniji 7
+INFO  01:21:38,239 - Deklarisana promenljiva x na liniji 8
+INFO  01:21:38,239 - ===================================
+INFO  01:21:38,268 - Parsiranje uspesno zavrseno!

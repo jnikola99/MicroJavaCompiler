@@ -1,0 +1,105 @@
+INFO  01:20:15,170 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  01:20:15,201 - #2 program
+INFO  01:20:15,201 - #25 test301
+INFO  01:20:15,201 - #25 int
+INFO  01:20:15,202 - #25 a
+INFO  01:20:15,203 - #10 [
+INFO  01:20:15,203 - #11 ]
+INFO  01:20:15,203 - #6 ;
+INFO  01:20:15,203 - #3 {
+INFO  01:20:15,203 - #5 void
+INFO  01:20:15,204 - #25 main
+INFO  01:20:15,204 - #14 (
+INFO  01:20:15,204 - #15 )
+INFO  01:20:15,204 - #25 int
+INFO  01:20:15,204 - #25 bodovi
+INFO  01:20:15,204 - #6 ;
+INFO  01:20:15,204 - #25 int
+INFO  01:20:15,205 - #25 x
+INFO  01:20:15,205 - #6 ;
+INFO  01:20:15,205 - #3 {
+INFO  01:20:15,205 - #25 x
+INFO  01:20:15,205 - #7 =
+INFO  01:20:15,206 - #33 -
+INFO  01:20:15,206 - #24 1
+INFO  01:20:15,206 - #33 -
+INFO  01:20:15,207 - #24 1
+INFO  01:20:15,207 - #17 print
+ERROR 01:20:15,207 - 
+Sintaksna greska na liniji 11
+INFO  01:20:15,207 - #14 (
+INFO  01:20:15,207 - #25 x
+INFO  01:20:15,207 - #15 )
+INFO  01:20:15,208 - #6 ;
+INFO  01:20:15,208 - #4 }
+INFO  01:20:15,208 - #4 }
+ERROR 01:20:15,208 - Izvrsen oporavak do ; u liniji 10
+INFO  01:20:15,212 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoConstList(
+  ) [NoConstList]
+  VarList(
+    NoVarList(
+    ) [NoVarList]
+    VarDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     a
+      VarSquares(
+      ) [VarSquares]
+    ) [VarDeclOneTime]
+  ) [VarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        VarList(
+          NoVarList(
+          ) [NoVarList]
+          VarDeclOneTime(
+            Type(
+             int
+            ) [Type]
+           bodovi
+            NoSquares(
+            ) [NoSquares]
+          ) [VarDeclOneTime]
+        ) [VarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         x
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        NoStmt(
+        ) [NoStmt]
+        MatchedStmt(
+          ErrorStmt(
+          ) [ErrorStmt]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  01:20:15,212 - ===================================
+INFO  01:20:15,214 - Deklarisan niz a na liniji 4
+INFO  01:20:15,214 - Obradjuje se funkcija main na liniji 6
+INFO  01:20:15,214 - Deklarisana promenljiva bodovi na liniji 7
+INFO  01:20:15,214 - Deklarisana promenljiva x na liniji 8
+INFO  01:20:15,214 - ===================================
+ERROR 01:20:15,215 - Parsiranje NIJE uspesno zavrseno

@@ -1,0 +1,153 @@
+INFO  01:19:28,324 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  01:19:28,355 - #2 program
+INFO  01:19:28,355 - #25 test301
+INFO  01:19:28,355 - #25 int
+INFO  01:19:28,355 - #25 a
+INFO  01:19:28,356 - #10 [
+INFO  01:19:28,356 - #11 ]
+INFO  01:19:28,356 - #6 ;
+INFO  01:19:28,356 - #3 {
+INFO  01:19:28,357 - #5 void
+INFO  01:19:28,357 - #25 main
+INFO  01:19:28,357 - #14 (
+INFO  01:19:28,357 - #15 )
+INFO  01:19:28,357 - #25 int
+INFO  01:19:28,357 - #25 bodovi
+INFO  01:19:28,357 - #6 ;
+INFO  01:19:28,358 - #25 int
+INFO  01:19:28,358 - #25 x
+INFO  01:19:28,358 - #6 ;
+INFO  01:19:28,358 - #3 {
+INFO  01:19:28,358 - #25 x
+INFO  01:19:28,358 - #7 =
+INFO  01:19:28,359 - #24 1
+INFO  01:19:28,359 - #42 *
+INFO  01:19:28,359 - #24 1
+INFO  01:19:28,360 - #32 +
+INFO  01:19:28,360 - #24 3
+INFO  01:19:28,360 - #6 ;
+INFO  01:19:28,361 - #17 print
+INFO  01:19:28,361 - #14 (
+INFO  01:19:28,361 - #25 x
+INFO  01:19:28,361 - #15 )
+INFO  01:19:28,361 - #6 ;
+INFO  01:19:28,361 - #4 }
+INFO  01:19:28,361 - #4 }
+INFO  01:19:28,365 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoConstList(
+  ) [NoConstList]
+  VarList(
+    NoVarList(
+    ) [NoVarList]
+    VarDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     a
+      VarSquares(
+      ) [VarSquares]
+    ) [VarDeclOneTime]
+  ) [VarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        VarList(
+          NoVarList(
+          ) [NoVarList]
+          VarDeclOneTime(
+            Type(
+             int
+            ) [Type]
+           bodovi
+            NoSquares(
+            ) [NoSquares]
+          ) [VarDeclOneTime]
+        ) [VarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         x
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        Statements(
+          NoStmt(
+          ) [NoStmt]
+          MatchedStmt(
+            DesStatement(
+              DesignatorAssign(
+                OneDesignatorIdent(
+                 x
+                ) [OneDesignatorIdent]
+                AssignopItem(
+                ) [AssignopItem]
+                PositiveExpr(
+                  NextExpr(
+                    FirstExpr(
+                      TermMore(
+                        TermOne(
+                          FactorNumber(
+                           1
+                          ) [FactorNumber]
+                        ) [TermOne]
+                        MulopItem(
+                        ) [MulopItem]
+                        FactorNumber(
+                         1
+                        ) [FactorNumber]
+                      ) [TermMore]
+                    ) [FirstExpr]
+                    AddopItem(
+                    ) [AddopItem]
+                    TermOne(
+                      FactorNumber(
+                       3
+                      ) [FactorNumber]
+                    ) [TermOne]
+                  ) [NextExpr]
+                ) [PositiveExpr]
+              ) [DesignatorAssign]
+            ) [DesStatement]
+          ) [MatchedStmt]
+        ) [Statements]
+        MatchedStmt(
+          PrintCondition(
+            PositiveExpr(
+              FirstExpr(
+                TermOne(
+                  FactorDesNoAct(
+                    OneDesignatorIdent(
+                     x
+                    ) [OneDesignatorIdent]
+                  ) [FactorDesNoAct]
+                ) [TermOne]
+              ) [FirstExpr]
+            ) [PositiveExpr]
+          ) [PrintCondition]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  01:19:28,365 - ===================================
+INFO  01:19:28,367 - Deklarisan niz a na liniji 4
+INFO  01:19:28,367 - Obradjuje se funkcija main na liniji 6
+INFO  01:19:28,368 - Deklarisana promenljiva bodovi na liniji 7
+INFO  01:19:28,368 - Deklarisana promenljiva x na liniji 8
+INFO  01:19:28,368 - ===================================
+INFO  01:19:28,371 - Parsiranje uspesno zavrseno!

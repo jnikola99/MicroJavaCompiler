@@ -1,0 +1,289 @@
+INFO  03:13:12,951 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  03:13:12,984 - #2 program
+INFO  03:13:12,984 - #25 test301
+INFO  03:13:12,984 - #9 const
+INFO  03:13:12,985 - #25 int
+INFO  03:13:12,985 - #25 nula
+INFO  03:13:12,985 - #7 =
+INFO  03:13:12,985 - #24 0
+INFO  03:13:12,985 - #6 ;
+INFO  03:13:12,985 - #9 const
+INFO  03:13:12,985 - #25 int
+INFO  03:13:12,986 - #25 jedan
+INFO  03:13:12,986 - #7 =
+INFO  03:13:12,986 - #24 1
+INFO  03:13:12,986 - #6 ;
+INFO  03:13:12,986 - #9 const
+INFO  03:13:12,986 - #25 int
+INFO  03:13:12,986 - #25 pet
+INFO  03:13:12,986 - #7 =
+INFO  03:13:12,986 - #24 5
+INFO  03:13:12,986 - #6 ;
+INFO  03:13:12,986 - #25 int
+INFO  03:13:12,987 - #25 niz
+INFO  03:13:12,987 - #10 [
+INFO  03:13:12,987 - #11 ]
+INFO  03:13:12,987 - #8 ,
+INFO  03:13:12,988 - #25 niz2
+INFO  03:13:12,988 - #10 [
+INFO  03:13:12,988 - #11 ]
+INFO  03:13:12,988 - #8 ,
+INFO  03:13:12,988 - #25 a
+INFO  03:13:12,988 - #8 ,
+INFO  03:13:12,988 - #25 b
+INFO  03:13:12,988 - #6 ;
+INFO  03:13:12,988 - #25 char
+INFO  03:13:12,989 - #25 nizch
+INFO  03:13:12,989 - #10 [
+INFO  03:13:12,989 - #11 ]
+INFO  03:13:12,989 - #6 ;
+INFO  03:13:12,989 - #3 {
+INFO  03:13:12,989 - #5 void
+INFO  03:13:12,989 - #25 main
+INFO  03:13:12,989 - #14 (
+INFO  03:13:12,989 - #15 )
+INFO  03:13:12,990 - #25 int
+INFO  03:13:12,990 - #25 bodovi
+INFO  03:13:12,990 - #6 ;
+INFO  03:13:12,990 - #25 bool
+INFO  03:13:12,990 - #25 bt
+INFO  03:13:12,990 - #6 ;
+INFO  03:13:12,990 - #3 {
+INFO  03:13:12,990 - #25 niz
+INFO  03:13:12,990 - #7 =
+INFO  03:13:12,990 - #22 new
+INFO  03:13:12,991 - #25 int
+INFO  03:13:12,991 - #10 [
+INFO  03:13:12,991 - #24 5
+INFO  03:13:12,991 - #11 ]
+INFO  03:13:12,991 - #6 ;
+INFO  03:13:12,991 - #10 [
+INFO  03:13:12,992 - #25 a
+INFO  03:13:12,992 - #8 ,
+INFO  03:13:12,992 - #25 b
+INFO  03:13:12,992 - #8 ,
+INFO  03:13:12,992 - #8 ,
+INFO  03:13:12,992 - #25 c
+INFO  03:13:12,992 - #11 ]
+INFO  03:13:12,992 - #7 =
+INFO  03:13:12,992 - #25 niz
+INFO  03:13:12,993 - #6 ;
+INFO  03:13:12,993 - #17 print
+INFO  03:13:12,993 - #14 (
+INFO  03:13:12,993 - #24 2
+INFO  03:13:12,993 - #15 )
+INFO  03:13:12,993 - #6 ;
+INFO  03:13:12,993 - #4 }
+INFO  03:13:12,993 - #4 }
+INFO  03:13:13,000 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstList(
+    ConstList(
+      ConstList(
+        NoConstList(
+        ) [NoConstList]
+        ConstDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         nula
+          NumConst(
+           0
+          ) [NumConst]
+        ) [ConstDeclOneTime]
+      ) [ConstList]
+      ConstDeclOneTime(
+        Type(
+         int
+        ) [Type]
+       jedan
+        NumConst(
+         1
+        ) [NumConst]
+      ) [ConstDeclOneTime]
+    ) [ConstList]
+    ConstDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     pet
+      NumConst(
+       5
+      ) [NumConst]
+    ) [ConstDeclOneTime]
+  ) [ConstList]
+  VarList(
+    VarList(
+      NoVarList(
+      ) [NoVarList]
+      MoreVarDecl(
+        Type(
+         int
+        ) [Type]
+       niz
+        VarSquares(
+        ) [VarSquares]
+        MultipleVars(
+          MultipleVars(
+            OneVar(
+             niz2
+              VarSquares(
+              ) [VarSquares]
+            ) [OneVar]
+           a
+            NoSquares(
+            ) [NoSquares]
+          ) [MultipleVars]
+         b
+          NoSquares(
+          ) [NoSquares]
+        ) [MultipleVars]
+      ) [MoreVarDecl]
+    ) [VarList]
+    VarDeclOneTime(
+      Type(
+       char
+      ) [Type]
+     nizch
+      VarSquares(
+      ) [VarSquares]
+    ) [VarDeclOneTime]
+  ) [VarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        VarList(
+          NoVarList(
+          ) [NoVarList]
+          VarDeclOneTime(
+            Type(
+             int
+            ) [Type]
+           bodovi
+            NoSquares(
+            ) [NoSquares]
+          ) [VarDeclOneTime]
+        ) [VarList]
+        VarDeclOneTime(
+          Type(
+           bool
+          ) [Type]
+         bt
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        Statements(
+          Statements(
+            NoStmt(
+            ) [NoStmt]
+            MatchedStmt(
+              DesStatement(
+                DesignatorAssign(
+                  OneDesignatorIdent(
+                   niz
+                  ) [OneDesignatorIdent]
+                  AssignopItem(
+                  ) [AssignopItem]
+                  PositiveExpr(
+                    FirstExpr(
+                      TermOne(
+                        FactorNewTypeExpr(
+                          Type(
+                           int
+                          ) [Type]
+                          PositiveExpr(
+                            FirstExpr(
+                              TermOne(
+                                FactorNumber(
+                                 5
+                                ) [FactorNumber]
+                              ) [TermOne]
+                            ) [FirstExpr]
+                          ) [PositiveExpr]
+                        ) [FactorNewTypeExpr]
+                      ) [TermOne]
+                    ) [FirstExpr]
+                  ) [PositiveExpr]
+                ) [DesignatorAssign]
+              ) [DesStatement]
+            ) [MatchedStmt]
+          ) [Statements]
+          MatchedStmt(
+            DesStatement(
+              MoreDesignatorSquare(
+                DesignatorYes(
+                  OneDesignatorIdent(
+                   a
+                  ) [OneDesignatorIdent]
+                ) [DesignatorYes]
+                MoreDesStmt(
+                  MoreDesStmt(
+                    OneDesStmt(
+                      DesignatorYes(
+                        OneDesignatorIdent(
+                         b
+                        ) [OneDesignatorIdent]
+                      ) [DesignatorYes]
+                    ) [OneDesStmt]
+                    DesignatorNo(
+                    ) [DesignatorNo]
+                  ) [MoreDesStmt]
+                  DesignatorYes(
+                    OneDesignatorIdent(
+                     c
+                    ) [OneDesignatorIdent]
+                  ) [DesignatorYes]
+                ) [MoreDesStmt]
+                OneDesignatorIdent(
+                 niz
+                ) [OneDesignatorIdent]
+              ) [MoreDesignatorSquare]
+            ) [DesStatement]
+          ) [MatchedStmt]
+        ) [Statements]
+        MatchedStmt(
+          PrintCondition(
+            PositiveExpr(
+              FirstExpr(
+                TermOne(
+                  FactorNumber(
+                   2
+                  ) [FactorNumber]
+                ) [TermOne]
+              ) [FirstExpr]
+            ) [PositiveExpr]
+          ) [PrintCondition]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  03:13:13,000 - ===================================
+INFO  03:13:13,003 - Deklarisana konstanta nula na liniji 4
+INFO  03:13:13,003 - Deklarisana konstanta jedan na liniji 5
+INFO  03:13:13,003 - Deklarisana konstanta pet na liniji 6
+INFO  03:13:13,003 - Deklarisan niz niz2 na liniji 8
+INFO  03:13:13,003 - Deklarisana promenljiva a na liniji 8
+INFO  03:13:13,003 - Deklarisana promenljiva b na liniji 8
+INFO  03:13:13,003 - Deklarisan niz niz na liniji 8
+INFO  03:13:13,003 - Deklarisan niz nizch na liniji 9
+INFO  03:13:13,003 - Obradjuje se funkcija main na liniji 11
+INFO  03:13:13,003 - Deklarisana promenljiva bodovi na liniji 12
+INFO  03:13:13,003 - Deklarisana promenljiva bt na liniji 13
+ERROR 03:13:13,003 - Greska na liniji 16 : ime c nije deklarisano! 
+ERROR 03:13:13,003 - Greska na liniji 16 : tipovi se ne poklapaju pri dodeli niza
+INFO  03:13:13,003 - ===================================
+ERROR 03:13:13,004 - Parsiranje NIJE uspesno zavrseno

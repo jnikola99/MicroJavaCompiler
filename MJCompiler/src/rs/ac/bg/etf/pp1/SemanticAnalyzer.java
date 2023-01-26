@@ -237,6 +237,12 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	public void visit(NextExpr expr) {
 		Struct t = expr.getAddopTermList().struct;
 		Struct e = expr.getTerm().struct;
+		if(t.getKind()==Struct.Array) {
+			t=t.getElemType();
+		}
+		if(e.getKind()==Struct.Array) {
+			e=e.getElemType();
+		}
 		if(t.equals(e) && e==Tab.intType) {
 			expr.struct=e;
 		}
@@ -309,6 +315,9 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		}
 		designator.obj = obj;
 		currentDesignatorName = designator.getDesignatorName();
+		if(obj.getKind()==Obj.Con) {
+			currentNumber = obj.getAdr();
+		}
 	}
 	
 	public void visit(ReturnCondition returnExpr) {
@@ -429,9 +438,18 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			}
 		}
 		else {
-			if(!cond.getExpr().struct.assignableTo(cond.getDesignator().obj.getType())) {
-				report_error("Greska na liniji "+ cond.getLine() + " : nisu kompatibilni tipovi",null);
+			if(cond.getExpr().struct.getKind()!=Struct.Array) {
+				if(!cond.getExpr().struct.assignableTo(cond.getDesignator().obj.getType())) {
+					report_error("Greska na liniji "+ cond.getLine() + " : nisu kompatibilni tipovi",null);
+				}
+				
 			}
+			else {
+				if(!cond.getExpr().struct.getElemType().assignableTo(cond.getDesignator().obj.getType())) {
+					report_error("Greska na liniji "+ cond.getLine() + " : nisu kompatibilni tipovi",null);
+				}
+			}
+			
 		}
 		
 	}

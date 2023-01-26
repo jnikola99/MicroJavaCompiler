@@ -1,0 +1,155 @@
+INFO  01:10:54,653 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  01:10:54,684 - #2 program
+INFO  01:10:54,684 - #25 test301
+INFO  01:10:54,684 - #25 int
+INFO  01:10:54,685 - #25 a
+INFO  01:10:54,685 - #10 [
+INFO  01:10:54,685 - #11 ]
+INFO  01:10:54,685 - #6 ;
+INFO  01:10:54,686 - #3 {
+INFO  01:10:54,686 - #5 void
+INFO  01:10:54,686 - #25 main
+INFO  01:10:54,686 - #14 (
+INFO  01:10:54,687 - #15 )
+INFO  01:10:54,687 - #25 int
+INFO  01:10:54,687 - #25 bodovi
+INFO  01:10:54,687 - #6 ;
+INFO  01:10:54,687 - #25 int
+INFO  01:10:54,687 - #25 x
+INFO  01:10:54,687 - #6 ;
+INFO  01:10:54,687 - #3 {
+INFO  01:10:54,687 - #25 x
+INFO  01:10:54,688 - #7 =
+INFO  01:10:54,688 - #24 1
+INFO  01:10:54,689 - #32 +
+INFO  01:10:54,689 - #24 1
+INFO  01:10:54,689 - #33 -
+INFO  01:10:54,689 - #24 1
+INFO  01:10:54,723 - #6 ;
+INFO  01:10:54,723 - #17 print
+INFO  01:10:54,723 - #14 (
+INFO  01:10:54,723 - #25 x
+INFO  01:10:54,723 - #15 )
+INFO  01:10:54,723 - #6 ;
+INFO  01:10:54,723 - #4 }
+INFO  01:10:54,723 - #4 }
+INFO  01:10:54,728 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoConstList(
+  ) [NoConstList]
+  VarList(
+    NoVarList(
+    ) [NoVarList]
+    VarDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     a
+      VarSquares(
+      ) [VarSquares]
+    ) [VarDeclOneTime]
+  ) [VarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        VarList(
+          NoVarList(
+          ) [NoVarList]
+          VarDeclOneTime(
+            Type(
+             int
+            ) [Type]
+           bodovi
+            NoSquares(
+            ) [NoSquares]
+          ) [VarDeclOneTime]
+        ) [VarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         x
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        Statements(
+          NoStmt(
+          ) [NoStmt]
+          MatchedStmt(
+            DesStatement(
+              DesignatorAssign(
+                OneDesignatorIdent(
+                 x
+                ) [OneDesignatorIdent]
+                AssignopItem(
+                ) [AssignopItem]
+                PositiveExpr(
+                  NextExpr(
+                    NextExpr(
+                      FirstExpr(
+                        TermOne(
+                          FactorNumber(
+                           1
+                          ) [FactorNumber]
+                        ) [TermOne]
+                      ) [FirstExpr]
+                      AddopItem(
+                      ) [AddopItem]
+                      TermOne(
+                        FactorNumber(
+                         1
+                        ) [FactorNumber]
+                      ) [TermOne]
+                    ) [NextExpr]
+                    Subop(
+                    ) [Subop]
+                    TermOne(
+                      FactorNumber(
+                       1
+                      ) [FactorNumber]
+                    ) [TermOne]
+                  ) [NextExpr]
+                ) [PositiveExpr]
+              ) [DesignatorAssign]
+            ) [DesStatement]
+          ) [MatchedStmt]
+        ) [Statements]
+        MatchedStmt(
+          PrintCondition(
+            PositiveExpr(
+              FirstExpr(
+                TermOne(
+                  FactorDesNoAct(
+                    OneDesignatorIdent(
+                     x
+                    ) [OneDesignatorIdent]
+                  ) [FactorDesNoAct]
+                ) [TermOne]
+              ) [FirstExpr]
+            ) [PositiveExpr]
+          ) [PrintCondition]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  01:10:54,728 - ===================================
+INFO  01:10:54,731 - Deklarisan niz a na liniji 4
+INFO  01:10:54,731 - Obradjuje se funkcija main na liniji 6
+INFO  01:10:54,731 - Deklarisana promenljiva bodovi na liniji 7
+INFO  01:10:54,731 - Deklarisana promenljiva x na liniji 8
+INFO  01:10:54,732 - ===================================
+INFO  01:10:54,736 - Parsiranje uspesno zavrseno!
