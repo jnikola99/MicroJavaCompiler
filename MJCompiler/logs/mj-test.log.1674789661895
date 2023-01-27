@@ -1,0 +1,192 @@
+INFO  04:19:54,639 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  04:19:54,672 - #2 program
+INFO  04:19:54,672 - #25 test301
+INFO  04:19:54,672 - #9 const
+INFO  04:19:54,672 - #25 int
+INFO  04:19:54,672 - #25 nula
+INFO  04:19:54,673 - #7 =
+INFO  04:19:54,673 - #24 0
+INFO  04:19:54,673 - #6 ;
+INFO  04:19:54,673 - #9 const
+INFO  04:19:54,673 - #25 int
+INFO  04:19:54,673 - #25 jedan
+INFO  04:19:54,673 - #7 =
+INFO  04:19:54,673 - #24 1
+INFO  04:19:54,673 - #6 ;
+INFO  04:19:54,673 - #9 const
+INFO  04:19:54,673 - #25 int
+INFO  04:19:54,673 - #25 pet
+INFO  04:19:54,673 - #7 =
+INFO  04:19:54,673 - #24 5
+INFO  04:19:54,674 - #6 ;
+INFO  04:19:54,674 - #25 int
+INFO  04:19:54,674 - #25 niz
+INFO  04:19:54,674 - #10 [
+INFO  04:19:54,674 - #11 ]
+INFO  04:19:54,674 - #8 ,
+INFO  04:19:54,674 - #25 niz2
+INFO  04:19:54,674 - #10 [
+INFO  04:19:54,674 - #11 ]
+INFO  04:19:54,674 - #8 ,
+INFO  04:19:54,675 - #25 b
+INFO  04:19:54,675 - #8 ,
+INFO  04:19:54,675 - #25 c
+INFO  04:19:54,675 - #6 ;
+INFO  04:19:54,675 - #25 char
+INFO  04:19:54,675 - #25 nizch
+INFO  04:19:54,675 - #10 [
+INFO  04:19:54,675 - #11 ]
+INFO  04:19:54,675 - #6 ;
+INFO  04:19:54,675 - #3 {
+INFO  04:19:54,676 - #5 void
+INFO  04:19:54,676 - #25 main
+INFO  04:19:54,676 - #14 (
+INFO  04:19:54,676 - #15 )
+INFO  04:19:54,676 - #25 int
+INFO  04:19:54,676 - #25 bodovi
+INFO  04:19:54,676 - #6 ;
+INFO  04:19:54,677 - #3 {
+INFO  04:19:54,677 - #25 bodovi
+INFO  04:19:54,677 - #7 =
+INFO  04:19:54,677 - #24 3
+INFO  04:19:54,677 - #44 %
+INFO  04:19:54,678 - #24 2
+INFO  04:19:54,678 - #32 +
+INFO  04:19:54,678 - #24 3
+INFO  04:19:54,679 - #42 *
+INFO  04:19:54,679 - #24 2
+INFO  04:19:54,679 - #33 -
+INFO  04:19:54,679 - #24 3
+INFO  04:19:54,680 - #17 print
+ERROR 04:19:54,680 - 
+Sintaksna greska na liniji 15
+INFO  04:19:54,680 - #14 (
+INFO  04:19:54,680 - #25 bodovi
+INFO  04:19:54,680 - #15 )
+INFO  04:19:54,680 - #6 ;
+INFO  04:19:54,680 - #4 }
+INFO  04:19:54,680 - #4 }
+ERROR 04:19:54,680 - Izvrsen oporavak do ; u liniji 14
+INFO  04:19:54,687 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstList(
+    ConstList(
+      ConstList(
+        NoConstList(
+        ) [NoConstList]
+        ConstDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         nula
+          NumConst(
+           0
+          ) [NumConst]
+        ) [ConstDeclOneTime]
+      ) [ConstList]
+      ConstDeclOneTime(
+        Type(
+         int
+        ) [Type]
+       jedan
+        NumConst(
+         1
+        ) [NumConst]
+      ) [ConstDeclOneTime]
+    ) [ConstList]
+    ConstDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     pet
+      NumConst(
+       5
+      ) [NumConst]
+    ) [ConstDeclOneTime]
+  ) [ConstList]
+  VarList(
+    VarList(
+      NoVarList(
+      ) [NoVarList]
+      MoreVarDecl(
+        Type(
+         int
+        ) [Type]
+       niz
+        VarSquares(
+        ) [VarSquares]
+        MultipleVars(
+          MultipleVars(
+            OneVar(
+             niz2
+              VarSquares(
+              ) [VarSquares]
+            ) [OneVar]
+           b
+            NoSquares(
+            ) [NoSquares]
+          ) [MultipleVars]
+         c
+          NoSquares(
+          ) [NoSquares]
+        ) [MultipleVars]
+      ) [MoreVarDecl]
+    ) [VarList]
+    VarDeclOneTime(
+      Type(
+       char
+      ) [Type]
+     nizch
+      VarSquares(
+      ) [VarSquares]
+    ) [VarDeclOneTime]
+  ) [VarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        NoVarList(
+        ) [NoVarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         bodovi
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        NoStmt(
+        ) [NoStmt]
+        MatchedStmt(
+          ErrorStmt(
+          ) [ErrorStmt]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  04:19:54,687 - ===================================
+INFO  04:19:54,689 - Deklarisana konstanta nula na liniji 4
+INFO  04:19:54,689 - Deklarisana konstanta jedan na liniji 5
+INFO  04:19:54,689 - Deklarisana konstanta pet na liniji 6
+INFO  04:19:54,689 - Deklarisan niz niz2 na liniji 8
+INFO  04:19:54,689 - Deklarisana promenljiva b na liniji 8
+INFO  04:19:54,689 - Deklarisana promenljiva c na liniji 8
+INFO  04:19:54,689 - Deklarisan niz niz na liniji 8
+INFO  04:19:54,689 - Deklarisan niz nizch na liniji 9
+INFO  04:19:54,689 - Obradjuje se funkcija main na liniji 11
+INFO  04:19:54,689 - Deklarisana promenljiva bodovi na liniji 12
+INFO  04:19:54,689 - ===================================
+ERROR 04:19:54,690 - Parsiranje NIJE uspesno zavrseno

@@ -10,14 +10,17 @@ import rs.etf.pp1.symboltable.concepts.Struct;
 
 public class CodeGenerator extends VisitorAdaptor{
 	private int mainPc;
-	List<String> designatori = new ArrayList<String>();
+	List<Obj> designatori = new ArrayList<Obj>();
+	List<Integer> indexi = new ArrayList<Integer>();
+	private boolean negBool=true;
+	private int currIndex=0;
 	
 	public int getMainPc(){
 		return mainPc;
 	}
 	
 	public void visit(DesignatorYes des) {
-		designatori.add(des.getDesignator().obj.getName());
+		designatori.add(des.getDesignator().obj);
 	}
 	
 	public void visit(DesignatorNo des) {
@@ -25,11 +28,67 @@ public class CodeGenerator extends VisitorAdaptor{
 	}
 	
 	public void visit(DesignatorSquareStmt stmt) {
+		Obj o = designatori.get(0);
+		if(o!=null) {
+			Code.load(stmt.getDesignator().obj);
+			Code.loadConst(0);
+			if(stmt.getDesignator().obj.getType().getElemType()==Tab.charType) {
+				Code.put(Code.baload);
+			}
+			else
+			Code.put(Code.aload);
+			if(stmt.getDesignatorNot().obj.getType().getKind()!=Struct.Array) {
+				Code.store(stmt.getDesignatorNot().obj);
+			}
+			else {
+				if(stmt.getDesignatorNot().obj.getType().getElemType()==Tab.charType) {
+					Code.put(Code.bastore);
+				}
+				else
+				Code.put(Code.astore);
+			}
+		}
+		designatori.clear();
+		//indexi.clear();
 		
 	}
 	
 	public void visit(MoreDesignatorSquare stmt) {
-		
+		int index = 0;
+		/*int count = 0;
+		for(int i=0;i<designatori.size();i++) {
+			if(designatori.get(i)!=null) {
+				if(designatori.get(i).getType().getKind()==Struct.Array) {
+						count++;
+					}
+				}
+		}*/
+		for(int i=0;i<designatori.size();i++) {
+			if(designatori.get(i)!=null) {
+				if(designatori.get(i).getType().getKind()!=Struct.Array) {
+					Code.load(stmt.getDesignator().obj);
+					Code.loadConst(i);
+					if(stmt.getDesignator().obj.getType().getElemType()==Tab.charType) {
+						Code.put(Code.baload);
+					}
+					else
+					Code.put(Code.aload);
+					Code.store(designatori.get(i));
+				}
+				else {
+					Code.load(stmt.getDesignator().obj);
+					Code.loadConst(designatori.size()-i-1);
+					if(stmt.getDesignator().obj.getType().getElemType()==Tab.charType) {
+						Code.put(Code.baload);
+					}
+					else
+					Code.put(Code.aload);
+					Code.put(Code.astore);
+				}
+			}
+		}
+		designatori.clear();
+		//indexi.clear();
 	}
 	
 	public void visit(ReadCondition read) {
@@ -114,7 +173,7 @@ public class CodeGenerator extends VisitorAdaptor{
 	}
 	
 	public void visit(NegativeExpr expr) {
-		Code.put(Code.neg);
+		negBool=true;
 	}
 	
 	public void visit(FactorNumber cnst) {
@@ -175,6 +234,10 @@ public class CodeGenerator extends VisitorAdaptor{
 	
 	public void visit(DesignatorAssign des) {
 			if(des.getDesignator().getClass()==DesignatorWithExpr.class) {
+				if(des.getDesignator().obj.getType().getElemType()==Tab.charType) {
+					Code.put(Code.bastore);
+				}
+				else
 				Code.put(Code.astore);
 			}else
 			Code.store(des.getDesignator().obj);
@@ -183,16 +246,32 @@ public class CodeGenerator extends VisitorAdaptor{
 	public void visit(OneDesignatorIdent des) {
 		SyntaxNode parent = des.getParent();
 		
-		if(DesignatorAssign.class != parent.getClass()) {
+		if(DesignatorAssign.class != parent.getClass() && DesignatorYes.class != parent.getClass()  && DesignatorSquareStmt.class != parent.getClass() && MoreDesignatorSquare.class != parent.getClass()) {
 			Code.load(des.obj);
 		}
+	}
+	
+	public void visit(FirstExpr expr) {
+		boolean treba = false;
+		SyntaxNode parent = expr.getParent();
+		while(parent!=null) {
+			if(parent.getClass()==NegativeExpr.class) {
+				treba=true;
+				break;
+			}
+			parent=parent.getParent();
+		}
+			if(negBool && treba) {
+				Code.put(Code.neg);
+				negBool=false;
+			}
 	}
 	
 	public void visit(NextExpr expr) {
 		if(expr.getAddop().getClass() == AddopItem.class) {
 			Code.put(Code.add);
 		}
-		else {
+		else if(expr.getAddop().getClass() == Subop.class){
 			Code.put(Code.sub);
 		}
 	}
@@ -210,22 +289,41 @@ public class CodeGenerator extends VisitorAdaptor{
 	}
 	
 	public void visit(DesignatorInc des) {
-		Code.put(Code.const_1);
-		Code.put(Code.add);
-		Code.store(des.getDesignator().obj);
+		if(des.getDesignator().obj.getType().getKind()==Struct.Array) {
+			Code.put(Code.const_1);
+			Code.put(Code.add);
+			Code.put(Code.astore);
+		}else {
+			Code.put(Code.const_1);
+			Code.put(Code.add);
+			Code.store(des.getDesignator().obj);
+		}
 	}
 	
 	public void visit(DesignatorDec des) {
-		Code.put(Code.const_1);
-		Code.put(Code.sub);
-		Code.store(des.getDesignator().obj);
+		if(des.getDesignator().obj.getType().getKind()==Struct.Array) {
+			Code.put(Code.const_1);
+			Code.put(Code.sub);
+			Code.put(Code.astore);
+		}else {
+			Code.put(Code.const_1);
+			Code.put(Code.sub);
+			Code.store(des.getDesignator().obj);
+		}
 	}
+	
 	
 	public void visit(DesignatorWithExpr des) {
 		SyntaxNode parent = des.getParent();
-		
-		if(DesignatorAssign.class != parent.getClass()) {
-			Code.put(Code.aload);
+		if(DesignatorAssign.class != parent.getClass() && DesignatorYes.class != parent.getClass()) {
+			if(des.getDesignator().obj.getType().getElemType()==Tab.charType) {
+				if(DesignatorInc.class == parent.getClass()|| DesignatorDec.class == parent.getClass())Code.put(Code.dup2);
+				Code.put(Code.baload);
+			}
+			else {
+				if(DesignatorInc.class == parent.getClass()|| DesignatorDec.class == parent.getClass())Code.put(Code.dup2);
+				Code.put(Code.aload);
+			}
 		}
 	}
 }

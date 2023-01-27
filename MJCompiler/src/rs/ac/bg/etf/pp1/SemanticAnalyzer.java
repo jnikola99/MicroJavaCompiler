@@ -498,9 +498,15 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 		Obj firstVar = Tab.find(first.getName());
 		Obj secondVar = Tab.find(second.getName());
 		
-		
-		if(!firstVar.getType().assignableTo(secondVar.getType().getElemType())) {
-			report_error("Greska na liniji "+ stmt.getLine() + " : nekompatibilna dodela nizu",null);
+		if(firstVar.getType().getKind()==Struct.Array) {
+			if(!firstVar.getType().getElemType().assignableTo(secondVar.getType().getElemType())) {
+				report_error("Greska na liniji "+ stmt.getLine() + " : nekompatibilna dodela nizu",null);
+			}
+		}
+		else {
+			if(!firstVar.getType().assignableTo(secondVar.getType().getElemType())) {
+				report_error("Greska na liniji "+ stmt.getLine() + " : nekompatibilna dodela nizu",null);
+			}
 		}
 		if(firstVar.getKind()!=Obj.Var && firstVar.getKind()!=Obj.Elem) {
 			report_error("Greska na liniji "+ stmt.getLine() + " : ono sto se dodeljuje nije promenljiva ili element niza",null);

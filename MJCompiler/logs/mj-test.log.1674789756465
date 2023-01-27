@@ -1,0 +1,232 @@
+INFO  04:21:01,896 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  04:21:01,928 - #2 program
+INFO  04:21:01,928 - #25 test301
+INFO  04:21:01,928 - #9 const
+INFO  04:21:01,929 - #25 int
+INFO  04:21:01,929 - #25 nula
+INFO  04:21:01,929 - #7 =
+INFO  04:21:01,929 - #24 0
+INFO  04:21:01,929 - #6 ;
+INFO  04:21:01,929 - #9 const
+INFO  04:21:01,929 - #25 int
+INFO  04:21:01,929 - #25 jedan
+INFO  04:21:01,929 - #7 =
+INFO  04:21:01,929 - #24 1
+INFO  04:21:01,929 - #6 ;
+INFO  04:21:01,930 - #9 const
+INFO  04:21:01,930 - #25 int
+INFO  04:21:01,930 - #25 pet
+INFO  04:21:01,930 - #7 =
+INFO  04:21:01,930 - #24 5
+INFO  04:21:01,930 - #6 ;
+INFO  04:21:01,930 - #25 int
+INFO  04:21:01,931 - #25 niz
+INFO  04:21:01,931 - #10 [
+INFO  04:21:01,931 - #11 ]
+INFO  04:21:01,932 - #8 ,
+INFO  04:21:01,932 - #25 niz2
+INFO  04:21:01,932 - #10 [
+INFO  04:21:01,932 - #11 ]
+INFO  04:21:01,932 - #8 ,
+INFO  04:21:01,932 - #25 b
+INFO  04:21:01,932 - #8 ,
+INFO  04:21:01,932 - #25 c
+INFO  04:21:01,932 - #6 ;
+INFO  04:21:01,932 - #25 char
+INFO  04:21:01,933 - #25 nizch
+INFO  04:21:01,933 - #10 [
+INFO  04:21:01,933 - #11 ]
+INFO  04:21:01,933 - #6 ;
+INFO  04:21:01,933 - #3 {
+INFO  04:21:01,933 - #5 void
+INFO  04:21:01,933 - #25 main
+INFO  04:21:01,933 - #14 (
+INFO  04:21:01,934 - #15 )
+INFO  04:21:01,934 - #25 int
+INFO  04:21:01,934 - #25 bodovi
+INFO  04:21:01,934 - #6 ;
+INFO  04:21:01,934 - #25 int
+INFO  04:21:01,934 - #25 a
+INFO  04:21:01,934 - #6 ;
+INFO  04:21:01,934 - #3 {
+INFO  04:21:01,934 - #25 a
+INFO  04:21:01,934 - #7 =
+INFO  04:21:01,935 - #24 2
+INFO  04:21:01,935 - #6 ;
+INFO  04:21:01,935 - #25 bodovi
+INFO  04:21:01,936 - #7 =
+INFO  04:21:01,936 - #24 3
+INFO  04:21:01,936 - #44 %
+INFO  04:21:01,936 - #24 2
+INFO  04:21:01,936 - #32 +
+INFO  04:21:01,936 - #24 3
+INFO  04:21:01,937 - #42 *
+INFO  04:21:01,937 - #24 2
+INFO  04:21:01,937 - #33 -
+INFO  04:21:01,937 - #24 3
+INFO  04:21:01,938 - #17 print
+ERROR 04:21:01,938 - 
+Sintaksna greska na liniji 17
+INFO  04:21:01,938 - #14 (
+INFO  04:21:01,938 - #25 bodovi
+INFO  04:21:01,938 - #15 )
+INFO  04:21:01,939 - #6 ;
+INFO  04:21:01,939 - #4 }
+INFO  04:21:01,939 - #4 }
+ERROR 04:21:01,939 - Izvrsen oporavak do ; u liniji 16
+INFO  04:21:01,944 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  ConstList(
+    ConstList(
+      ConstList(
+        NoConstList(
+        ) [NoConstList]
+        ConstDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         nula
+          NumConst(
+           0
+          ) [NumConst]
+        ) [ConstDeclOneTime]
+      ) [ConstList]
+      ConstDeclOneTime(
+        Type(
+         int
+        ) [Type]
+       jedan
+        NumConst(
+         1
+        ) [NumConst]
+      ) [ConstDeclOneTime]
+    ) [ConstList]
+    ConstDeclOneTime(
+      Type(
+       int
+      ) [Type]
+     pet
+      NumConst(
+       5
+      ) [NumConst]
+    ) [ConstDeclOneTime]
+  ) [ConstList]
+  VarList(
+    VarList(
+      NoVarList(
+      ) [NoVarList]
+      MoreVarDecl(
+        Type(
+         int
+        ) [Type]
+       niz
+        VarSquares(
+        ) [VarSquares]
+        MultipleVars(
+          MultipleVars(
+            OneVar(
+             niz2
+              VarSquares(
+              ) [VarSquares]
+            ) [OneVar]
+           b
+            NoSquares(
+            ) [NoSquares]
+          ) [MultipleVars]
+         c
+          NoSquares(
+          ) [NoSquares]
+        ) [MultipleVars]
+      ) [MoreVarDecl]
+    ) [VarList]
+    VarDeclOneTime(
+      Type(
+       char
+      ) [Type]
+     nizch
+      VarSquares(
+      ) [VarSquares]
+    ) [VarDeclOneTime]
+  ) [VarList]
+  NoClassList(
+  ) [NoClassList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      VarList(
+        VarList(
+          NoVarList(
+          ) [NoVarList]
+          VarDeclOneTime(
+            Type(
+             int
+            ) [Type]
+           bodovi
+            NoSquares(
+            ) [NoSquares]
+          ) [VarDeclOneTime]
+        ) [VarList]
+        VarDeclOneTime(
+          Type(
+           int
+          ) [Type]
+         a
+          NoSquares(
+          ) [NoSquares]
+        ) [VarDeclOneTime]
+      ) [VarList]
+      Statements(
+        Statements(
+          NoStmt(
+          ) [NoStmt]
+          MatchedStmt(
+            DesStatement(
+              DesignatorAssign(
+                OneDesignatorIdent(
+                 a
+                ) [OneDesignatorIdent]
+                AssignopItem(
+                ) [AssignopItem]
+                PositiveExpr(
+                  FirstExpr(
+                    TermOne(
+                      FactorNumber(
+                       2
+                      ) [FactorNumber]
+                    ) [TermOne]
+                  ) [FirstExpr]
+                ) [PositiveExpr]
+              ) [DesignatorAssign]
+            ) [DesStatement]
+          ) [MatchedStmt]
+        ) [Statements]
+        MatchedStmt(
+          ErrorStmt(
+          ) [ErrorStmt]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  04:21:01,944 - ===================================
+INFO  04:21:01,946 - Deklarisana konstanta nula na liniji 4
+INFO  04:21:01,946 - Deklarisana konstanta jedan na liniji 5
+INFO  04:21:01,947 - Deklarisana konstanta pet na liniji 6
+INFO  04:21:01,947 - Deklarisan niz niz2 na liniji 8
+INFO  04:21:01,947 - Deklarisana promenljiva b na liniji 8
+INFO  04:21:01,947 - Deklarisana promenljiva c na liniji 8
+INFO  04:21:01,947 - Deklarisan niz niz na liniji 8
+INFO  04:21:01,947 - Deklarisan niz nizch na liniji 9
+INFO  04:21:01,947 - Obradjuje se funkcija main na liniji 11
+INFO  04:21:01,947 - Deklarisana promenljiva bodovi na liniji 12
+INFO  04:21:01,947 - Deklarisana promenljiva a na liniji 13
+INFO  04:21:01,947 - ===================================
+ERROR 04:21:01,948 - Parsiranje NIJE uspesno zavrseno
