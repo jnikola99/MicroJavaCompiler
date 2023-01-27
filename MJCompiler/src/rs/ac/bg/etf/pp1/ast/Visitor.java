@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 15/0/2023 1:16:8
+// 27/0/2023 18:1:23
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -156,6 +156,7 @@ public interface Visitor {
     public void visit(OneConstType OneConstType);
     public void visit(MultipleConstTypes MultipleConstTypes);
     public void visit(NoConstList NoConstList);
+    public void visit(VarDecList VarDecList);
     public void visit(ConstList ConstList);
     public void visit(ProgName ProgName);
     public void visit(Program Program);

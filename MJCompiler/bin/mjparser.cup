@@ -68,11 +68,13 @@ nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, Mul
 
 precedence left ELSE;
 
-Program ::= (Program) PROG ProgName:p ConstDeclList VarDeclList ClassDeclList LBRACE MethodDeclList RBRACE;
+Program ::= (Program) PROG ProgName:p ConstDeclList LBRACE MethodDeclList RBRACE;
 
 ProgName ::= (ProgName) IDENT:progName;
 
 ConstDeclList ::= (ConstList) ConstDeclList ConstDecl
+				|
+				(VarDecList) ConstDeclList VarDecl
 				|
 				(NoConstList) /* epsilon */
 				;

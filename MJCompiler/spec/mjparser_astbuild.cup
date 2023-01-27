@@ -91,11 +91,13 @@ nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, Factor, Term, Expr, Mul
 
 precedence left ELSE;
 
-Program ::= (Program) PROG ProgName:p ConstDeclList:C1 VarDeclList:V2 ClassDeclList:C3 LBRACE MethodDeclList:M4 RBRACE {: RESULT=new Program(p, C1, V2, C3, M4); RESULT.setLine(pleft); :};
+Program ::= (Program) PROG ProgName:p ConstDeclList:C1 LBRACE MethodDeclList:M2 RBRACE {: RESULT=new Program(p, C1, M2); RESULT.setLine(pleft); :};
 
 ProgName ::= (ProgName) IDENT:progName {: RESULT=new ProgName(progName); RESULT.setLine(progNameleft); :};
 
 ConstDeclList ::= (ConstList) ConstDeclList:C1 ConstDecl:C2 {: RESULT=new ConstList(C1, C2); RESULT.setLine(C1left); :}
+				|
+				(VarDecList) ConstDeclList:C1 VarDecl:V2 {: RESULT=new VarDecList(C1, V2); RESULT.setLine(C1left); :}
 				|
 				(NoConstList) {: RESULT=new NoConstList(); :} /* epsilon */
 				;
@@ -313,7 +315,7 @@ Factor ::= (FactorDesAct) Designator:func LPAREN DesiActPars:D1 RPAREN {: RESULT
 		|
 		(FactorBool) BOOL:B1 {: RESULT=new FactorBool(B1); RESULT.setLine(B1left); :}
 		|
-		(FactorExpr) LPAREN Expr:E1 RPAREN {: RESULT=new FactorExpr(E1); RESULT.setLine(E1left); :}
+		(FactorExpr) LPAREN Expr:e RPAREN {: RESULT=new FactorExpr(e); RESULT.setLine(eleft); :}
 		|
 		(FactorNewTypeExpr) NEW Type:arrType LSQUARES Expr:e RSQUARES {: RESULT=new FactorNewTypeExpr(arrType, e); RESULT.setLine(arrTypeleft); :}
 		|

@@ -68,38 +68,59 @@ public class CodeGenerator extends VisitorAdaptor{
 				if(designatori.get(i).getType().getKind()!=Struct.Array) {
 					Code.load(stmt.getDesignator().obj);
 					Code.loadConst(i);
+					
 					if(stmt.getDesignator().obj.getType().getElemType()==Tab.charType) {
 						Code.put(Code.baload);
 					}
 					else
-					Code.put(Code.aload);
+						Code.put(Code.aload);
+					
 					Code.store(designatori.get(i));
+					indexi.add(i);
 				}
 				else {
 					Code.load(stmt.getDesignator().obj);
 					Code.loadConst(designatori.size()-i-1);
+					
 					if(stmt.getDesignator().obj.getType().getElemType()==Tab.charType) {
 						Code.put(Code.baload);
 					}
 					else
-					Code.put(Code.aload);
+						Code.put(Code.aload);
+					
 					Code.put(Code.astore);
 				}
 			}
 		}
 		designatori.clear();
-		//indexi.clear();
+		indexi.clear();
 	}
 	
 	public void visit(ReadCondition read) {
-		Struct s = read.getDesignator().obj.getType();
+		Struct s;
+		if(read.getDesignator().obj.getType().getKind()==Struct.Array) {
+			s = read.getDesignator().obj.getType().getElemType();
+		}
+		else {
+			s = read.getDesignator().obj.getType();
+		}
 		if(s != Tab.charType) {
 			Code.put(Code.read);
-			Code.store(read.getDesignator().obj);
+			if(read.getDesignator().obj.getType().getKind()==Struct.Array) {
+				Code.put(Code.astore);
+			}
+			else {
+				Code.store(read.getDesignator().obj);
+			}
 		}
 		else {
 			Code.put(Code.bread);
-			Code.store(read.getDesignator().obj);
+			if(read.getDesignator().obj.getType().getKind()==Struct.Array) {
+				Code.put(Code.bastore);
+			}
+			else {
+				Code.store(read.getDesignator().obj);
+			}
 		}
 	}
 	
@@ -315,7 +336,7 @@ public class CodeGenerator extends VisitorAdaptor{
 	
 	public void visit(DesignatorWithExpr des) {
 		SyntaxNode parent = des.getParent();
-		if(DesignatorAssign.class != parent.getClass() && DesignatorYes.class != parent.getClass()) {
+		if(DesignatorAssign.class != parent.getClass() && DesignatorYes.class != parent.getClass() && ReadCondition.class != parent.getClass()) {
 			if(des.getDesignator().obj.getType().getElemType()==Tab.charType) {
 				if(DesignatorInc.class == parent.getClass()|| DesignatorDec.class == parent.getClass())Code.put(Code.dup2);
 				Code.put(Code.baload);
