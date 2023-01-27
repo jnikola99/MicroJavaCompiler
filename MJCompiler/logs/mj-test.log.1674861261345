@@ -1,123 +1,123 @@
-INFO  00:14:21,347 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
-INFO  00:14:21,379 - #2 program
-INFO  00:14:21,379 - #25 test301
-INFO  00:14:21,379 - #9 const
-INFO  00:14:21,380 - #25 int
-INFO  00:14:21,380 - #25 nula
-INFO  00:14:21,380 - #7 =
-INFO  00:14:21,380 - #24 0
-INFO  00:14:21,380 - #6 ;
-INFO  00:14:21,380 - #9 const
-INFO  00:14:21,380 - #25 int
-INFO  00:14:21,380 - #25 jedan
-INFO  00:14:21,380 - #7 =
-INFO  00:14:21,380 - #24 1
-INFO  00:14:21,380 - #6 ;
-INFO  00:14:21,381 - #9 const
-INFO  00:14:21,381 - #25 int
-INFO  00:14:21,381 - #25 pet
-INFO  00:14:21,381 - #7 =
-INFO  00:14:21,381 - #24 5
-INFO  00:14:21,381 - #6 ;
-INFO  00:14:21,381 - #25 int
-INFO  00:14:21,382 - #25 niz
-INFO  00:14:21,382 - #10 [
-INFO  00:14:21,382 - #11 ]
-INFO  00:14:21,382 - #8 ,
-INFO  00:14:21,382 - #25 niz2
-INFO  00:14:21,382 - #10 [
-INFO  00:14:21,382 - #11 ]
-INFO  00:14:21,382 - #8 ,
-INFO  00:14:21,382 - #25 a
-INFO  00:14:21,382 - #8 ,
-INFO  00:14:21,383 - #25 b
-INFO  00:14:21,383 - #8 ,
-INFO  00:14:21,383 - #25 c
-INFO  00:14:21,383 - #8 ,
-INFO  00:14:21,383 - #25 d
-INFO  00:14:21,383 - #6 ;
-INFO  00:14:21,383 - #25 char
-INFO  00:14:21,383 - #25 nizch
-INFO  00:14:21,383 - #10 [
-INFO  00:14:21,383 - #11 ]
-INFO  00:14:21,383 - #6 ;
-INFO  00:14:21,383 - #3 {
-INFO  00:14:21,383 - #5 void
-INFO  00:14:21,384 - #25 main
-INFO  00:14:21,384 - #14 (
-INFO  00:14:21,384 - #15 )
-INFO  00:14:21,384 - #25 int
-INFO  00:14:21,384 - #25 bodovi
-INFO  00:14:21,384 - #6 ;
-INFO  00:14:21,384 - #25 bool
-INFO  00:14:21,384 - #25 bt
-INFO  00:14:21,384 - #6 ;
-INFO  00:14:21,384 - #3 {
-INFO  00:14:21,384 - #25 niz2
-INFO  00:14:21,385 - #7 =
-INFO  00:14:21,385 - #22 new
-INFO  00:14:21,385 - #25 int
-INFO  00:14:21,385 - #10 [
-INFO  00:14:21,385 - #24 4
-INFO  00:14:21,385 - #11 ]
-INFO  00:14:21,386 - #6 ;
-INFO  00:14:21,386 - #25 niz
-INFO  00:14:21,386 - #7 =
-INFO  00:14:21,386 - #22 new
-INFO  00:14:21,386 - #25 int
-INFO  00:14:21,386 - #10 [
-INFO  00:14:21,386 - #24 4
-INFO  00:14:21,387 - #11 ]
-INFO  00:14:21,387 - #6 ;
-INFO  00:14:21,387 - #25 niz
-INFO  00:14:21,387 - #10 [
-INFO  00:14:21,387 - #24 0
-INFO  00:14:21,387 - #11 ]
-INFO  00:14:21,387 - #7 =
-INFO  00:14:21,387 - #24 1
-INFO  00:14:21,387 - #6 ;
-INFO  00:14:21,387 - #25 niz
-INFO  00:14:21,387 - #10 [
-INFO  00:14:21,387 - #24 1
-INFO  00:14:21,387 - #11 ]
-INFO  00:14:21,387 - #7 =
-INFO  00:14:21,387 - #24 2
-INFO  00:14:21,387 - #6 ;
-INFO  00:14:21,387 - #25 niz
-INFO  00:14:21,388 - #10 [
-INFO  00:14:21,388 - #24 2
-INFO  00:14:21,388 - #11 ]
-INFO  00:14:21,388 - #7 =
-INFO  00:14:21,388 - #24 3
-INFO  00:14:21,388 - #6 ;
-INFO  00:14:21,388 - #25 niz
-INFO  00:14:21,388 - #10 [
-INFO  00:14:21,388 - #24 3
-INFO  00:14:21,388 - #11 ]
-INFO  00:14:21,388 - #7 =
-INFO  00:14:21,388 - #24 4
-INFO  00:14:21,388 - #6 ;
-INFO  00:14:21,388 - #25 niz2
-INFO  00:14:21,388 - #10 [
-INFO  00:14:21,388 - #24 0
-INFO  00:14:21,388 - #11 ]
-INFO  00:14:21,388 - #7 =
-INFO  00:14:21,388 - #25 niz
-INFO  00:14:21,388 - #10 [
-INFO  00:14:21,388 - #24 0
-INFO  00:14:21,388 - #11 ]
-INFO  00:14:21,388 - #6 ;
-INFO  00:14:21,388 - #17 print
-INFO  00:14:21,388 - #14 (
-INFO  00:14:21,388 - #25 niz2
-INFO  00:14:21,388 - #10 [
-INFO  00:14:21,389 - #24 0
-INFO  00:14:21,389 - #11 ]
-INFO  00:14:21,389 - #15 )
-INFO  00:14:21,389 - #6 ;
-INFO  00:14:21,389 - #4 }
-INFO  00:14:21,389 - #4 }
-INFO  00:14:21,393 - Program(
+INFO  00:12:56,809 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  00:12:56,842 - #2 program
+INFO  00:12:56,842 - #25 test301
+INFO  00:12:56,842 - #9 const
+INFO  00:12:56,843 - #25 int
+INFO  00:12:56,843 - #25 nula
+INFO  00:12:56,843 - #7 =
+INFO  00:12:56,843 - #24 0
+INFO  00:12:56,843 - #6 ;
+INFO  00:12:56,843 - #9 const
+INFO  00:12:56,844 - #25 int
+INFO  00:12:56,844 - #25 jedan
+INFO  00:12:56,844 - #7 =
+INFO  00:12:56,844 - #24 1
+INFO  00:12:56,844 - #6 ;
+INFO  00:12:56,844 - #9 const
+INFO  00:12:56,844 - #25 int
+INFO  00:12:56,844 - #25 pet
+INFO  00:12:56,844 - #7 =
+INFO  00:12:56,844 - #24 5
+INFO  00:12:56,844 - #6 ;
+INFO  00:12:56,844 - #25 int
+INFO  00:12:56,845 - #25 niz
+INFO  00:12:56,845 - #10 [
+INFO  00:12:56,845 - #11 ]
+INFO  00:12:56,845 - #8 ,
+INFO  00:12:56,845 - #25 niz2
+INFO  00:12:56,845 - #10 [
+INFO  00:12:56,845 - #11 ]
+INFO  00:12:56,845 - #8 ,
+INFO  00:12:56,846 - #25 a
+INFO  00:12:56,846 - #8 ,
+INFO  00:12:56,846 - #25 b
+INFO  00:12:56,846 - #8 ,
+INFO  00:12:56,846 - #25 c
+INFO  00:12:56,846 - #8 ,
+INFO  00:12:56,846 - #25 d
+INFO  00:12:56,846 - #6 ;
+INFO  00:12:56,846 - #25 char
+INFO  00:12:56,846 - #25 nizch
+INFO  00:12:56,846 - #10 [
+INFO  00:12:56,846 - #11 ]
+INFO  00:12:56,846 - #6 ;
+INFO  00:12:56,847 - #3 {
+INFO  00:12:56,847 - #5 void
+INFO  00:12:56,847 - #25 main
+INFO  00:12:56,847 - #14 (
+INFO  00:12:56,847 - #15 )
+INFO  00:12:56,847 - #25 int
+INFO  00:12:56,848 - #25 bodovi
+INFO  00:12:56,848 - #6 ;
+INFO  00:12:56,848 - #25 bool
+INFO  00:12:56,848 - #25 bt
+INFO  00:12:56,848 - #6 ;
+INFO  00:12:56,848 - #3 {
+INFO  00:12:56,848 - #25 niz2
+INFO  00:12:56,848 - #7 =
+INFO  00:12:56,848 - #22 new
+INFO  00:12:56,849 - #25 int
+INFO  00:12:56,849 - #10 [
+INFO  00:12:56,849 - #24 4
+INFO  00:12:56,849 - #11 ]
+INFO  00:12:56,849 - #6 ;
+INFO  00:12:56,849 - #25 niz
+INFO  00:12:56,850 - #7 =
+INFO  00:12:56,850 - #22 new
+INFO  00:12:56,850 - #25 int
+INFO  00:12:56,850 - #10 [
+INFO  00:12:56,850 - #24 4
+INFO  00:12:56,851 - #11 ]
+INFO  00:12:56,851 - #6 ;
+INFO  00:12:56,851 - #25 niz
+INFO  00:12:56,851 - #10 [
+INFO  00:12:56,851 - #24 0
+INFO  00:12:56,851 - #11 ]
+INFO  00:12:56,851 - #7 =
+INFO  00:12:56,851 - #24 1
+INFO  00:12:56,851 - #6 ;
+INFO  00:12:56,851 - #25 niz
+INFO  00:12:56,851 - #10 [
+INFO  00:12:56,851 - #24 1
+INFO  00:12:56,851 - #11 ]
+INFO  00:12:56,851 - #7 =
+INFO  00:12:56,851 - #24 2
+INFO  00:12:56,851 - #6 ;
+INFO  00:12:56,851 - #25 niz
+INFO  00:12:56,851 - #10 [
+INFO  00:12:56,851 - #24 2
+INFO  00:12:56,851 - #11 ]
+INFO  00:12:56,851 - #7 =
+INFO  00:12:56,851 - #24 3
+INFO  00:12:56,852 - #6 ;
+INFO  00:12:56,852 - #25 niz
+INFO  00:12:56,852 - #10 [
+INFO  00:12:56,852 - #24 3
+INFO  00:12:56,852 - #11 ]
+INFO  00:12:56,852 - #7 =
+INFO  00:12:56,852 - #24 4
+INFO  00:12:56,852 - #6 ;
+INFO  00:12:56,852 - #25 niz2
+INFO  00:12:56,852 - #10 [
+INFO  00:12:56,852 - #24 0
+INFO  00:12:56,852 - #11 ]
+INFO  00:12:56,852 - #7 =
+INFO  00:12:56,852 - #25 niz
+INFO  00:12:56,852 - #10 [
+INFO  00:12:56,852 - #24 0
+INFO  00:12:56,852 - #11 ]
+INFO  00:12:56,852 - #6 ;
+INFO  00:12:56,852 - #17 print
+INFO  00:12:56,852 - #14 (
+INFO  00:12:56,852 - #25 niz2
+INFO  00:12:56,852 - #10 [
+INFO  00:12:56,852 - #24 0
+INFO  00:12:56,852 - #11 ]
+INFO  00:12:56,853 - #15 )
+INFO  00:12:56,853 - #6 ;
+INFO  00:12:56,853 - #4 }
+INFO  00:12:56,853 - #4 }
+INFO  00:12:56,857 - Program(
   ProgName(
    test301
   ) [ProgName]
@@ -509,19 +509,20 @@ INFO  00:14:21,393 - Program(
     ) [MethodDecl]
   ) [MethodList]
 ) [Program]
-INFO  00:14:21,394 - ===================================
-INFO  00:14:21,396 - Deklarisana konstanta nula na liniji 5
-INFO  00:14:21,396 - Deklarisana konstanta jedan na liniji 6
-INFO  00:14:21,396 - Deklarisana konstanta pet na liniji 7
-INFO  00:14:21,396 - Deklarisan niz niz2 na liniji 9
-INFO  00:14:21,396 - Deklarisana promenljiva a na liniji 9
-INFO  00:14:21,396 - Deklarisana promenljiva b na liniji 9
-INFO  00:14:21,396 - Deklarisana promenljiva c na liniji 9
-INFO  00:14:21,396 - Deklarisana promenljiva d na liniji 9
-INFO  00:14:21,396 - Deklarisan niz niz na liniji 9
-INFO  00:14:21,396 - Deklarisan niz nizch na liniji 10
-INFO  00:14:21,396 - Obradjuje se funkcija main na liniji 12
-INFO  00:14:21,396 - Deklarisana promenljiva bodovi na liniji 13
-INFO  00:14:21,396 - Deklarisana promenljiva bt na liniji 14
-INFO  00:14:21,396 - ===================================
-INFO  00:14:21,401 - Parsiranje uspesno zavrseno!
+INFO  00:12:56,858 - ===================================
+INFO  00:12:56,860 - Deklarisana konstanta nula na liniji 5
+INFO  00:12:56,860 - Deklarisana konstanta jedan na liniji 6
+INFO  00:12:56,860 - Deklarisana konstanta pet na liniji 7
+INFO  00:12:56,860 - Deklarisan niz niz2 na liniji 9
+INFO  00:12:56,860 - Deklarisana promenljiva a na liniji 9
+INFO  00:12:56,860 - Deklarisana promenljiva b na liniji 9
+INFO  00:12:56,860 - Deklarisana promenljiva c na liniji 9
+INFO  00:12:56,860 - Deklarisana promenljiva d na liniji 9
+INFO  00:12:56,860 - Deklarisan niz niz na liniji 9
+INFO  00:12:56,860 - Deklarisan niz nizch na liniji 10
+INFO  00:12:56,860 - Obradjuje se funkcija main na liniji 12
+INFO  00:12:56,860 - Deklarisana promenljiva bodovi na liniji 13
+INFO  00:12:56,860 - Deklarisana promenljiva bt na liniji 14
+ERROR 00:12:56,860 - Greska na liniji 23 : nisu kompatibilni tipovi
+INFO  00:12:56,860 - ===================================
+ERROR 00:12:56,861 - Parsiranje NIJE uspesno zavrseno

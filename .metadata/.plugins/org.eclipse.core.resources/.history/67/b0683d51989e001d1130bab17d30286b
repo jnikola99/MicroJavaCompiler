@@ -433,12 +433,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 			return;
 		}
 		if(cond.getDesignator().obj.getType().getKind()==Struct.Array) {
-			if(cond.getExpr().struct.getKind()!=Struct.Array) {
-				if(!cond.getExpr().struct.assignableTo(cond.getDesignator().obj.getType().getElemType())) {
-					report_error("Greska na liniji "+ cond.getLine() + " : nisu kompatibilni tipovi",null);
-				}
-			}else
-			if(!cond.getExpr().struct.getElemType().assignableTo(cond.getDesignator().obj.getType().getElemType())) {
+			if(!cond.getExpr().struct.assignableTo(cond.getDesignator().obj.getType().getElemType())) {
 				report_error("Greska na liniji "+ cond.getLine() + " : nisu kompatibilni tipovi",null);
 			}
 		}
