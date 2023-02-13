@@ -1,0 +1,60 @@
+INFO  22:28:22,061 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  22:28:22,092 - #2 program
+INFO  22:28:22,092 - #25 test301
+INFO  22:28:22,092 - #25 int
+INFO  22:28:22,093 - #25 x
+INFO  22:28:22,093 - #25 y
+ERROR 22:28:22,093 - 
+Sintaksna greska na liniji 2
+INFO  22:28:22,093 - #6 ;
+INFO  22:28:22,093 - #3 {
+INFO  22:28:22,093 - #5 void
+INFO  22:28:22,094 - #25 main
+ERROR 22:28:22,094 - Izvrsen oporavak do ; u liniji 2
+INFO  22:28:22,112 - #14 (
+INFO  22:28:22,112 - #15 )
+INFO  22:28:22,112 - #3 {
+INFO  22:28:22,112 - #25 x
+INFO  22:28:22,113 - #7 =
+INFO  22:28:22,113 - #6 ;
+ERROR 22:28:22,113 - 
+Sintaksna greska na liniji 6
+INFO  22:28:22,113 - #4 }
+INFO  22:28:22,113 - #4 }
+ERROR 22:28:22,114 - Izvrsen oporavak do ; u liniji 6
+INFO  22:28:22,133 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VarDecList(
+    NoConstList(
+    ) [NoConstList]
+    VarError(
+    ) [VarError]
+  ) [VarDecList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      NoVarList(
+      ) [NoVarList]
+      Statements(
+        NoStmt(
+        ) [NoStmt]
+        MatchedStmt(
+          ErrorStmt(
+          ) [ErrorStmt]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  22:28:22,133 - ===================================
+INFO  22:28:22,135 - Obradjuje se funkcija main na liniji 4
+INFO  22:28:22,135 - ===================================
+ERROR 22:28:22,136 - Parsiranje NIJE uspesno zavrseno

@@ -1,0 +1,18 @@
+program test301
+	int c;
+	int niz[],izlaz[];
+{
+	void main()	
+	{
+		niz = new int[4];
+		izlaz = new int[4];
+		
+		niz[0]=1;
+		niz[1]=2;
+		niz[2]=3;
+		[izlaz[0],c,izlaz[1]] = niz;
+		print(izlaz[0]);
+		print(c);
+		print(izlaz[1]);
+	}
+}

@@ -1,0 +1,441 @@
+INFO  03:18:32,413 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  03:18:32,446 - #2 program
+INFO  03:18:32,446 - #25 test301
+INFO  03:18:32,446 - #25 int
+INFO  03:18:32,446 - #25 c
+INFO  03:18:32,447 - #6 ;
+INFO  03:18:32,447 - #25 int
+INFO  03:18:32,448 - #25 niz
+INFO  03:18:32,448 - #10 [
+INFO  03:18:32,448 - #11 ]
+INFO  03:18:32,448 - #8 ,
+INFO  03:18:32,448 - #25 izlaz
+INFO  03:18:32,448 - #10 [
+INFO  03:18:32,448 - #11 ]
+INFO  03:18:32,448 - #6 ;
+INFO  03:18:32,448 - #3 {
+INFO  03:18:32,448 - #5 void
+INFO  03:18:32,449 - #25 main
+INFO  03:18:32,449 - #14 (
+INFO  03:18:32,449 - #15 )
+INFO  03:18:32,449 - #3 {
+INFO  03:18:32,449 - #25 niz
+INFO  03:18:32,450 - #7 =
+INFO  03:18:32,450 - #22 new
+INFO  03:18:32,451 - #25 int
+INFO  03:18:32,451 - #10 [
+INFO  03:18:32,451 - #24 3
+INFO  03:18:32,451 - #11 ]
+INFO  03:18:32,451 - #6 ;
+INFO  03:18:32,452 - #25 izlaz
+INFO  03:18:32,452 - #7 =
+INFO  03:18:32,452 - #22 new
+INFO  03:18:32,452 - #25 int
+INFO  03:18:32,452 - #10 [
+INFO  03:18:32,452 - #24 3
+INFO  03:18:32,452 - #11 ]
+INFO  03:18:32,452 - #6 ;
+INFO  03:18:32,452 - #25 niz
+INFO  03:18:32,452 - #10 [
+INFO  03:18:32,452 - #24 0
+INFO  03:18:32,452 - #11 ]
+INFO  03:18:32,452 - #7 =
+INFO  03:18:32,452 - #24 1
+INFO  03:18:32,453 - #6 ;
+INFO  03:18:32,453 - #25 niz
+INFO  03:18:32,453 - #10 [
+INFO  03:18:32,453 - #24 1
+INFO  03:18:32,453 - #11 ]
+INFO  03:18:32,453 - #7 =
+INFO  03:18:32,453 - #24 2
+INFO  03:18:32,453 - #6 ;
+INFO  03:18:32,453 - #25 niz
+INFO  03:18:32,453 - #10 [
+INFO  03:18:32,453 - #24 2
+INFO  03:18:32,453 - #11 ]
+INFO  03:18:32,453 - #7 =
+INFO  03:18:32,453 - #24 3
+INFO  03:18:32,453 - #6 ;
+INFO  03:18:32,453 - #10 [
+INFO  03:18:32,453 - #25 izlaz
+INFO  03:18:32,453 - #10 [
+INFO  03:18:32,453 - #24 0
+INFO  03:18:32,453 - #11 ]
+INFO  03:18:32,453 - #8 ,
+INFO  03:18:32,454 - #25 c
+INFO  03:18:32,454 - #8 ,
+INFO  03:18:32,454 - #25 izlaz
+INFO  03:18:32,454 - #10 [
+INFO  03:18:32,454 - #24 1
+INFO  03:18:32,455 - #11 ]
+INFO  03:18:32,455 - #11 ]
+INFO  03:18:32,455 - #7 =
+INFO  03:18:32,455 - #25 niz
+INFO  03:18:32,455 - #6 ;
+INFO  03:18:32,455 - #17 print
+INFO  03:18:32,455 - #14 (
+INFO  03:18:32,455 - #25 izlaz
+INFO  03:18:32,455 - #10 [
+INFO  03:18:32,455 - #24 0
+INFO  03:18:32,455 - #11 ]
+INFO  03:18:32,455 - #15 )
+INFO  03:18:32,455 - #6 ;
+INFO  03:18:32,455 - #17 print
+INFO  03:18:32,455 - #14 (
+INFO  03:18:32,455 - #25 c
+INFO  03:18:32,455 - #15 )
+INFO  03:18:32,455 - #6 ;
+INFO  03:18:32,455 - #17 print
+INFO  03:18:32,456 - #14 (
+INFO  03:18:32,456 - #25 izlaz
+INFO  03:18:32,456 - #10 [
+INFO  03:18:32,456 - #24 1
+INFO  03:18:32,456 - #11 ]
+INFO  03:18:32,456 - #15 )
+INFO  03:18:32,456 - #6 ;
+INFO  03:18:32,456 - #4 }
+INFO  03:18:32,456 - #4 }
+INFO  03:18:32,460 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  VarDecList(
+    VarDecList(
+      NoConstList(
+      ) [NoConstList]
+      VarDeclOneTime(
+        Type(
+         int
+        ) [Type]
+       c
+        NoSquares(
+        ) [NoSquares]
+      ) [VarDeclOneTime]
+    ) [VarDecList]
+    MoreVarDecl(
+      Type(
+       int
+      ) [Type]
+     niz
+      VarSquares(
+      ) [VarSquares]
+      OneVar(
+       izlaz
+        VarSquares(
+        ) [VarSquares]
+      ) [OneVar]
+    ) [MoreVarDecl]
+  ) [VarDecList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      NoVarList(
+      ) [NoVarList]
+      Statements(
+        Statements(
+          Statements(
+            Statements(
+              Statements(
+                Statements(
+                  Statements(
+                    Statements(
+                      Statements(
+                        NoStmt(
+                        ) [NoStmt]
+                        MatchedStmt(
+                          DesStatement(
+                            DesignatorAssign(
+                              OneDesignatorIdent(
+                               niz
+                              ) [OneDesignatorIdent]
+                              AssignopItem(
+                              ) [AssignopItem]
+                              PositiveExpr(
+                                FirstExpr(
+                                  TermOne(
+                                    FactorNewTypeExpr(
+                                      Type(
+                                       int
+                                      ) [Type]
+                                      PositiveExpr(
+                                        FirstExpr(
+                                          TermOne(
+                                            FactorNumber(
+                                             3
+                                            ) [FactorNumber]
+                                          ) [TermOne]
+                                        ) [FirstExpr]
+                                      ) [PositiveExpr]
+                                    ) [FactorNewTypeExpr]
+                                  ) [TermOne]
+                                ) [FirstExpr]
+                              ) [PositiveExpr]
+                            ) [DesignatorAssign]
+                          ) [DesStatement]
+                        ) [MatchedStmt]
+                      ) [Statements]
+                      MatchedStmt(
+                        DesStatement(
+                          DesignatorAssign(
+                            OneDesignatorIdent(
+                             izlaz
+                            ) [OneDesignatorIdent]
+                            AssignopItem(
+                            ) [AssignopItem]
+                            PositiveExpr(
+                              FirstExpr(
+                                TermOne(
+                                  FactorNewTypeExpr(
+                                    Type(
+                                     int
+                                    ) [Type]
+                                    PositiveExpr(
+                                      FirstExpr(
+                                        TermOne(
+                                          FactorNumber(
+                                           3
+                                          ) [FactorNumber]
+                                        ) [TermOne]
+                                      ) [FirstExpr]
+                                    ) [PositiveExpr]
+                                  ) [FactorNewTypeExpr]
+                                ) [TermOne]
+                              ) [FirstExpr]
+                            ) [PositiveExpr]
+                          ) [DesignatorAssign]
+                        ) [DesStatement]
+                      ) [MatchedStmt]
+                    ) [Statements]
+                    MatchedStmt(
+                      DesStatement(
+                        DesignatorAssign(
+                          DesignatorWithExpr(
+                            OneDesignatorIdent(
+                             niz
+                            ) [OneDesignatorIdent]
+                            PositiveExpr(
+                              FirstExpr(
+                                TermOne(
+                                  FactorNumber(
+                                   0
+                                  ) [FactorNumber]
+                                ) [TermOne]
+                              ) [FirstExpr]
+                            ) [PositiveExpr]
+                          ) [DesignatorWithExpr]
+                          AssignopItem(
+                          ) [AssignopItem]
+                          PositiveExpr(
+                            FirstExpr(
+                              TermOne(
+                                FactorNumber(
+                                 1
+                                ) [FactorNumber]
+                              ) [TermOne]
+                            ) [FirstExpr]
+                          ) [PositiveExpr]
+                        ) [DesignatorAssign]
+                      ) [DesStatement]
+                    ) [MatchedStmt]
+                  ) [Statements]
+                  MatchedStmt(
+                    DesStatement(
+                      DesignatorAssign(
+                        DesignatorWithExpr(
+                          OneDesignatorIdent(
+                           niz
+                          ) [OneDesignatorIdent]
+                          PositiveExpr(
+                            FirstExpr(
+                              TermOne(
+                                FactorNumber(
+                                 1
+                                ) [FactorNumber]
+                              ) [TermOne]
+                            ) [FirstExpr]
+                          ) [PositiveExpr]
+                        ) [DesignatorWithExpr]
+                        AssignopItem(
+                        ) [AssignopItem]
+                        PositiveExpr(
+                          FirstExpr(
+                            TermOne(
+                              FactorNumber(
+                               2
+                              ) [FactorNumber]
+                            ) [TermOne]
+                          ) [FirstExpr]
+                        ) [PositiveExpr]
+                      ) [DesignatorAssign]
+                    ) [DesStatement]
+                  ) [MatchedStmt]
+                ) [Statements]
+                MatchedStmt(
+                  DesStatement(
+                    DesignatorAssign(
+                      DesignatorWithExpr(
+                        OneDesignatorIdent(
+                         niz
+                        ) [OneDesignatorIdent]
+                        PositiveExpr(
+                          FirstExpr(
+                            TermOne(
+                              FactorNumber(
+                               2
+                              ) [FactorNumber]
+                            ) [TermOne]
+                          ) [FirstExpr]
+                        ) [PositiveExpr]
+                      ) [DesignatorWithExpr]
+                      AssignopItem(
+                      ) [AssignopItem]
+                      PositiveExpr(
+                        FirstExpr(
+                          TermOne(
+                            FactorNumber(
+                             3
+                            ) [FactorNumber]
+                          ) [TermOne]
+                        ) [FirstExpr]
+                      ) [PositiveExpr]
+                    ) [DesignatorAssign]
+                  ) [DesStatement]
+                ) [MatchedStmt]
+              ) [Statements]
+              MatchedStmt(
+                DesStatement(
+                  MoreDesignatorSquare(
+                    DesignatorYes(
+                      DesignatorWithExpr(
+                        OneDesignatorIdent(
+                         izlaz
+                        ) [OneDesignatorIdent]
+                        PositiveExpr(
+                          FirstExpr(
+                            TermOne(
+                              FactorNumber(
+                               0
+                              ) [FactorNumber]
+                            ) [TermOne]
+                          ) [FirstExpr]
+                        ) [PositiveExpr]
+                      ) [DesignatorWithExpr]
+                    ) [DesignatorYes]
+                    MoreDesStmt(
+                      OneDesStmt(
+                        DesignatorYes(
+                          OneDesignatorIdent(
+                           c
+                          ) [OneDesignatorIdent]
+                        ) [DesignatorYes]
+                      ) [OneDesStmt]
+                      DesignatorYes(
+                        DesignatorWithExpr(
+                          OneDesignatorIdent(
+                           izlaz
+                          ) [OneDesignatorIdent]
+                          PositiveExpr(
+                            FirstExpr(
+                              TermOne(
+                                FactorNumber(
+                                 1
+                                ) [FactorNumber]
+                              ) [TermOne]
+                            ) [FirstExpr]
+                          ) [PositiveExpr]
+                        ) [DesignatorWithExpr]
+                      ) [DesignatorYes]
+                    ) [MoreDesStmt]
+                    OneDesignatorIdent(
+                     niz
+                    ) [OneDesignatorIdent]
+                  ) [MoreDesignatorSquare]
+                ) [DesStatement]
+              ) [MatchedStmt]
+            ) [Statements]
+            MatchedStmt(
+              PrintCondition(
+                PositiveExpr(
+                  FirstExpr(
+                    TermOne(
+                      FactorDesNoAct(
+                        DesignatorWithExpr(
+                          OneDesignatorIdent(
+                           izlaz
+                          ) [OneDesignatorIdent]
+                          PositiveExpr(
+                            FirstExpr(
+                              TermOne(
+                                FactorNumber(
+                                 0
+                                ) [FactorNumber]
+                              ) [TermOne]
+                            ) [FirstExpr]
+                          ) [PositiveExpr]
+                        ) [DesignatorWithExpr]
+                      ) [FactorDesNoAct]
+                    ) [TermOne]
+                  ) [FirstExpr]
+                ) [PositiveExpr]
+              ) [PrintCondition]
+            ) [MatchedStmt]
+          ) [Statements]
+          MatchedStmt(
+            PrintCondition(
+              PositiveExpr(
+                FirstExpr(
+                  TermOne(
+                    FactorDesNoAct(
+                      OneDesignatorIdent(
+                       c
+                      ) [OneDesignatorIdent]
+                    ) [FactorDesNoAct]
+                  ) [TermOne]
+                ) [FirstExpr]
+              ) [PositiveExpr]
+            ) [PrintCondition]
+          ) [MatchedStmt]
+        ) [Statements]
+        MatchedStmt(
+          PrintCondition(
+            PositiveExpr(
+              FirstExpr(
+                TermOne(
+                  FactorDesNoAct(
+                    DesignatorWithExpr(
+                      OneDesignatorIdent(
+                       izlaz
+                      ) [OneDesignatorIdent]
+                      PositiveExpr(
+                        FirstExpr(
+                          TermOne(
+                            FactorNumber(
+                             1
+                            ) [FactorNumber]
+                          ) [TermOne]
+                        ) [FirstExpr]
+                      ) [PositiveExpr]
+                    ) [DesignatorWithExpr]
+                  ) [FactorDesNoAct]
+                ) [TermOne]
+              ) [FirstExpr]
+            ) [PositiveExpr]
+          ) [PrintCondition]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  03:18:32,461 - ===================================
+INFO  03:18:32,463 - Deklarisana promenljiva c na liniji 2
+INFO  03:18:32,463 - Deklarisan niz izlaz na liniji 3
+INFO  03:18:32,463 - Deklarisan niz niz na liniji 3
+INFO  03:18:32,463 - Obradjuje se funkcija main na liniji 5
+INFO  03:18:32,464 - ===================================
+INFO  03:18:32,468 - Parsiranje uspesno zavrseno!

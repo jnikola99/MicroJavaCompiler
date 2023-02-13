@@ -12,19 +12,43 @@ public class CodeGenerator extends VisitorAdaptor{
 	private int mainPc;
 	List<Obj> designatori = new ArrayList<Obj>();
 	List<Integer> indexi = new ArrayList<Integer>();
+	int ind = 0;
 	private boolean negBool=true;
 	private int currIndex=0;
 	
-	public int getMainPc(){
-		return mainPc;
+	public CodeGenerator() {
+		for(int i=0;i<3;i++) {
+			switch (i) {
+			case 0:
+				Tab.chrObj.setAdr(Code.pc);
+				break;
+			case 1:
+				Tab.ordObj.setAdr(Code.pc);
+				break;
+			case 2:
+				Tab.lenObj.setAdr(Code.pc);
+				break;
+			default:
+				break;
+			}
+			Code.put(Code.enter);
+			Code.put(1);
+			Code.put(1);
+			Code.put(Code.load_n);
+			Code.put(Code.exit);
+			Code.put(Code.return_);
+		}
 	}
+	
 	
 	public void visit(DesignatorYes des) {
 		designatori.add(des.getDesignator().obj);
+		ind++;
 	}
 	
 	public void visit(DesignatorNo des) {
 		designatori.add(null);
+		ind++;
 	}
 	
 	public void visit(DesignatorSquareStmt stmt) {
@@ -54,16 +78,8 @@ public class CodeGenerator extends VisitorAdaptor{
 	}
 	
 	public void visit(MoreDesignatorSquare stmt) {
-		int index = 0;
-		/*int count = 0;
-		for(int i=0;i<designatori.size();i++) {
-			if(designatori.get(i)!=null) {
-				if(designatori.get(i).getType().getKind()==Struct.Array) {
-						count++;
-					}
-				}
-		}*/
-		for(int i=0;i<designatori.size();i++) {
+
+		/*for(int i=0;i<designatori.size();i++) {
 			if(designatori.get(i)!=null) {
 				if(designatori.get(i).getType().getKind()!=Struct.Array) {
 					Code.load(stmt.getDesignator().obj);
@@ -76,7 +92,6 @@ public class CodeGenerator extends VisitorAdaptor{
 						Code.put(Code.aload);
 					
 					Code.store(designatori.get(i));
-					indexi.add(i);
 				}
 				else {
 					Code.load(stmt.getDesignator().obj);
@@ -92,8 +107,9 @@ public class CodeGenerator extends VisitorAdaptor{
 				}
 			}
 		}
-		designatori.clear();
-		indexi.clear();
+		designatori.clear();*/
+		
+		ind = 0;
 	}
 	
 	public void visit(ReadCondition read) {
@@ -172,26 +188,6 @@ public class CodeGenerator extends VisitorAdaptor{
 		}
 	}
 	
-	public void visit(VarDeclOneTime VarDeclOneTime) {
-		Code.put(Code.new_);
-		Code.put2(4);
-	}
-	
-	
-	public void visit(OneVar OneVar) {
-		Code.put(Code.new_);
-		Code.put2(4);
-	}
-	
-	public void visit(MultipleVars MultipleVars) {
-		Code.put(Code.new_);
-		Code.put2(4);
-	}
-	
-	public void visit(MoreVarDecl MoreVarDecl) {
-		Code.put(Code.new_);
-		Code.put2(4);
-	}
 	
 	public void visit(NegativeExpr expr) {
 		negBool=true;
@@ -207,7 +203,7 @@ public class CodeGenerator extends VisitorAdaptor{
 	public void visit(FactorChar cnst) {
 		Obj con = Tab.insert(Obj.Con, "$", cnst.struct);
 		con.setLevel(0);
-		con.setAdr(cnst.getC1().charAt(0));
+		con.setAdr(cnst.getC1().charAt(1));
 		Code.load(con);
 	}
 	
@@ -269,6 +265,34 @@ public class CodeGenerator extends VisitorAdaptor{
 		
 		if(DesignatorAssign.class != parent.getClass() && DesignatorYes.class != parent.getClass()  && DesignatorSquareStmt.class != parent.getClass() && MoreDesignatorSquare.class != parent.getClass()) {
 			Code.load(des.obj);
+		}
+		
+		if(DesignatorYes.class == parent.getClass()) {
+			while(parent!=null) {
+				if(parent.getClass() == MoreDesignatorSquare.class) {
+					MoreDesignatorSquare mds = (MoreDesignatorSquare) parent;
+					Code.load(mds.getDesignator().obj);
+					Code.put(Code.arraylength);
+					Code.loadConst(ind+1);
+					Code.putFalseJump(Code.lt,0);
+					int adr=Code.pc-2;
+					Code.put(Code.trap);
+					Code.put(1);
+					Code.putJump(0);
+					int adr2=Code.pc-2;
+					Code.fixup(adr);
+					
+					//Ucitaj niz sa desne strane
+					Code.load(mds.getDesignator().obj);
+					Code.loadConst(ind);
+					Code.put(Code.aload);
+					
+					//Smesti u objekat sa leve strane
+					Code.store(des.obj);
+					Code.fixup(adr2);
+				}
+				parent=parent.getParent();
+			}
 		}
 	}
 	
@@ -346,5 +370,38 @@ public class CodeGenerator extends VisitorAdaptor{
 				Code.put(Code.aload);
 			}
 		}
+		if(DesignatorYes.class == parent.getClass()) {
+			while(parent!=null) {
+				if(parent.getClass() == MoreDesignatorSquare.class) {
+					MoreDesignatorSquare mds = (MoreDesignatorSquare) parent;
+					Code.load(mds.getDesignator().obj);
+					Code.put(Code.arraylength);
+					Code.loadConst(ind+1);
+					Code.putFalseJump(Code.lt,0);
+					int adr=Code.pc-2;
+					Code.put(Code.trap);
+					Code.put(1);
+					Code.putJump(0);
+					int adr2=Code.pc-2;
+					Code.fixup(adr);
+					
+					//Ucitaj niz sa desne strane
+					Code.load(mds.getDesignator().obj);
+					Code.loadConst(ind);
+					Code.put(Code.aload);
+					
+					//Smesti u objekat sa leve strane
+					Code.put(Code.astore);
+					Code.fixup(adr2);
+				}
+				parent=parent.getParent();
+			}
+		}
+		
+	}
+
+
+	public int getMainPc() {
+		return mainPc;
 	}
 }

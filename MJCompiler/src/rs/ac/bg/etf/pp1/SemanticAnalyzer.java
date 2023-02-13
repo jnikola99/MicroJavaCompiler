@@ -198,7 +198,7 @@ public class SemanticAnalyzer extends VisitorAdaptor {
 	public void visit(CharConst cnst) {
 		cnst.struct = Tab.charType;
 		constTypevar = Tab.charType;
-		adrch = cnst.getConstType().charAt(0);
+		adrch = cnst.getConstType().charAt(1);
 	}
 	
 	public void visit(BoolConst cnst) {

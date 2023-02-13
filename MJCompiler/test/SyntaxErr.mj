@@ -1,0 +1,8 @@
+program test301
+	int x y;
+{
+	void main()	
+	{
+		x = ;
+	}
+}

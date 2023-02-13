@@ -1,0 +1,30 @@
+INFO  22:31:34,881 - ===================================
+INFO  22:31:34,884 - Deklarisana promenljiva x na liniji 2
+INFO  22:31:34,884 - Deklarisana promenljiva y na liniji 3
+INFO  22:31:34,884 - Obradjuje se funkcija main na liniji 5
+ERROR 22:31:34,884 - Greska na liniji 7 : nisu kompatibilni tipovi
+ERROR 22:31:34,884 - Greska na liniji 8 : nisu kompatibilni tipovi
+INFO  22:31:34,884 - ===================================
+=====================SYMBOL TABLE DUMP=========================
+Type int: int, -1, -1 
+Type char: char, -1, -1 
+Con eol: char, 10, 0 
+Con null: Class [], 0, 0 
+Meth chr: char, 0, 1 
+   Var i: int, 0, 1 
+
+Meth ord: int, 0, 1 
+   Var ch: char, 0, 1 
+
+Meth len: int, 0, 1 
+   Var arr: Arr of notype, 0, 1 
+
+Type bool: bool, -1, -1 
+Prog test301: notype, 0, 1 
+   Var x: int, 0, 0 
+   Var y: char, 1, 0 
+   Meth main: notype, 0, 0 
+
+
+
+ERROR 22:31:34,885 - Parsiranje NIJE uspesno zavrseno

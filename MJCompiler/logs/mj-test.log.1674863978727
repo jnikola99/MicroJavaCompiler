@@ -1,0 +1,57 @@
+INFO  00:57:31,234 - Compiling source file: E:\pp1lab.templateAST\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  00:57:31,266 - #2 program
+INFO  00:57:31,266 - #25 test301
+INFO  00:57:31,267 - #3 {
+INFO  00:57:31,267 - #5 void
+INFO  00:57:31,267 - #25 main
+INFO  00:57:31,267 - #14 (
+INFO  00:57:31,268 - #15 )
+INFO  00:57:31,268 - #3 {
+INFO  00:57:31,268 - #17 print
+INFO  00:57:31,268 - #14 (
+INFO  00:57:31,269 - #27 'a'
+INFO  00:57:31,269 - #15 )
+INFO  00:57:31,269 - #6 ;
+INFO  00:57:31,269 - #4 }
+INFO  00:57:31,269 - #4 }
+INFO  00:57:31,273 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoConstList(
+  ) [NoConstList]
+  MethodList(
+    NoMethodDecl(
+    ) [NoMethodDecl]
+    MethodDecl(
+      MethTypeVoid(
+       main
+      ) [MethTypeVoid]
+      NoFormParsList(
+      ) [NoFormParsList]
+      NoVarList(
+      ) [NoVarList]
+      Statements(
+        NoStmt(
+        ) [NoStmt]
+        MatchedStmt(
+          PrintCondition(
+            PositiveExpr(
+              FirstExpr(
+                TermOne(
+                  FactorChar(
+                   'a'
+                  ) [FactorChar]
+                ) [TermOne]
+              ) [FirstExpr]
+            ) [PositiveExpr]
+          ) [PrintCondition]
+        ) [MatchedStmt]
+      ) [Statements]
+    ) [MethodDecl]
+  ) [MethodList]
+) [Program]
+INFO  00:57:31,274 - ===================================
+INFO  00:57:31,276 - Obradjuje se funkcija main na liniji 5
+INFO  00:57:31,276 - ===================================
+INFO  00:57:31,281 - Parsiranje uspesno zavrseno!
